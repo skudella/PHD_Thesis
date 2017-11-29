@@ -1,0 +1,238 @@
+\documentclass[a4paper,twoside,11pt]{book}
+% Alternative Options:
+% Paper Size: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Base Font Size: 10pt / 11pt / 12pt
+\usepackage{pdflscape}
+
+%% Language %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[USenglish]{babel} %francais, polish, spanish, ...
+%\usepackage[english]{babel}
+%\usepackage[ansinew]{inputenc} %ansinew
+\usepackage[latin1]{inputenc}
+%\usepackage[uft8]{inputenc}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+
+%\usepackage[ngerman]{babel}
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+%\usepackage[numbers,square]{natbib} %Use Natbib
+%\usepackage{wasysym}
+%\usepackage{mathaccent}
+
+
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %%For loading graphic files
+%\usepackage{subfig} %%Subfigures inside a figure
+%\usepackage{tikz} %%Generate vector graphics from within LaTeX
+
+%% Please note:
+%% Images can be included using \includegraphics{filename}
+%% resp. using the dialog in the Insert menu.
+%% 
+%% The mode "LaTeX => PDF" allows the following formats:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% The modes "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% allow the following formats:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsbsy} %um \boldsymbol bereitzustellen (fette Mathezeichen)
+
+%% Line Spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-spacing (default)
+%\onehalfspacing       %% 1,5-spacing
+%\doublespacing        %% 2-spacing
+
+
+%% Other Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{a4wide} %%Smaller margins = more text per page.
+\usepackage[left=3.5cm,right=3.0cm,top=3cm,bottom=3cm]{geometry} %Standard (3,5;3,3,3)
+%\parindent1cm	%Keine Einr�ckung der ersten Zeile nach einem Absatz
+%\setlength{\parindent}{1cm}
+%\parskip1.5ex plus 0.5ex minus 0.5ex
+%\parindent0em \parskip1.5ex plus0.5ex minus0.5ex
+\usepackage{fancyhdr} %%Fancy headings
+%\usepackage{longtable} %%For tables, that exceed one page
+\usepackage{appendix}
+\usepackage[bf,small]{caption}		%Package for nicer captions: smaller font and bold ``Figure X''
+\usepackage{verbatim}	%Package for input of text as plain text, i.e. without LaTex trying to interprete the text.
+%\usepackage[dvips]{epsfig}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usepackage{xkeyval}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{todonotes}
+%\usepackage[usenames]{color} %verwende das "named-modell"
+\usepackage{booktabs} %erweiterte tabular-umgebung
+%\usepackage[mediumspace,mediumqspace,Gray,squaren]{siunitx}
+\usepackage{siunitx}
+%\usepackage{mathrm}
+\usepackage{microtype}
+\usepackage{multirow}
+%\usepackage[mediumspace,mediumqspace,Grey,squaren]{SIunits}
+\usepackage[nohyperlinks]{acronym}
+\usepackage{emptypage}
+\usepackage[absolute,overlay]{textpos}
+%\usepackage{ziffer} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Remarks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Edit the used packages and their options (see above).
+% 2. If you want, add a BibTeX-File to the project
+%    (e.g., 'literature.bib').
+% 3. Happy TeXing!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Options / Modifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\unitlength=1cm %Masseinheit in picture-Umgebung
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\bottomfraction}{0.7}
+\renewcommand{\topfraction}{0.7}
+\doublerulesep0.1mm %Abstand von Linien in Tabelle
+\newcommand{\Lapl}{\hbox{\footnotesize{$\bigtriangleup$}\,}}
+\newcommand{\Quabla}{\hbox{\footnotesize{$\Box$}\,}}
+\newcommand{\quabla}{\hbox{\scriptsize{$\Box$\,}}}
+\def\symbR{\rm{\textsuperscript{\textregistered}}}
+\def\symbC{\textsuperscript{\textcopyright}}
+\def\symbTM{\rm{\texttrademark}}
+
+
+%\hyphenation{aus-wer-te-in-ter-vall  aus-wer-te-in-ter-valle  sub-strat-rau-hig-kei-ten  ener-gien  was-ser-stoff-iso-top  neu-tri-no-mas-sen-ex-pe-ri-ment  fun-da-men-ta-len  mess-pr\"a-zi-sion  mess-zeiten  be-triebs-temp-era-tur  k\"uhl-leis-tung  Teil-chen-beschl-euniger}
+
+
+%hurenkinder
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{options} %You need a file 'options.tex' for this
+%% ==> TeXnicCenter supplies some possible option files
+%% ==> with its templates (File | New from Template...).
+
+
+
+\begin{document}
+
+
+
+%\listoftodos
+
+%TESTAREA
+
+
+
+
+%\cleardoublepage
+\input{01Titel}
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{}																% Clear all settings
+\fancyhead[OR]{\thepage}									% Seitenzahl auf ungerader Seite rechts außen. 
+\fancyhead[OL]{\nouppercase{\rightmark}}	% Section name auf ungerader Seite innen
+\fancyhead[EL]{\thepage}									% Seitenzahl auf gerader Seite links außen
+\fancyhead[ER]{\nouppercase{\leftmark}}		% Chapter name auf gerade Seite innen
+\renewcommand{\headrulewidth}{0.5pt}			% Liniendicke oben
+%\renewcommand{\headheight}{14pt}					% Vergr\"oßere H\"ohe der Kopfzeile von 12pt auf 14pt, sonst Warnung
+
+
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+
+\input{03essay}
+\cleardoublepage
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Table of Contents}
+\cleardoublepage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\cleardoublepage
+
+
+\setcounter{page}{1}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\pagenumbering{arabic}
+
+
+
+
+\input{04introducion}
+
+
+\input{05SM_and_motivation}
+
+\input{07LHC_CMS}
+
+\input{10Object_reconstruction}
+
+\input{11Search_for_bosonic_resonances}
+
+\input{06semiconducting_pixeldetectors}
+
+\input{09_PHASE_I_production}
+
+\input{11summary}
+
+%\input{12appendix}
+
+\input{14acronyms}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+%\renewcommand{\bibname}{Bibliography}
+\bibliographystyle{alphadin}
+\bibliography{Literatur/Masterthesis}
+%\defbibheading{head}{\chapter*{Bibliography}}
+%\renewcommand{Literaturverzeichnis}{Bibliography}
+\cleardoublepage
+\input{13acknowledgements}
+
+\input{02declaration}
+
+%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%% The simple version:
+
+\end{document}

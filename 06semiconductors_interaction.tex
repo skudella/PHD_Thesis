@@ -1,0 +1,104 @@
+\acresetall
+\chapter{Semiconductors and their usage as particle detectors}\label{cha:semi-conductors}
+Semiconductors have been known since the discovery of the rectifier effect of semiconductors in the year 1874, but their use in electronics started with the invention of the transistor in 1947~\cite{Bar48}. Nowadays, semiconductors are used in nearly all electronic devices. A special application for semiconductors is the usage of the depletion zone of diodes as a sensitive detector material. This chapter gives basic insight into semiconductors and their usage as particle detectors for the tracking of charged particles in \ac{HEP}.
+
+In general, semiconductors are materials with a conductivity depending on the status and the environment of the material and can be divided in two types according to their conductivity. High temperature conductors increase their conductivity with increasing temperature. Low temperature conductors reduce their conductivity with increasing temperatures. Silicon, as a representative of the high temperature conductors, plays a very important role in the semiconductor industry. Therefore, it will be described in more detail in this chapter.
+\section{Semiconductors in the energy-band model}
+The behavior of electrical conductivity can be described by the energy band model. This model examines the multiple energy states of electrons in a solid state body as bands of possible energy states. The bands are filled with electrons from low energies to high energies up to the Fermi energy. The probability distribution can be described by the Fermi-Dirac distribution
+\begin{equation}
+f(E)=\frac{1}{e^{\left( \frac{E-E_F}{k_B T} \right)} +1},
+\end{equation}
+which depends on the temperature $T$. The particle energy is given by $E$. Here, $E_F$ is the Fermi energy and $k_B$ is the Boltzmann-constant. The highest bands filled with electrons are the valence bands. The lowest empty bands are the conduction bands. In the energy-band model, the electrical conductivity is determined by the availability of free electron states, and the energy required to reach these states. Since in a solid state body a hole is just a missing electron, all of the following statements for electrons are applicable to holes as well.
+
+For conductors, the valence and conduction bands overlap and the Fermi energy is situated within an energy band, allowing many free energy states to all electrons in the band. Insulators have a large valence-conduction band gap and the Fermi energy lies in between the bands. To create a free charge, an electron needs additional energy to change from the valence into the conduction bands. The energy might come from a high energetic photon or an ionizing particle%\footnote{See the usage of diamonds for particle detectors~\cite{Tap00}.}
+. Semiconductors behave like insulators, except that the valence-conduction band gap is smaller, so that the thermal excitation at room temperature is already sufficient to provide the energy required to move an electron from the valence bands into the conduction bands. Figure~\ref{fig:energy_bands} illustrates the different conductors and their energy bands.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/semi-conductors/energy_gaps.pdf}
+\end{center}
+\caption[Energy-band model for different classes of materials]{\textbf{Energy-band model for different classes of materials.} In this figure, the energy bands of conductors (left), insulators (middle) and direct and indirect semiconductors (right) are illustrated. }\label{fig:energy_bands}
+\end{figure}
+The energy needed to excite electrons from the valence bands into the conduction bands does not only depend on the energy gap between these bands, but also on their shape and relative position in reciprocal space. For this reason, high temperature semiconductors are separated into direct and indirect semiconductors. For direct semiconductors, the minimum of the conduction bands shows the same wave-number $k$ as the maximum of the valence bands, allowing a direct excitation with an energy similar to the energy gap. Indirect semiconductors show a minimum of the conduction bands at a different wave-number than the maximum of the valence bands. This means that a direct excitation requires more energy than the energy gap. Another possible excitation is the indirect excitation, requiring a phonon to provide the additional momentum in the reciprocal space. Silicon, for example, is such an indirect semiconductor. Although the energy gap at room temperature is $\Delta E_{\rm{gap}}=1.12\,\rm{eV}$~\cite{Lut99}, the energy required for a direct excitation is $\Delta E_{\rm{excit.}}=3.67\,\rm{eV}$~\cite{Ber12}.
+\\
+\\Because of its enormous worldwide resources, silicon has gained a special role in the electronics industry and detector physics. For this reason, the focus of this chapter is on silicon.
+
+
+\subsection{Doping of semiconductors}
+Doping, in this context, describes the intentional contamination of material. By intentionally inserting impurity atoms into the pure semiconductor bulk, its electric properties can be specifically influenced. This way, the material gets turned from an intrinsic to an extrinsic semiconductor. For example, inserting atoms of the third main group (acceptors) into the bulk of material from the forth main group creates additional free states right above the valence bands (acceptor states), due to the missing electrons in the lattice structure. The additional free states reduce the Fermi energy to a value between the valence bands and the implemented free states. This allows electrons from the valence bands to be thermally excited into these free states and to contribute to the conductivity, even at room temperature. Semiconductors doped in such a way are called n-doped semiconductors.
+
+Atoms of the fifth main group (donators) inserted into the bulk of material from the forth main group create additional electron states right below the conduction bands (donator states), due to the additional electrons in the lattice structure. These electrons increase the Fermi energy to a level between the implemented electron states and the conduction bands. They can be thermally excited at room temperature into the conduction bands and contribute to the conductivity. Semiconductors doped in such a way are called p-doped semiconductors. Figure~\ref{fig:doping} shows how the doping increases the conductivity of the semiconductor.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/semi-conductors/doping.pdf}
+\end{center}
+\caption[Extrinsic semiconductors and the pn-junction]{\textbf{Extrinsic semiconductors and the pn-junction.} The figure illustrates the energy bands model for extrinsic semiconductors (left) and the pn-junction without any external voltage applied.}\label{fig:doping}
+\end{figure}
+
+
+\subsection{The pn-junction}
+When p-doped semiconductors get in contact with n-doped semiconductors, important boundary region effects happen. Due to the thermal diffusion of electrons in the boundary region, the Fermi energies of the p-types and n-types equalize, causing the conduction and valence bands to be deformed. In the boundary region, the thermally excited free electrons from the n-doped area fill the free states in the p-doped area. Since the atomic nuclei are not moveable, an electric field grows, prohibiting further charge exchanges and creating a barrier layer without any free charge carriers (depletion zone). Such a component is called a pn-diode (see fig.~\ref{fig:doping}).
+
+When an external voltage is applied to the pn-junction, the behavior of the pn-junction depends on the voltage polarity.
+\begin{itemize}
+\item \textbf{Reverse bias:} With the positive pole connected to the n-doped side and the negative pole connected to the p-side of the diode, the additional potential adds to the effect of thermal diffusion. This increases the depletion zone and prohibits any current. (see fig.~\ref{fig.diode} left).
+\item \textbf{Forward bias:} With the positive pole connected to the p-doped side and the negative pole connected to the n-side of the of the diode, the potential reduces the energy of the energy bands on the p-side of the diode. This causes the electrons from the donator levels to drift into the conduction bands of the n-doped side, reducing and removing the barrier layer and contributing to the conductivity.
+(see fig.~\ref{fig.diode} right).
+\end{itemize}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/semi-conductors/diode.pdf}
+\end{center}
+\caption[Behavior of a pn-diode with external voltage applied]{\textbf{Behavior of a pn-diode with external voltage applied.} This figure illustrates how the pn-junction behaves when an external voltage is applied to the diode. Left - reverse bias, right - forward bias.}\label{fig.diode}
+\end{figure}
+The thickness $d$ of the depletion zone depends on the voltage applied to the junction and the doping concentrations of the acceptors and the donators. Eq.~\ref{equ:depleted_zone_thickness}~\cite{Lut99} describes the voltage dependence of the depleted zone and the influence of the doping concentrations on the depletion zone thickness.
+\begin{equation}
+d=\sqrt{\frac{2 \epsilon _0 \epsilon _r}{e}\cdot \left(\frac{1}{N_D}+\frac{1}{N_A}\right)\cdot \left(V_{\rm{eq}}-V_{\rm{bias}}\right)}\label{equ:depleted_zone_thickness}
+\end{equation}
+Here, $N_D$ and $N_A$ are the doping concentrations of the donators and acceptors, $V_{\rm{eq}}$ is the voltage, due to the thermal diffusion in the equilibrium, and $V_{\rm{bias}}$ is the external voltage applied to the pn-junction. $\epsilon _0$ and $\epsilon _r$ are permittivity constants and $e$ is the electron charge.
+
+In summary, by building up or removing a free charge carrier depleted zone, a diode becomes conductive in one direction and non-conductive in the other direction.
+
+\section{Usage of semiconductors as particle detectors}
+Semiconductors have been used as particle detectors since the 1970s~\cite{Lut99} and have almost entirely replaced gas detectors as tracking detectors. The main advantages of semiconducting detectors, as compared to gas detectors, are the high density of states and the lower excitation energies, resulting in a larger signal than in the classic gaseous detectors. Other advantages are the high charge collection speed, allowing high readout frequencies ($40\,\rm{MHz}$ at \ac{LHC}) and a strong industrial sector, providing high material quality and a continuous development of the technology.
+
+
+\subsection{Interaction of ionizing charged particles with matter}
+To understand the working principle of a semiconducting particle detector, one needs to understand how charged particles interact with matter. Since the focus of this thesis is on pixel detectors that are typically used as part of a tracker and not as calorimeters, this section will be limited on the ionization caused by charged particles.
+
+The ionization of material by heavy charged particles and their energy loss $\frac{dE}{dx}$ is well described by the Bethe equation~\cite{Ber12}. Here, all particles with a mass significantly higher than the mass of an electron are classified as heavy:
+\begin{equation}
+-\frac{dE}{dx}=\underbrace{4\rm{\pi}N_A r_e c^2}_{\rm{constants}}\cdot \frac{Z}{A}\cdot \frac{z^2}{\beta ^2}\cdot\left[\frac{1}{2}\cdot\ln \left(2m_e c^2\cdot\frac{\beta ^2\gamma ^2T_{\rm{max}}}{I^2}\right)-\beta ^2-\frac{\delta (\beta \gamma)}{2}-\frac{C}{Z}(\beta \gamma)\right].\label{equ:Bethe-Bloch}
+\end{equation}
+In this equation, the $N_A$ is the Avogadro number, $r_e$ the classical electron radius, $m_e$ the electron mass, and $c$ the speed of light. The charge of the ionizing particle is given by $z$, while $\beta=\frac{v}{c}$ and $\gamma=\frac{1}{\sqrt{1-\beta^2}}$ describe the velocity and the relativity of the particle. The target material is defined by the atomic number $Z$, the atomic mass $A$, the mean excitation energy $I$, corrections at very low energies, due to the atomic structure $\frac{C}{Z}(\beta \gamma)$, polarization effects and density corrections $\delta (\beta \gamma)$ at high particle energies. The maximum momentum transferred to an electron is given by $T_{\rm{max}}$. At low energies, the energy loss is dominated by ionization according to the Bethe equation. At high energies ($\beta \gamma > 500$), the energy loss is dominated by radiative energy losses due to the emission of bremsstrahlung. Particles with $\beta \gamma =2-3$ are called minimum ionizing particles (\acs{MIP}s), since their energy loss is always in the region of the minimal energy loss by ionization. Figure~\ref{fig:Bethe-Bloch} illustrates how the energy deposition behaves as a function of the momentum of the ionizing particle.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.8]{pictures/semi-conductors/Bethe-Bloch.pdf}
+\end{center}
+\caption[Energy loss of charged particles in material]{\textbf{Energy loss of heavy charged particles in material.} The figure illustrates the energy loss of charged particles in material as a function of $\beta \gamma$. While at low values of $\beta \gamma$, the ionization of the target material is the dominant process, that can be described by the Bethe equation, radiative energy losses become dominant at high values of $\beta \gamma$~\cite{Ber12}.}\label{fig:Bethe-Bloch}
+\end{figure}
+
+ 
+\subsection{Semiconductor particle detectors}\label{sec:semi_as_detector}
+To achieve high electrical resistivity while avoiding any noise due to leakage current, the ideal material for particle tracking detectors should have a small excitation energy and no free charge carriers. At the same time, it should show a high density of states and short radiation length to allow the production of small detectors. Also, it should have a high radiation hardness to stand the high particle flux in a tracker. It needs to allow an electrical signal readout and provide fast charge collection, to allow the construction of fast detectors. Finally, it should be available in large numbers, and allow a segmentation of the material.
+
+Semiconductors provide most of these characteristics, except for the low density of free charge carriers at room temperatures. For semiconductors, the current at room temperature is several times higher than the signal induced by an ionizing particle, making any detection impossible. One option to tackle this problem is to cool down the semiconductor to cryogenic temperatures. In this way, the thermal excitation is reduced and a better signal-to-noise ratio can be achieved. This option is suitable for experiments that require a cryogenic surrounding for other physical or technical reasons. In a \ac{HEP} detector, this cannot be provided. Another approach to reduce conductivity at room temperature is to use pn-junctions as sensitive detector material. As mentioned above, with a voltage applied in reverse bias direction, the depletion zone of the pn-junction is free of free charge carriers, resulting in an insulating layer. Although this zone is fully depleted (insulating), the region still shows a high density of states for non-free charge carriers that can be excited by ionizing particles. This turns the depleted area to an ideal detector material with very low leakage current, and a low excitation energy.
+
+When an ionizing particle traverses the depletion zone, it excites electrons from the valence bands into the conduction bands all along its track. Due to the electric field, the electrons and holes get separated from each other, drift, and create a signal current.
+
+Since the depleted zone is typically very thin, it is increased by using pin-diodes or $n^+n^-p^+$ or $p^+p^-n^+$ diodes. In these diodes, the depleted zone of the pn-junction is increased by inserting a thick layer of intrinsic or slightly doped semiconductor material in-between the p-type and the n-type regions. Figure~\ref{fig:pin-diode} illustrates the increase of the depleted zone by inserting an intrinsic layer.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/semi-conductors/pin-diode.pdf}
+\end{center}
+\caption[pn-junctions in particle detectors]{\textbf{pn-junctions in particle detectors.} The figure illustrates the sensitive area of the pn-junction in a semiconducting particle detector and how an ionizing particle creates free charges that contribute to the conductivity and the signal current.}\label{fig:pin-diode}
+\end{figure}
+In the depleted zone of a pn-junction, a \acs{MIP} creates a mean of $80\,\frac{\rm{electron-hole\,\, pairs}}{\si{\micro \meter}}$. Typical sensor thicknesses are $300-500\,\si{\micro \meter}$, which cause \acs{MIP}s to deposit a most probable charge of $24000-40000$ electrons~\cite{Tin11}. A cross-section of a semiconducting particle sensor shows how a \acs{MIP} produces electron-hole pairs and how they contribute to the signal (see fig.~\ref{fig:sensor_cell}).
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{pictures/sensor_cell.pdf}
+\end{center}
+\caption[Cross-section of a semiconductor particle detector]{\textbf{Cross-section of a semiconductor particle detector.} It is shown how a charged particle produces electron-hole pairs and how they drift inside the depletion zone (after \cite{Ros06}.}\label{fig:sensor_cell}
+\end{figure} 
+\\
+\\With the expertise of the semiconductor industry in processing silicon, it is easily possible to implement several segmented pn-juntions into a single intrinsic bulk. This allows the production of strip or pixel detectors to give information about the position where a particle penetrates the semiconductor.

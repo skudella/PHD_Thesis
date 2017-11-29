@@ -1,0 +1,79 @@
+\acresetall
+\chapter{Cleaning of substrates or chips}\label{cha:cleaning}
+During handling, all microelectronic material is constantly put in jeopardy of being polluted by organic or inorganic pollutions (e.g. dust particles) that come from the surrounding environment or the handling tools. To minimize pollution, the material should be stored in an inert atmosphere (e.g. a nitrogen cupboard) and handled inside a clean-room.
+
+The best protection of material from pollution, oxidation and mechanical damage is achieved by covering it with a protection layer of thick photo-resist. This strategy has been chosen by \ac{KIT} for the delivery of the \ac{CMS} Phase I Upgrade \ac{ROC}s to \ac{KIT}. Of course the photo-resist itself needs to be removed by a special cleaning procedure. This cleaning procedure at \ac{KIT} was designed as part of this thesis.
+
+\section{Cleaning of material}
+If, despite all efforts, the material is polluted or it is covered by a protective layer, like the photo-resist already mentioned, it needs to be cleaned to remove all organic and inorganic contamination from the surface. This is done by using baths of solvents. To remove inorganic pollution, especially salts and ionic contamination, typically a bath in pure water or flushing by pure water is used. Organic pollution is best removed by an acetone bath \cite{NLM14a}. For very strong (e.g. metallic) pollutions, an ultrasonic bath\footnote{In an ultrasonic bath an ultrasonic vibration generator creates ultrasonic waves in a solvent.} might be used to exert some mechanical force and movement onto the substrate\footnote{Ultrasonic baths should not be combined with flammable liquids like acetone or isopropyl alcohol to avoid explosive gas mixtures. The flash point of acetone is $T_{\rm{flash}}(\rm{acetone})=-20\, ^{\circ} \rm{C}$, and the flash point of isopropyl alcohol is $T_{\rm{flash}}(\rm{isopropyl\text{ }alcohol})=53\, ^{\circ} \rm{C}$  \cite{NLM14a}, \cite{NLM14b}.}.
+
+Although acetone and water are standard solvents for cleaning microelectronic material, there are many other industrial cleaning solvents available on the market for specific types of pollutions and substrates. Most of them are specially designed to be non-flammable and usable in an ultrasonic bath.
+
+\section{Handling tools for bumped \acl{ROC}s}
+When investigating bump bonding interconnection technologies, the need to clean bumped chips might occur. Also, the photo-resist protection layer on the \ac{CMS} pixel \acs{ROC}s for the production at \ac{KIT} needs to be removed before bonding. In this case it is very difficult to handle the chips, since touching the surface would destroy the bumps and handling with tweezers brings the risk of conchoidal fractures which might destroy structures close to the edge. For this reason, a special tray was designed to handle \acs{ROC}s during the cleaning process. The basic idea of the tray is to keep the chips in position during the whole cleaning procedure. After the cleaning, the whole tray is flipped onto a GelPack$\rm{\symbTM}$. Thanks to the tray, all the chips will be well aligned and in correct order and are ready for bonding. A layout of the design is shown in figure~\ref{pic:cleaning_tray_layout}.\\
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.26]{pictures/Cleaning_Tray.png}
+\end{center}
+\caption[Layout of the cleaning tray to handle CMS pixel readout chips.]{\textbf{Layout of the cleaning tray to handle \ac{CMS} pixel readout chips.} The picture shows the basic design of the cleaning tray and how the single parts are mounted. The tray is shown in green, the vacuum plate in yellow, the \acs{PTFE} grid in grey, and the GelPack$\rm{\symbTM}$ in black. On the right, it is shown how the GelPack$\rm{\symbTM}$ can be placed on top of the tray to perform a flipping of all cleaned chips.}\label{pic:cleaning_tray_layout}
+\end{figure}
+\subsection{Cleaning tray}
+Since the \ac{CMS} Phase I Upgrade pixel production requires a big throughput of cleaned \acs{ROC}s, the tray accommodates 35 \acs{ROC}s to be cleaned at once. The aim is to produce at least two modules a day (better three a day). Each of the \acs{ROC}s is placed into cavities which show the same dimensions as the \acs{ROC}s (plus an additional $150\, \si{\micro \meter}$ in every direction). For detailed mechanical drawings see Appendix \ref{App:cleaning_drawings}. The tray has a furrow that fits the GelPack$\rm{\symbTM}$. This way the tray can be aligned to the GelPack$\rm{\symbTM}$, leaving a distance of $150\,\si{\micro \meter}$ between bumps and the GelPack$\rm{\symbTM}$ surface.\\
+\\The cleaning procedure and the hardware design require high standards for the material which is used to build the tray.
+\begin{itemize}
+\item The material needs to be safe against \ac{ESD}. This means the material needs to be either conductive or antistatic.
+\item The material needs to be well millable. This rules out \ac{PTFE}, since the small coefficient of static friction leads to very imprecise milling, resulting in a wiggly line shaped cavity.
+\item The material needs to be soft enough not to scratch the chips. This rules out all metals since the risk of damaging the chip would be too high.
+\item The material needs to be acetone resistant since acetone is used to solve the photo-resist layer.
+\end{itemize}
+The search for a suitable material has shown that an \ac{ESD}-safe version of \ac{POM} works fine for this application. The plastic becomes \ac{ESD} safe by inserting conductive particles into its polymer structure\footnote{The industrial name for this kind of plastic is \acs{POM}-ELS (available at \cite{KHP14}).}.
+\\
+\\Although cavities in the tray keep the \acs{ROC}s in position horizontally, small bubbles trapped behind the silicon chip may cause the \acs{ROC}s to float up. To avoid this, a \ac{PTFE} grid was designed to keep the \acs{ROC}s in position vertically. The grid consists of an aluminum frame and \ac{PTFE} weaving yarn ($220\,\rm{dtex}$\footnote{dtex is the typical way to describe the fineness of a weaving yarn. One dtex describes that a yarn of $10000\, \rm{m}$ length has a weight of $1\,\rm{g}$.}) that is stretched over the aluminum frame. The whole grid is mounted on the tray with four screws.
+
+\subsection{Vacuum system and chemical baths}
+To ensure that the chips can be flipped safely, a vacuum plate was designed and vacuum holes were drilled into the cavities of the tray to apply a vacuum from the rear. With this vacuum, the \acs{ROC}s can be kept in position during the flipping.  The aluminum vacuum plate gets mounted from the backside and fixed by screws. Figure~\ref{pic:cleaning_tray_produced} shows a picture of the \acs{POM} tray, the \ac{PTFE} grid and the vacuum plate that were produced at \ac{KIT}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.08]{pictures/trays.JPG}
+\end{center}
+\caption[Readout chip cleaning tray produced at KIT.]{\textbf{Readout chip cleaning tray produced at \ac{IPE}.} The picture shows the cleaning tray made out of \acs{ESD}-safe \acs{POM} (middle), the \ac{PTFE} grid (left), and the vacuum plate (right) produced at \ac{KIT}.}\label{pic:cleaning_tray_produced}
+\end{figure}
+
+Because there is the risk of cleaning liquid getting inside the vacuum system and damaging the vacuum pump, the vacuum is applied by a Venturi tube\footnote{The Venturi tube creates a vacuum due to fast flushing air, according to Bernoulli's equation. \cite{Sch07}}. Because of some leakage into the vacuum, system the usage of acetone or isopropyl alcohol in combination with the vacuum system should be avoided, since the liquids would evaporate very fast and be a health threat to all workers in the clean-room. To reduce the leakage, the inside of the cavities has been polished. This decreased the leakage by a factor of more than 3 (from $0.57\,\rm{ml/min}$ per \acs{ROC} to $0.17\,\rm{ml/min}$ per \acs{ROC}). The current leakage for a tray with 35 \acs{ROC}s is $90\, \rm{ml}$ during $15\,\rm{min}$ in bath. The vacuum also brings the benefit of holding the \acs{ROC}s in position while flushing them with water or nitrogen. % This way, it is easily possible to remove dust particles coming from the air.
+
+The vacuum system also allows using ultrasonic baths to clean the material, since the chips can be fixed from the back and without any \ac{PTFE} grid on top. In ultrasonic baths, the leakage into the vacuum system doubles, due to the movement of the chips inside the cavity. To avoid the risk of any mechanical damage to the bumps on the \acs{ROC}, no ultrasonic bath is used to clean bumped chips for the production of the \ac{CMS} Phase I Upgrade production. Still, the option of cleaning in ultrasonic baths might be interesting for future projects.
+\\
+\\To handle the chemicals baths that are needed for the cleaning procedure, metallic ``Gastro''-containers\footnote{Type: GN 1/3 from BLANCO and the fitting silicone sealed lid.} with a silicone sealing were purchased. In these containments, the chemical baths can take place and the solvents can be stored, since the containers are resistant to all chemicals used and completely water- and air-proof.
+
+
+\section{\acs{KIT} process to clean \acl{ROC}s}
+In addition to the handling tools, a cleaning procedure was designed to remove the photo-resist layer from the \ac{CMS} pixel \acs{ROC}s. Although this procedure was designed for the cleaning during the Phase I Upgrade production, it can be used as cleaning a procedure for most bump bonding applications.% To achieve high quality standards, the last step of the procedure should always be the one that can guarantee the highest chemical purity\footnote{Typically the highest purity can be guaranteed for water.}.
+
+\subsection{Cleaning procedure}
+The tray with the chips is placed in a bath of acetone. With light and slow shaking of the tray, the photo-resist gets easily dissolved by the acetone. The tray is kept inside the acetone bath for at least four minutes. After this time, all the organic material including the photo-resist should be resolved by the acetone. For a large production with more than $30$ chips per tray it might be necessary to use a second bath of acetone to completely remove the photo-resist. Since acetone evaporates very fast, all changes from an acetone bath into another bath need to be done as fast as possible ($<1\,\rm{s}$) and all containers must be closed immediately.
+
+Typically, a water bath would be next, but since acetone is non-polar and water is polar, it is not possible to mix these two fluids. For this reason, an intermediate bath in isopropyl alcohol is needed to remove the residual acetone. With its polar $\rm{OH}$-group and non-polar $\rm{CH}_{\rm{3}}$-group, isopropyl alcohol is capable to solve both acetone and water. Studies have shown that the isopropyl alcohol available at the \ac{IPE} clean-room ($95\,\rm{\%}$) is not pure enough ensure a high process quality. The impurities in the isopropyl alcohol cannot be solved in water and leave stains on the material. For this reason, a highly pure isopropyl alcohol version ($>99.9\,\rm{\%}$) \cite{BAS14} was selected. The tray should stay in this intermediate bath for another three minutes under light and slow shaking. Moving the tray from isopropyl alcohol to any other bath needs to be very fast due to the fast evaporation of isopropyl alcohol ($<1\,\rm{s}$) and the containers must be closed immediately.
+
+To solve inorganic pollutions, the tray needs to be placed into a water bath for three minutes and be shaken fast and vigorously. The fast shaking is needed to remove all isopropyl alcohol residuals from the chips\footnote{An alternative to shaking would be an ultrasonic bath, which cannot be used on bumped chips, since it is too energetic, as already explained above.}. To ensure that there are no remnants of the acetone or isopropyl alcohol, the tray needs to be placed into a second bath of water for another three minutes with fast shaking. Our studies have shown that the quality of the cleaning procedure heavily depends on the purity of the water baths.
+
+Using water as the last cleaning step brings the disadvantage of very slow evaporation of the water. To speed up this process, the tray is placed inside a heated vacuum chamber at $70\,\si{\degreeCelsius}$ for $10-20$ minutes. The vacuum is needed in order to lower the evaporation temperature below $100\,\si{\degreeCelsius}$. This prevents deformations of the \acs{POM} which would start at $100\,\si{\degreeCelsius}$.
+
+After the evaporation of the water, all material can be easily stored inside the nitrogen-cupboard. If the chips get polluted in storage, the dust should usually be easily removed by fixing the chips by vacuum and blowing them with nitrogen. Before bonding, there is the option to use a $\rm{Ar}+\rm{H}_2$-plasma to reduce any oxidation on the bumps. In this case, the chips need to be placed in the plasma cleaning machine at $80\,\rm{\%}$ power for ten minutes. As a final step, the vacuum system is mounted from the back, the tray gets flipped onto the GelPack$\rm{\symbTM}$ and the vacuum is removed. The chips are now ready for bonding.\\
+\\
+For cleaning sensors, the process is much easier since the sensor is not bumped and the risk of mechanical damage to the sensor is lower. Single sensors can simply be clamped between the tray and the \ac{PTFE} grid. Sensor modules can be clamped between two \ac{PTFE} grids. The cleaning process for sensors is the same as for \ac{ROC}s. Still, there is the option of designing a new tool whose cavities have the dimensions of the sensor.
+
+
+
+\subsection{Cleaning results}
+To check the quality of the cleaning procedure, several inspections were done on cleaned chips. These tests include an optical inspection by optical microscope, a \ac{SEM} inspection and an \ac{EDX} spectroscopy. None of the inspections showed any photo-resist residuals $>1\,\si{\micro \meter}$ on the bumps or the chip surface. Figure~\ref{pic:cleaning_results} shows a part of the \acs{ROC} before and after cleaning, and a \ac{SEM} picture of a single bump after the cleaning procedure.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.48]{pictures/cleaning_results.png}
+\end{center}
+\caption[Readout chip before and after the cleaning procedure.]{\textbf{Readout chip before and after cleaning procedure.} The pictures show how the cleaning procedure cleans the \acs{ROC}s surface from the protective photo-resist. There is an optical view of a part of the \acs{ROC} shown, before cleaning (left) and after cleaning (center). The right picture shows a single bump under a scanning electron microscope. One can see that the cleaning procedure works very well and that there are basically no residuals on the bumps or the chip surface \cite{Jun14}.}\label{pic:cleaning_results}
+\end{figure}
+
+
+
+\section{R\'{e}sum\'{e}}
+The investigations presented in this chapter have shown that the cleaning procedure with acetone, isopropyl alcohol and water works and is able to remove pollutions and photo-resistive layers. The tests by optical microscope, \ac{SEM} and \ac{EDX} showed a very clean bump and chip surface. With the cleaning tray, the \ac{PTFE} grid and the vacuum plate that were designed, it is possible to handle the \acs{ROC}s and the sensors during the cleaning and to provide the necessary throughput for the production of the \ac{CMS} Phase I Upgrade production at \ac{KIT}. The vacuum system still provides the option of cleaning material in ultrasonic baths and the plasma cleaning allows removing oxidation from the chips.

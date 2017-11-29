@@ -1,0 +1,86 @@
+\BOOKMARK [0][-]{chapter*.2}{Table of Contents}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
+\BOOKMARK [0][-]{chapter.2}{Motivation and theoretical background}{}% 5
+\BOOKMARK [1][-]{section.2.1}{The Standard Model of particle physics}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Physics beyond the Standard Model}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Physics/Upgrade plans of the CMS Experiment}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Large Hadron Collider and Compact Muon Solenoid Experiment}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Large Hadron Collider}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.1.1}{Acceleration Complex}{section.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.1.2}{Experiments at the LHC}{section.3.1}% 12
+\BOOKMARK [1][-]{section.3.2}{The Compact Muon Solenoid \(CMS\) Experiment}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.2.1}{The CMS sub-detector systems}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.2}{The CMS trigger system}{section.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.2.3}{The CMS data-processing structures}{section.3.2}% 16
+\BOOKMARK [-1][-]{part.1}{I Search for heavy bosonic resonances decaying via a vector-like quark into the all-hadronic final state}{}% 17
+\BOOKMARK [0][-]{chapter.4}{Object identifcation}{part.1}% 18
+\BOOKMARK [1][-]{section.4.1}{Jet clustering}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Jet-identification}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.2.1}{b-jet tagging}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{Boosted object jet-identification}{section.4.2}% 22
+\BOOKMARK [3][-]{subsubsection.4.2.2.1}{W/Z/H-jet tagging}{subsection.4.2.2}% 23
+\BOOKMARK [3][-]{subsubsection.4.2.2.2}{t-jet tagging}{subsection.4.2.2}% 24
+\BOOKMARK [1][-]{section.4.3}{Lepton-identification}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Heavy bosonic resonances decaying via a vector-like quarks}{part.1}% 26
+\BOOKMARK [1][-]{section.5.1}{Current scientific status}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Theoretical models}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Physics of the Z'tT' system}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.3.1}{Basic event selection}{section.5.3}% 30
+\BOOKMARK [2][-]{subsection.5.3.2}{Reconstruction of the Z'tT' system}{section.5.3}% 31
+\BOOKMARK [1][-]{section.5.4}{Background sources}{chapter.5}% 32
+\BOOKMARK [2][-]{subsection.5.4.1}{Top-quark background}{section.5.4}% 33
+\BOOKMARK [2][-]{subsection.5.4.2}{QCD-multijet background}{section.5.4}% 34
+\BOOKMARK [1][-]{section.5.5}{Datadriven QCD-multijet background estimation}{chapter.5}% 35
+\BOOKMARK [2][-]{subsection.5.5.1}{ABCD-method}{section.5.5}% 36
+\BOOKMARK [3][-]{subsubsection.5.5.1.1}{Binwise ABCD-method}{subsection.5.5.1}% 37
+\BOOKMARK [3][-]{subsubsection.5.5.1.2}{Validation region on data}{subsection.5.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.5.2}{Variable selection}{section.5.5}% 39
+\BOOKMARK [3][-]{subsubsection.5.5.2.1}{Correlation between variables}{subsection.5.5.2}% 40
+\BOOKMARK [3][-]{subsubsection.5.5.2.2}{Shape prediction}{subsection.5.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.5.3}{Validation of background estimation method on MC and data}{section.5.5}% 42
+\BOOKMARK [2][-]{subsection.5.5.4}{Signal contamination}{section.5.5}% 43
+\BOOKMARK [1][-]{section.5.6}{Statistical and systematic uncertainties}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.6.1}{Theoretical and experimental uncertainties}{section.5.6}% 45
+\BOOKMARK [2][-]{subsection.5.6.2}{Uncertainties from ABCD-method}{section.5.6}% 46
+\BOOKMARK [1][-]{section.5.7}{Statistical analysis of data}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.7.1}{Analyis sensitivity using 35.9fb-1 of data}{section.5.7}% 48
+\BOOKMARK [2][-]{subsection.5.7.2}{Combination with semi-leptonic final-state}{section.5.7}% 49
+\BOOKMARK [1][-]{section.5.8}{Results}{chapter.5}% 50
+\BOOKMARK [-1][-]{part.2}{II Bump-bonding technology for the CMS Phase I Upgrade}{}% 51
+\BOOKMARK [0][-]{chapter.6}{Semiconducting pixel detectors for high-energy physics}{part.2}% 52
+\BOOKMARK [1][-]{section.6.1}{Basics on semiconductors}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.2}{Pixelated semiconductors as vertex detectors}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.3}{Bump-bonding interconnection technology for pixel detectors}{chapter.6}% 55
+\BOOKMARK [2][-]{subsection.6.3.1}{Bump deposition}{section.6.3}% 56
+\BOOKMARK [3][-]{subsubsection.6.3.1.1}{Lithographic bump depostion}{subsection.6.3.1}% 57
+\BOOKMARK [3][-]{subsubsection.6.3.1.2}{Non-lithographic bump depostion}{subsection.6.3.1}% 58
+\BOOKMARK [2][-]{subsection.6.3.2}{Flip-chip bonding}{section.6.3}% 59
+\BOOKMARK [1][-]{section.6.4}{Bump-bonding technologies for the R\046D of future particle detectors}{chapter.6}% 60
+\BOOKMARK [0][-]{chapter.7}{Production of the CMS Phase I Barrel Pixeldetector}{part.2}% 61
+\BOOKMARK [1][-]{section.7.1}{Phase I Upgrade of the CMS pixel detector}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.2}{Overview of the KIT production line}{chapter.7}% 63
+\BOOKMARK [2][-]{subsection.7.2.1}{Process flow}{section.7.2}% 64
+\BOOKMARK [3][-]{subsubsection.7.2.1.1}{Material selection}{subsection.7.2.1}% 65
+\BOOKMARK [3][-]{subsubsection.7.2.1.2}{``Bare Module'' production}{subsection.7.2.1}% 66
+\BOOKMARK [3][-]{subsubsection.7.2.1.3}{``Bare Module'' electrical test}{subsection.7.2.1}% 67
+\BOOKMARK [3][-]{subsubsection.7.2.1.4}{Full module gluing}{subsection.7.2.1}% 68
+\BOOKMARK [3][-]{subsubsection.7.2.1.5}{Final electrical test}{subsection.7.2.1}% 69
+\BOOKMARK [2][-]{subsection.7.2.2}{ETP \046 IPE infrastructure}{section.7.2}% 70
+\BOOKMARK [2][-]{subsection.7.2.3}{Production grading scheme}{section.7.2}% 71
+\BOOKMARK [1][-]{section.7.3}{Bump bonding pre-processing}{chapter.7}% 72
+\BOOKMARK [2][-]{subsection.7.3.1}{Bump deposition by external Vendors}{section.7.3}% 73
+\BOOKMARK [2][-]{subsection.7.3.2}{Readoutchip cleaning process}{section.7.3}% 74
+\BOOKMARK [2][-]{subsection.7.3.3}{Optical inspection}{section.7.3}% 75
+\BOOKMARK [2][-]{subsection.7.3.4}{Material selection}{section.7.3}% 76
+\BOOKMARK [1][-]{section.7.4}{Flip-chip bonding}{chapter.7}% 77
+\BOOKMARK [2][-]{subsection.7.4.1}{Quality-assurance tests}{section.7.4}% 78
+\BOOKMARK [2][-]{subsection.7.4.2}{Optimization of the tagging subprocess}{section.7.4}% 79
+\BOOKMARK [2][-]{subsection.7.4.3}{Optimization of the reflow subprocess}{section.7.4}% 80
+\BOOKMARK [2][-]{subsection.7.4.4}{Reworking}{section.7.4}% 81
+\BOOKMARK [3][-]{subsubsection.7.4.4.1}{Void-studies}{subsection.7.4.4}% 82
+\BOOKMARK [1][-]{section.7.5}{Bump bonding post-processing}{chapter.7}% 83
+\BOOKMARK [1][-]{section.7.6}{Results}{chapter.7}% 84
+\BOOKMARK [0][-]{chapter.8}{Summary and conclusion}{part.2}% 85
+\BOOKMARK [0][-]{section*.6}{Bibliography}{part.2}% 86

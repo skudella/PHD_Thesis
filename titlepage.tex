@@ -1,0 +1,115 @@
+%% titlepage.tex
+%%
+% coordinates for the bg shape on the titlepage
+\selectlanguage{english}
+\newcommand{\diameter}{20}
+\newcommand{\xone}{-6}
+\newcommand{\xtwo}{168}
+\newcommand{\yone}{12}
+\newcommand{\ytwo}{-255}
+
+%\KOMAoptions{twoside=semi,DIV=last}
+
+%~ \begin{titlepage}
+%~ \selectlanguage{ngerman}
+%~ % bg shape
+%~ \begin{tikzpicture}[overlay]
+%~ \draw[color=gray]  
+ 		 %~ (\xone mm, \yone mm)
+  %~ -- (\xtwo mm, \yone mm)
+ %~ arc (90:0:\diameter pt) 
+  %~ -- (\xtwo mm + \diameter pt , \ytwo mm) 
+	%~ -- (\xone mm + \diameter pt , \ytwo mm)
+ %~ arc (270:180:\diameter pt)
+	%~ -- (\xone mm, \yone mm);
+%~ \end{tikzpicture}
+	%~ \begin{textblock}{11.9}[0,0](4,2.73)
+         %~ \changefont{phv}{m}{n}
+         %~ \raggedleft{ }
+     %~ \end{textblock}
+	%~ \changefont{phv}{m}{n}	% helvetica	
+	%~ \vspace*{2.925cm}
+	%~ \begin{center}
+		%~ \Huge{\mytitle}
+		%~ \vspace*{1cm}\\
+		%~ \Large{\myname}\\
+		%~ \vspace*{2cm}
+		%~ \vspace*{11cm}
+		%~ \Large{Diplomarbeit\\
+			%~ KIT, \mydepartment
+			%~ \\
+			%~ \myinstitute}
+	%~ \end{center}
+%~ \selectlanguage{english}
+%~ \end{titlepage}
+%\selectlanguage{english}
+\begin{titlepage}
+%\selectlanguage{USenglish}
+% bg shape
+\begin{tikzpicture}[overlay]
+\draw[color=gray]  
+ 		 (\xone mm, \yone mm)
+  -- (\xtwo mm, \yone mm)
+ arc (90:0:\diameter pt) 
+  -- (\xtwo mm + \diameter pt , \ytwo mm) 
+	-- (\xone mm + \diameter pt , \ytwo mm)
+ arc (270:180:\diameter pt)
+	-- (\xone mm, \yone mm);
+\end{tikzpicture}
+	\begin{textblock}{10}[0,0](2,1.2)
+		\includegraphics[width=.3\textwidth]{logos/KITLogo_RGB.pdf}
+	\end{textblock}
+	\begin{textblock}{11.9}[0,0](2,1.5)
+         \changefont{phv}{m}{n}
+         \raggedleft{\Large{IEKP-KA/2012-15}}
+     \end{textblock}
+	\changefont{phv}{m}{n}	% helvetica	
+	\vspace*{3.225cm}
+	\begin{changemargin}{0.5cm}{0cm}
+	\begin{center}
+		\Huge{mytitle}
+		\vspace*{1cm}\\
+		\Large{myname}\\
+		\vspace*{2cm}
+		\Large{
+			Master Thesis of
+		}\\
+		\vspace*{3.5cm}
+		\Large{
+			mydepartment
+			\\
+			myinstitute
+		}
+	\end{center}
+	\vspace*{0.6cm}
+\Large{
+\begin{center}
+\begin{tabular}[ht]{l c l}
+ Reviewer: & \hfill  & \reviewerone\\
+ Second reviewer: & \hfill  & \reviewertwo\\
+  %\iflanguage{english}{Advisor}{Betreuender Mitarbeiter}: & \hfill  & \advisor\\
+\end{tabular}
+\end{center}
+}
+
+
+\vspace{5cm}
+\begin{center}
+\large{myplace, timeend}
+\end{center}
+\end{changemargin}
+
+\begin{textblock}{10}[0,0](2,15.45)
+\tiny{ 
+KIT -- University of the State of Baden-Wuerttemberg and National Laboratory of the Helmholtz Association
+}
+\end{textblock}
+
+\begin{textblock}{11.9}[0,0](12,15.45)
+\large{
+	\raggedleft{\textbf{www.kit.edu}}
+}
+\end{textblock}
+\selectlanguage{english}
+\end{titlepage}
+%\KOMAoptions{twoside=true,DIV=last}

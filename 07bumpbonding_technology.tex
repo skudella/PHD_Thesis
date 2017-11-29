@@ -1,0 +1,134 @@
+\acresetall
+\chapter{Bump bonding interconnection technology}\label{cha:bump_bonding}
+In the last years, there has been a rapid development in micro electronics towards smaller structures and more interconnection lines. This has increasingly demanded high density interconnections techniques to produce \acl{FPGA}s (\acs{FPGA}s), \acl{ASIC}s (\acs{ASIC}s), and micro controllers. Especially pixel detectors in particle physics require a high interconnection density, while keeping the length of the connection as low as possible to avoid any noise and crosstalk stemming from the interconnection. This rules out the standard wire bonding interconnection technology.
+
+To provide the necessary interconnection density and the low interconnection length, the bump bonding interconnection technology is needed. This chapter gives an overview of the bump bonding process.
+
+\section{Basic working principle of bump bonding}
+Developed in the 1960s by IBM, the bump bonding technology replaces the bonding wires with solder balls (bumps) as interconnection material. Figure~\ref{pic:bump_bonding_principle} illustrates the bump bonding process. The bump bonding process can be separated in two separate sub-processes. The first one is the bumping, in which the bumps are deposited onto the contact areas of the chips surface (steps 1$\&$2 in fig.~\ref{pic:bump_bonding_principle}). There are many different processes to deposit the bumps on the chip surface (see sec.~\ref{sec:bumping}). The second step is to flip-chip bond two chips (steps $3-6$ in fig.~\ref{pic:bump_bonding_principle}). To do so, a chip gets flipped and aligned it with a second chip. Next, the bumped chip is placed onto the second chip with the bumps aligned with the contact areas. By applying a defined force on the chip at a defined temperature (thermocompression), the chips are bonded together. In this way, the bumps provide electrical and mechanical connections between the two chips.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.15]{pictures/BB.pdf}
+\end{center}
+\caption[Working principle of bump bonding interconnection technology.]{\textbf{Working principle of the bump bonding interconnection technology.} After the deposition of the bumps on the chip surface, it gets flipped over and connected to the substrate or another chip by thermocompression (after~\cite{UCD14}).}\label{pic:bump_bonding_principle}
+\end{figure}
+
+The bump bonding process not only provides the interconnection density needed for modern high end electronics: It also allows more compact assemblies, because there are no wire bonds to be connected outside the chip, and a mechanical connection, so that no adhesives are required to hold the parts together. In general, the strength of the connection strongly depends on the bump material and the bonding parameters in the process.\\
+\\Unfortunately, bump bonding is a rather complex and expensive interconnection techno-logy. Since most of the bumping techniques are lithographic, small amounts of material are relatively expensive. For this reason, there is always the search for a cost-efficient non-lithographic alternative bump bonding process.
+
+\section{Bump bonding and its application for particle detectors}\label{sec:bump_bonding_pixel_detectors}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.58]{pictures/pixel_cell.pdf}
+\end{center}
+\caption[Hybrid solution of a pixel detector for ionizing particles.]{\textbf{Hybrid solution of a pixel detector for ionizing particles.} This illustration shows a cross-section through a hybrid solution of readout electronics and sensor for a pixel detector. The readout chip and the sensor are connected via bump bonding (after~\cite{Ros06}).}\label{fig:pixel_cell}
+\end{figure}
+Modern particle detectors typically have an area sensitive to ionizing particles (sensor) and front-end readout electronics that collect and process the signals from the sensor before sending them to the detector periphery. These two parts can be implemented in one chip or in a hybrid solution, where readout electronics and sensor are implemented in separate chips. For the \ac{CMS} pixel detector, the hybrid solution has been selected. This allows independent developments on sensor and electronics. Additionally, the different requirements of the sensor and the readout electronics for the semiconducting material are easier to fulfill in a hybrid solution. Also, irradiation studies benefit from the hybrid solution, since the sensor and the readout electronics can be investigated separately. Concluding, a hybrid solution shows big advantages in terms of flexibility, especially during the R$\&$D phase, but requires the interconnection between sensor and electronics.
+
+As long as the interconnection density is low, it is possible to connect sensor and readout electronics using the wire bonding technology. Pixel detectors require finer pitches with very short interconnections and therefore need the bump bonding interconnection technology. But even for the bump bonding technology, the requirements respecting the pitch and the bump diameter are below the standard industrial processes. Therefore, pixel detectors require special fine-pitch and small bump diameter bump bonding techniques.
+
+Figure~\ref{fig:pixel_cell} illustrates how the signal is produced and read out in a hybrid pixel detector. The sensor die consists of a diode, segmented into several thousand pixels. In the sensor, a depletion zone is created by operating the sensor in reverse bias (see sec.~\ref{sec:semi_as_detector}). If an ionizing particle penetrates the depletion zone, it creates free electron-hole pairs all along its track. The strong electric field inside the depletion zone separates the charges, which create a signal. The readout of the signal is done by the electronics in the \ac{PUC} of the \ac{ROC} (amplifier shaper etc., see sec.~\ref{sec:dig_ROC} for the typical electronics in a \ac{ROC}). The electrical connection between the pn-junction in the sensor and the \ac{PUC} is established by a bump soldered to the metal pads of the sensor and the \ac{PUC}s of the \ac{ROC}.
+
+\section{Overview of different bumping processes}\label{sec:bumping}
+There are many different bump bonding techniques that mainly differ in their bump material. Common bump materials are: indium solder, tin-lead solder (SnPb), tin-silver-copper solder (SnAgCu), gold (Au) or copper (Cu). Depending on the bump material used for the process, the bumping process is adjusted. This section gives a brief overview of common bumping techniques. A more detailed overview can be found in~\cite{Hei12},~\cite{Big07}.
+
+In general, the bumping processes can be separated into lithographic and non-lithographic bump deposition processes. 
+
+\subsection{Lithographic bump deposition}
+The idea of a lithographic bump deposition is to deposit all bumps in parallel while shielding the rest of the wafer structure. Depositing bumps lithographically typically requires processing of complete wafers, since all structures that should not be processed need to be masked. This makes the lithographic bump depositions interesting for large-scale productions. But for the R$\&$D of new microelectronic structures, the need to process complete wafers incurs high costs.
+
+All processes with a lithographic bump deposition have in common that the inter-metallic connection between the aluminum contact area of the chip and the bump material is not sufficient to establish an inter-metallic connection. For this reason, additional inter-layers that provide the inter-metallic connection need to be added. These layers are called \ac{UBM}. Depending on the bumping material, the \ac{UBM} needs to be adapted to get a good interconnection.
+
+
+
+\paragraph*{\acl{C4} process}
+Developed by IBM $40$ years ago, the \ac{C4} process has become the standard bump deposition process for bumps with large diameters bumps ($>100\,\si{\micro \meter}$) and applications, allowing large distances between the bumps (pitch $>250\,\si{\micro \meter}$). Here, a molybdenum mask covers all wafer surface, except for the metal pads where the bumps should be placed. Through the holes in the mask, the \ac{UBM} metal layers are grown onto the wafer by evaporation. After the \ac{UBM} deposition, the bump material is evaporated through the mask. After the material deposition, the mask is removed and the wafer is heated above the melting point of the bump material. This provides good inter-metallic connection between bump material and \ac{UBM} and liquefies the bumps, forming spheres, due to the surface tension. This process step is called ``reflow''. Typical bump material is SnPb (5$\%$/95$\%$) with a phase transition temperature of $340\,\rm{^\circ \, C}$~\cite {Ros06},~\cite{Mil69}. The minimum bump diameter and pitch of the process are limited by the molybdenum mask, which, for mechanical reasons, cannot provide smaller structures.
+
+\paragraph*{Evaporation bumping process using photo-lithographic techniques and indium bumps}\label{sec:indium_bumping}
+As an improvement of the \ac{C4} process, the indium process reduces the minimum pitch and the minimum bump diameter. The improvement is achieved by using UV patterned photo-resist masks instead of molybdenum masks, which allow much smaller structures. Just as in the the \ac{C4} process, the deposition of the \ac{UBM} and the indium bump material is done by evaporation through the mask. After the deposition, a reflow is required to form spherical bumps. Since indium is very soft, the mechanical strength of the bumps is very low ($\approx 2\,\rm{mN}/\rm{bump}$). This technique has been used for the current \ac{CMS} pixel detector and is well described at~\cite{Bro06}. 
+
+\paragraph*{Electroplating bump deposition}
+In the electroplating bumping process, the bump material is deposited by an electro-chemical separation inside a solvent. To do so, a voltage has to be applied to the chip to induce the electro-chemical deposition on the \ac{UBM}. This technique requires a conductive chip and a photo-lithographic mask to shield the areas next to the \ac{UBM} from any material deposition~\cite{Huf04}. Section~\ref{sec:KIT_bump_bonding} gives more details of the electroplating bumping process, as it is the technique chosen to build the KIT-part of the \ac{CMS} Phase I pixel detector.
+
+%\\
+%\\A new upcoming technique of electroplating bump deposition are copper pillars. Here the solder is replaced by Cu, which is grown in high pillars. There is no reflow performed, since the melting temperature of Cu is above $1000\,\rm{^{\circ}C}$~\cite{NLM14d}, but the possibility of growing 
+
+\paragraph*{Electro-less plating bump deposition}
+Unlike in the electroplating process, no voltage and no conductive chip is required in this process. The material deposition is done by chemical red-ox reactions inside a solvent, induced by powerful reducing agents. The reactions cause a plating on the metal pad, since the passivation layer on the rest of the wafer is chemically inactive. This technique is mainly used to deposit micro bumps or \ac{UBM} layers, because the growth of large bumps is slow and hard to control~\cite{Big07}.
+
+\subsection{Non-lithographic bump deposition}
+Non-lithographic bump deposition processes have the advantage of processing single chips. This reduces costs during the R$\&$D of new microelectronic devices and allows high flexibility in the bumping pattern. Although the bump deposition itself is non-lithographic, lithographic steps might still be necessary in the complete bump bonding process (\ac{UBM} deposition).
+
+\paragraph*{Solder jetting}
+In the solder jetting process, the bump deposition is done sequently by soldering single solder balls (SnAg, SnPb or SnAgCu) to a substrate. A solder jetting machine feeds single solder balls from a reservoir into a small capillary. After moving the capillary above a bump location, the machine pneumatically places a single ball on the bump location. Then, the soldering is performed by a high power Nd-YAG LASER\footnote{Neodymium-doped Yttrium Aluminum Garnet LASER} pulse heating the ball above the melting point of the solder. An inertial gas streaming out of the capillary prohibits the oxidation of the solder ball. This sequence can be performed with a frequency of up to $7\,\rm{Hz}$. Although the bump deposition is non-lithographic, the soldering process requires an \ac{UBM} that needs to be deposited lithographically to gain a good inter-metallic connection of the solder to the surface.
+
+At \ac{DESY}, such a solder jetting machine performs the bumping of all modules built at \ac{DESY} for the \ac{CMS} Phase I pixel detector~\cite{Ham12},~\cite{Bla02},~\cite{Pac13}.
+
+\paragraph*{Pre-coated Powder Sheet process}\label{sec:PPS}
+This process uses pre-produced solder bumps that are delivered on a adhesive sheet. The solder bumps of the solder powder have sizes of down to $5-10\,\si{\micro \meter}$ and are kept on the \ac{PPS} by an adhesive layer. The bumping is done by pressing a chip with its \ac{UBM} onto the heated \ac{PPS}. When lifting off the chip from the \ac{PPS}, the solder powder balls stick to the \ac{UBM}, since the inter-metallic connection between the solder and the \ac{UBM} is stronger than the \ac{PPS} adhesive. By repeating the process, the amount of solder sticking to the UBM can be increased. A reflow inside of a vacuum oven reshapes the several powder balls on one \ac{UBM} to a single bump. Since the powder balls only stick to the \ac{UBM}, different kinds of bump shapes can be produced, depending on the shape of the \ac{UBM}~\cite{Sen11}. The \ac{PPS} process is illustrated in figure~\ref{fig:PPS}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.8]{pictures/pps.png}
+\end{center}
+\caption[Working principle of the Pre-coated Powder Sheet (PPS) process]{\textbf{Working principle of the \ac{PPS} process.} This graphics show the work-flow of the \ac{PPS} process. All process steps can be performed on wafer level or on single chip level~\cite{Sen11}.}\label{fig:PPS}
+\end{figure}
+
+According to the vendor, the process allows minimum bump diameters of $20\,\si{\micro \meter}$ and pitches of $25\,\si{\micro \meter}$. Except for the \ac{UBM} on the chip, this process only requires a flip-chip bonder and allows the processing of wafers and single chips.
+
+\paragraph*{Gold-stud bumping}
+This process, developed from the ball wire bonding process, sequently places gold bumps on top of a substrate, chip or wafer. The bump deposition is done by ultrasonic bonding of a gold wire to the aluminum surface and cutting of the wire right above the bump. This process has the big advantage that it does not require any chemical or lithographic process at all, and the disadvantage of typically bigger bump diameters ($\approx 60\,\si{\micro \meter}$) and pitches \cite{Tri10}. As the gold-stud bump bonding interconnection technology is the main topic of this thesis, it will be described in chapter~\ref{cha:gold-stud_bumping} in more detail.
+
+
+
+\section[SnPb bump bonding process at \acs{KIT}]{SnPb bump bonding process as used for the \ac{CMS} pixel detector Phase I Upgrade at \acs{KIT}}\label{sec:KIT_bump_bonding}
+To get an idea about a standard bump bonding process for \ac{HEP} applications, this section gives an exemplary overview of the SnPb-based bump bonding technique used for the \ac{CMS} pixel Phase I Upgrade at \ac{KIT}.
+
+
+\subsection{Bump deposition of SnPb bumps}\label{sec:RTI_bumping}
+For the \ac{CMS} Phase I Upgrade of the pixel detector, \ac{KIT} has decided to use eutectic SnPb (63$\%$/37$\%$) solder\footnote{In the thermodynamics of mixed phases, the temperature needed to liquefy a mixed phase depends on its composition. In the eutectic composition, two elements liquefy simultaneously at a temperature lower than the melting temperature of the single materials. For Sn and Pb, the eutectic mixture is reached at $63\%$ Sn and $37\%$ Pb, with a melting temperature of $183\,\rm{^\circ C}$~\cite{Mul14}.} as bump material. While the bumping process is done by an external company, the bonding is done at \ac{IPE}. \acs{RTI} International has been chosen as the vendor to provide the bumping of the \ac{ROC}s. Their process allows SnPb bumping with minimal bump diameters of $25\,\si{\micro \meter}$ and minimal pitches of $50\,\si{\micro \meter}$. The sensor side will not be bumped, but equipped with an \ac{UBM} by the external company PacTech.\\
+\\The bumping of the \ac{ROC}s is done by electroplating bump deposition, which ensures a high wafer uniformity. Figure~\ref{fig:RTI_bumping} shows a cross-section through the bumping process sequence.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1.4]{pictures/snpb/RTI_bumping.png}
+\end{center}
+\caption[SnPb bumping process as used for the CMS Phase I Upgrade]{\textbf{SnPb bumping process as used for the \ac{CMS} Phase I Upgrade.} The figure illustrates a cross-section through the bumping process used by RTI international to deposit SnPb bumps onto the \ac{ROC}s~\cite{Huf04}.}\label{fig:RTI_bumping}
+\end{figure}
+An overview of the \acs{RTI} International process is outlined below:
+\begin{enumerate}
+\item As a first step, the wafer is re-passivated by \acl{BCB} (\acs{BCB}, Cyclotene$\rm{\symbTM}$), a photosensitive polymer, that forms a stress buffer between the bumps and the wafer~\cite{Bur90},~\cite{Dow14}. In the metal pad area, the \acs{BCB} is exposed to light and removed to allow access to the metal pad.
+\item Next, the \ac{UBM} is deposited onto the complete wafer by electro-less plating. The \ac{UBM} provides a solder wet-able seed layer and a low resistance interface between the solder bump and the metal pad. The \ac{UBM} consist of (from metal pad to \ac{UBM} surface) a thin tungsten layer to provide a diffusion barrier between metal pad and \ac{UBM}, a thick nickel layer to provide the seed layer for the bump growth, and a thin gold layer to protect the \ac{UBM} from oxidation and to promote solder wetting.
+\item After the \ac{UBM} deposition, a thick photo-resist layer is placed on top of the wafer. A photo-lithographic process creates openings in the photo-resist above the metal pads of the chip. Since lithographic processes allow very fine structures, a good uniformity can be assured.
+\item The next step is the electroplating of the bump material. Since the amount of bump material deposited on the \ac{UBM} depends on the electroplating current, the hight of the material deposition can be well controlled.
+\item When the electroplating bump deposition is finished, the photo-resist template is chemically removed.
+\item By heating the wafer above the phase transition temperature of the bump material, the solder bumps get liquefied and the surface tension reshapes the SnPb pillars to spherical bumps. Also, the high temperature ensures an inter-metallic connection between the SnPb solder and the \ac{UBM}.
+\item As a last step, the \ac{UBM} not covered by SnPb is etched. If needed, the \acs{BCB} is dry etched from the wire bonding pads in a photo-lithographic process.
+\end{enumerate}
+The process assures a bump yield of $4.5\cdot 10^{-4}\,\rm{failures}/{bump}$ and bumps standing shear forces of approximately $4.5\,\rm{g}$\footnote{In bump bonding, shear forces and pull forces are typically given in kilogram-force ($1\,\rm{kg}\triangleq 9.81\,\rm{N}$, $1\,\rm{g}\triangleq 9.81\,\rm{mN}$).}.\\
+\\To protect the bumps from mechanical stress during the dicing and thinning processes after the bump deposition, and to avoid any oxidation or contamination of the bumps, the chip is covered by a thick photo-resist layer. The removal process of this photo-resist layer for the flip-chip bonding is described in chapter~\ref{cha:cleaning}.
+
+
+\subsection{Flip-chip bonding process}\label{sec:SnPb_flip-chip}
+The flip-chip bonding of the \ac{CMS} Phase I pixel bare modules is performed inside the clean-room of the Electronic Packaging Group of \ac{IPE}. The flip-chip bonding is done by a Finetech FINEPLACER$\rm{\symbR}$ femto flip-chip bonder, which is described in chapter~\ref{cha:flip-chipping}.\\
+\\The flip-chip bonding process consists of several steps:
+\begin{enumerate}
+\item Since the material is delivered with a thick photo-resist protection layer, the first step is to remove the photo-resist in a chemical cleaning process (see ch.~\ref{cha:cleaning}).
+\item The flip-chip bonder picks up a \ac{ROC} and places it down onto the sensor, which is fixed onto the bonding table.
+\item By applying a defined force and temperature, the bumps get deformed and are tagged to the \ac{UBM} of the sensor. The force used to place the \ac{ROC} on the sensor defines the final gap between sensor and \ac{ROC}s. Figure~\ref{fig:bonding_profile_SnPb} shows a temperature and force profile of the bonding process.
+\item The sequence of picking up \ac{ROC}s and placing them onto a sensor is performed $16$ times until all \ac{ROC}s are placed on the sensor.
+\item Finally, the flip-chip bonder performs a global reflow of all \ac{ROC}s in its reflow chamber. The reflow is done under an atmosphere of nitrogen and formic acid. The reflow reshapes the bump into spherical structures and assures a strong connection between the solder bump and the \ac{UBM}. The surface tension of the liquid solder bumps also increases the bonding alignment and planarity. The formic acid helps to form spherical bumps and removes oxidation from the surface of the bumps. Figure~\ref{fig:bonding_profile_SnPb} shows the profile of the reflow process. 
+\end{enumerate}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.35]{pictures/snpb/Bonding_ReflowProfile.png}
+\end{center}
+\caption[Bonding profile for SnPb flip-chip bonding process]{\textbf{Bonding profile for the SnPb flip-chip bonding process.} The picture shows the bonding profile (top) and the reflow profile (bottom) used for the flip-chip bonding process of SnPb-bumped \ac{CMS} pixel chips. In the bonding profile, the bonding force (cyan) and the bonding temperature (blue and green) is shown as a function of time. In the reflow profile, the bonding temperature (light green) and the period of the formic acid atmosphere is shown.}\label{fig:bonding_profile_SnPb}
+\end{figure}
+The \ac{IPE} clean-room provides the option to perform the reflow in a separate reflow-oven. The oven can perform reflows under atmospheres of nitrogen, formic acid or vacuum reflows. If the reflow is be performed in the reflow-oven, three bump bonded modules can be placed simultaneously.
+\\
+\\The bonding process described above allowed producing several assemblies. The pull tests of the assemblies showed a mechanical strength of $>2.4\,\rm{g/bump}$, and an electrical test showed a good electrical connection for all the $4160$ bumps on the \ac{CMS} single chip. The planarity is stable within $<0.1\,\rm{mrad}$ and the misalignment is below $<5\,\si{\micro \meter}$. Figure~\ref{pic:SnPb_cross_source} shows a cross-section and an electrical test with a radioactive source performed on a \ac{CMS} pixel single chip assembly bump bonded at \ac{KIT}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/snpb/SD.pdf}
+\end{center}
+\caption[Cross-section and electrical test of a CMS single chip assembly bump bonded at KIT]{\textbf{Cross-section and electrical test with a radioactive source performed on of a \ac{CMS} single chip assembly bump bonded at \ac{KIT}.} The flip-chip bonding process developed at\ac{KIT} for the \ac{CMS} Phase I Upgrade of the pixel detector, shows a good inter-metallic connection, and a good placement accuracy (see cross-section on the right). An electrical test with a radioactive source shows a working electrical connection for all bumps (left). }\label{pic:SnPb_cross_source}
+\end{figure}

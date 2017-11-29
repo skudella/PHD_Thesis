@@ -1,0 +1,268 @@
+\acresetall
+\chapter{Flip-chip bonding process using gold-stud bumps}\label{cha:flip-chipping}
+To establish an in-house bump bonding process at the \ac{IPE}, the gold-stud bumping process was optimized as shown in chapter~\ref{cha:gold-stud_bumping}. The following chapter gives inside into the flip-chip bonding process of gold-stud bumped material and the optimization of the flip-chip bonding process. The flip-chip bonder available at \ac{IPE} is a FINEPLACER$\rm{\symbR}$ femto manufactured by Finetech. All of the flip-chip bonding assemblies were performed on this flip-chip bonder. 
+
+
+\section{Working principle of the FINEPLACER$\rm{\symbR}$ femto}
+The basic working principle of the flip-chip bonding of gold-stud bumps is the establishment of a bump-to-bump connection via thermocompression. The bumped materials are pressed onto each other at temperatures of up to $400\,\si{\degreeCelsius}$. By applying a high force onto the gold-stud bumps, they become slightly deformed, and it is possible to contact all bumps on the \ac{ROC} with their corresponding bumps on the sensor. The connection between two gold-stud bumps is established by thermal diffusion of the gold, leading to reliable inter-metallic connections.
+
+The femto is able to perform an additional reflow with nitrogen and formic acid after the bonding to reshape solder bumps and ensure a good inter-metallic connection to the \ac{UBM}(compare sec.~\ref{sec:KIT_bump_bonding}). For gold-stud bump bonding, no reflow is possible since gold liquefies only at $1064.76\,\si{\degreeCelsius}$~\cite{NLM14c} and such high temperatures cannot be reached on a flip-chip bonder.
+
+\section{Hardware and technical specifications}
+This section gives an overview of the femto's hardware and its limitations. Figure~\ref{pic:femto} shows pictures of the sub-systems of the femto.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{pictures/femto_hardware.png}
+\end{center}
+\caption[FINEPLACER$\rm{\symbR}$ femto]{\textbf{FINEPLACER$\rm{\symbR}$ femto.} The picture shows the FINEPLACER$\rm{\symbR}$ femto from Finetech (top) and a more detailed view of the bonding table and the bond arm (bottom). This flip-chip bonder is used to investigate the flip-chip bonding process of gold-stud bumped material~\cite{Fin14a}.}\label{pic:femto}
+\end{figure}
+\paragraph*{Basic layout of the femto}
+The central part of the femto is its fully motorized ($x$,$y$,$z$,$\rm{\varphi}$) bonding table. Material can be placed on the sides of the bonding table to be picked up for bonding. The dies can be placed in a GelPack$\rm{\symbTM}$ which is held in place by vacuum. In the center of the bonding table, the bonding area is placed. The table (at the center of the picture) has vacuum holes to fix material or specially designed bonding jigs. This part of the table can be heated from underneath and also be cooled by an air-cooling system specially designed for \ac{KIT} \footnote{Investigations have shown that the amount of voids inside SnPb-bumps is strongly correlated to the cooling speed, and therefore this aspect of the machine needed to be optimized.}. The whole bonding area can be closed to create a reflow chamber that can be used with formic acid or nitrogen. Above the bonding table sits the bond arm. This arm can only perform a rotation movement around the $x$-axis to pick up a chip from its horizontal position on the GelPack$\rm{\symbTM}$ and move it up to a vertical position. The bond arm is equipped with a bond head, which contains an auto-self-planarity tool to ensure good planarity. The vacuum pick-up tool on the bond head can be heated during the bonding process. To monitor the whole process and to align the material which needs to be bonded, the femto comes with a camera and a microscope equipped with a light splitter. In addition to these central parts, the bonder is equipped with a lot of peripheries: an anti-vibrational table, a computer to control the machine process, and gas modules for nitrogen, formic acid or other process gasses.
+
+\paragraph*{Technical specifications}
+With a working area of $450\,\rm{mm}\times 150\,\rm{mm}$ and substrate sizes of $0.1\,\rm{mm}\times 0.1\,\rm{mm}$ to $100\,\rm{mm}\times 100\,\rm{mm}$, the femto allows the bonding of chips and even small wafers. It is worth mentioning that the pick-up tool of the bond arm needs to be specially re-designed with every change in the dimensions of the die.
+
+The optical system of the femto consists of a microscope with a light splitter and two optics facing the bonding area and the home position of the bond arm. The light splitter ensures a good alignment of the two pictures seen by the microscope. The microscope has a field of view of $0.27\,\rm{mm}\times 0.2\,\rm{mm}$ to $3.2\,\rm{mm}\times 2.4\,\rm{mm}$ and is used to perform a pattern recognition on the chips. An additional camera facing the bonding position of the arm allows monitoring the pick-up and the bonding sequence.
+
+The femto is able to heat up the bonding table and the pick-up tool to up to $400\,\si{\degreeCelsius}$ and can apply bonding forces of $0.5\,\rm{N}-500\,\rm{N}$ to the chip. With 4160 bumps per chip, this means that every bump gets pressed with $120\,\rm{mN}$ at maximum bonding force. The femto has a nominal placement accuracy of $\pm 0.5\,\si{\micro \meter}$ and a planarity accuracy of $\theta \leq 3.5\,\si{\micro \radian}$~\cite{Fin14b}.
+
+
+\section{Bonding process sequence}
+The bonding sequence for the flip-chip bonding of gold-stud bumped chips consists of eight steps. Figure~\ref{fig:bonding_process} illustrates the single steps that were used.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.125]{pictures/bonding_process/process3.pdf}
+\end{center}
+\caption[Flip-chip bonding process]{\textbf{Flip-chip bonding process.} This figure illustrates the process sequence of the flip-chip bonding for gold-stud bumped chips. 1. sensor placement, 2. \ac{ROC} pick-up, 3. pattern-recognition and alignment of chips, 4. auto-self-planarity sequence, 5. bonding by thermocompression, 6. moving up arm to remove bonded device. }\label{fig:bonding_process}
+\end{figure}
+
+\begin{enumerate}
+\item \textbf{Sensor placement:} First, the sensor is placed on the bonding table and is fixed by vacuum. This placement is done by hand.
+\item \textbf{\ac{ROC} placement:} The \ac{ROC}s need to be flipped onto the GelPack$\rm{\symbTM}$ with the bumps facing downwards. The GelPack$\rm{\symbTM}$ with the \ac{ROC}s on top is placed next to the bonding table. After aligning the corners of a \ac{ROC} (this requires a precise dicing), the \ac{ROC} is picked-up and fixed to the bond head by vacuum. The alignment of the corners of the \ac{ROC} is necessary, since the \ac{ROC} is only processed on one side and there is no structure or alignment mark at the back of the chip. The pick-up needs to be done in such a way that a unique structure is visible in the field of view of the microscope (e.g.~the first row of bumps). Otherwise, the pattern recognition would not be unambiguous, due to the periodic structure of the bumping matrix.
+\item \textbf{Alignment:} After the bond arm has moved up into its home position, the software performs a pattern recognition on the picked-up \ac{ROC} and the sensor. By moving the bonding table, the sensor gets aligned with the \ac{ROC}.
+%\item \textbf{Stamp-sequence:} To perform the stamping sequence the bond arm moves into its bonding position, so the ROC is right above the sensor. The table moves up and applies a small force e.g. $10\,\rm{N}$ onto the \ac{ROC}. This way it is possible to increase the smoothness of the bumps and to remove the spikes on top of the bumps that are still left from the bumping. The stamp sequence also helps to create a uniform level of bump-height for all the bumps. Because there is not heating, the bumps only get deformed but no connection is established.
+%\item \textbf{Alignment:} After the stamp-sequence, the bond arm moves up again to check the alignment of the chips again. This is necessary to check there was no misalignment created during the stamping sequence. If there is any misalignment the alignment gets re-established by moving the bonding table.
+\item \textbf{Auto-self-planarity:} By moving down the bond arm and moving up the bonding table with a force of approximately~$30\,\rm{N}$ for approximately~$40\,\rm{s}$, the auto-self-planarity procedure is performed. This procedure is used to ensure good planarity of the bonding. The bond head is equipped with a specially designed tool, which is fully flexible in rotations around the $x$- and $y$-axis and adapts to the planarity of the chips, as long as the bonding force is small ($<100\,\rm{N}$). After the auto-self-planarity procedure, the bonder directly continues with the actual bonding sequence.
+\item \textbf{Bonding:} The bonding by thermocompression is performed by moving up the bonding table with defined force and temperature. This state of temperature and pressure is kept during the complete bonding time. For this thesis an easy one-step profile was chosen, to investigate the influence of the bonding parameters on the bump interconnection. Figure~\ref{pic:bonding_profile} shows a sample bonding profile.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{pictures/bonding_profile.png}
+\end{center}
+\caption[Bonding profile for bonding of gold-stud bumped chips]{\textbf{Bonding profile for bonding of gold-stud bumped chips.} This picture shows a sample bonding profile as it is used to flip-chip bond gold-stud bumped \ac{CMS} pixel chips, showing the bonding temperature (green) and the bonding force (cyan) over time. Also, the two steps of the auto-self-planarity and the bonding sequence are clearly visible.}\label{pic:bonding_profile}
+\end{figure}
+The femto comes with the option to perform a reflow of the bump material under an atmosphere of nitrogen or formic acid with a defined reflow profile. This re-flow is done right after the bonding, with the bond head covering the reflow chamber. For gold-stud bump bonding, a reflow is not possible.
+\item \textbf{Returning to home position:} The process is finished by the bond arm moving up into its home position, allowing the operator to take out the flip-chip bonded device.
+\end{enumerate}
+
+
+
+
+
+
+\section{Investigation of the bonding parameters}
+When investigating the flip-chip bonding process, the bonding parameters need to be optimized to fulfill several requirements like electrical connection, mechanical strength and suitability for the application. The optimization will be done in several steps: first the suitability for the application, then the mechanical strength and finally the electrical connection.
+
+The basic parameters influencing the flip-chip bonding process of gold-stud bumped material are bonding force, bonding temperature and bonding time. The influence of the bonding time on the connection strength is less significant than the influence of the other parameters, since it just needs to be long enough to ensure a stable temperature and force on all the bumps. For this reason, the bonding time was not investigated further and was set to $60\,\rm{s}$. Although a very long bonding time ($>1\,\rm{h}$) would slightly improve the interconnection quality, such long bonding times are not feasible and are therefore not used. The bonding force defines the deformation of the bumps. The bonding force has to be large enough to ensure that all gold-stud bumps are in contact with their counterparts. The bonding temperature limits the amount of diffusion between the bumps and therefore defines the quality of the bump-to-bump connection.
+
+The following sections cover a deeper investigation of the bonding force and the bonding temperature and their influence on the connection quality. 
+
+\subsection{Pull test of bump bonded single chip assemblies}
+An easy way of testing the quality of the connection is to perform a pull test on the flip-chip bonded chips~\cite{DOD13}. As already mentioned when discussing the shear testing of gold-stud bumps, the connection strength and the electrical conductivity typically increase with a good inter-metallic connection (see sec.~\ref{sec:shear_test}). The pull test is a destructive test in which the flip-chip bonded chips get separated by applying a force orthogonal to the chip surface and measuring it.
+
+\subsubsection{The Nordson DAGE Bond tester}
+The pull test is performed using a Nordsen Dage 4000 bond tester and a $10\,\rm{kg}$ pull cartridge, which is able to pull upto $10\,\rm{kg}$\footnote{In bump bonding, shear forces and pull forces are typically given in kilogram-force ($1\,\rm{kg}\triangleq 9.81\,\rm{N}$, $1\,\rm{g}\triangleq 9.81\,\rm{mN}$).}. It is the same bond tester that was used to shear the gold-stud bumps and is shown in figure~\ref{pic:shear_tester}.
+
+In order to perform the test, a bump bonded chip needs to be connected to the pull tester and the cartridge. Therefore, the chips need to be mounted in between two tools that can be connected to the tester. Pull test mounts consist of an aluminum plate that gets clamped onto the pull tester and an aluminum die with a thread that gets screwed to the cartridge. The connection between chip and aluminum mount is established by Araldite$\rm{\symbR}$ glue.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.06]{pictures/pull-test/pulltest_mounts.JPG}
+\end{center}
+\caption[Pull test mounts for single chip assemblies]{\textbf{Pull test mounts for single chip assemblies.} The picture shows the pull test mounts that are used to connect the bump bonded chips to the pull tester.}\label{pic:pull-test_mounts}
+\end{figure}
+
+\subsubsection{Performing a pull test of bump bonded chips}
+To ensure a good connection of the glue to the pull test mounts, all aluminum surfaces need to be cleaned by isopropyl alcohol. After the pull test mounts are wetted by Araldite$\rm{\symbR}$, the single chip assembly is placed in between the two aluminum mounts. With the chips glued between the aluminum mounts, the Araldite$\rm{\symbR}$ needs to cure for at least eight hours. During the whole glueing procedure and curing of the glue, there must not be any glue in between the bonded chips. To ensure this, there must not be any movements of the chip after it is placed\footnote{During the curing of glue the aluminum mount needs to be stored completely horizontal to avoid any movement due to the weight of the aluminum die itself.}. Otherwise, the glue would keep together the chips and produce incorrect pull test results.
+
+With the glue cured, the actual pull test can be performed. The aluminum plate gets fixed onto the pull tester, and the die gets screwed to the cartridge. It is important to ensure a good planarity of the aluminum plate on the pull tester, since it is essential for the pull test result to perform a vertical pull. If the pull force is not applied fully orthogonal to the chip surface, the force applied to the individual bumps will differ strongly, resulting in a ``domino-like'' breaking mechanism. In this way, only few bumps are pulled at the same time, leading to a lower pull force. With an upward movement of the aluminum die and an increasing force on the bonded chips, the pull tester performs a vertical pull, while keeping the aluminum plate fixed. During the whole pull test the pull force is measured up to the breaking point. All pull tests were performed with a movement speed of $400\,\frac{\si{\micro \meter}}{\rm{s}}$.
+
+
+\subsubsection{Separation processes}
+As in shear testing, not only the pull force measured by the pull tester is important but also the type of separation process defines the quality of the result. For a pull test, there are basically six different separation processes possible.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.33]{pictures/pull-test/separations.png}
+\end{center}
+\caption[Possible separation processes during a pull test]{\textbf{Separation processes during a pull test.} The pictures show the different separation processes that have been observed after the pull tests performed in this thesis. An aluminum lift-off has not been observed during this thesis, which confirms that the bumping process is optimized already. The different processes are 1) no contact, 2) bump-to-bump separation, 4) bump breaking 5) aluminum breaking, 6a)$\,\&\,$6b) aluminum lift-off.}\label{pic:pull_separations}
+\end{figure}
+\begin{enumerate}
+\item \textbf{No contact:} If the bumps were not connected during the flip-chip bonding, there is no separation process visible and the bumps look like before the flip-chip bonding (see fig.~\ref{pic:pull_separations} pic.~1).
+\item \textbf{Bump-to-bump separation:} A connection between the bumps less strong than the connection of the bumps to the aluminum surface leads to this kind of separation, where the two bumps are separated (see fig.~\ref{pic:pull_separations} pic.~2).
+\item \textbf{Bump-to-aluminum separation:} In this separation process, the connection between bump and aluminum surface is weaker than the connection between the bumps. This separation process indicates that the bumping process needs to be improved. This separation process was not observed during this thesis, confirming a good bumping process. 
+\item \textbf{Bump-breaking:} With a breaking inside of the bump, both connections bump-to-bump and bump-to-aluminum are very strong (see fig.~\ref{pic:pull_separations} pic.~4). The only way of improving the process is by reducing the grain size of the gold-stud bump by reducing the EFO current (see sec.~\ref{sec:grain_size}).
+\item \textbf{Aluminum breaking:} With a strong bumping and a good bonding process, the connection is so strong that the chip gets destroyed during the pull test. If the connection of the aluminum to the rest of the chip is stronger than the aluminum itself, the aluminum breaks (see fig.~\ref{pic:pull_separations} pic.~5).
+\item \textbf{Aluminum lift-off:} As in the aluminum breaking, both bumping and flip-chip bonding processes are very good and the chip gets destroyed during the pull test. If the connection of the aluminum to the rest of the chip is weaker than the aluminum itself, the whole aluminum layer gets lifted off (see fig.~\ref{pic:pull_separations} pic.~6a$\,\&\,$6b).
+\end{enumerate}
+Ideally, one would like to have an aluminum breaking (5.) or aluminum lift-off (6.), since it indicates that the bumping and the bonding processes are optimized.
+
+
+
+\subsection{Investigation of the connections' dependence on the bonding temperature}\label{sec:flip-chip_bonding_temperature}
+The most important parameter for the mechanical strength and the electrical connection between the bumps is the bonding temperature. A high bonding temperature increases diffusion processes of the gold between the bumps, leading to a stronger connection. Unfortunately, most microelectronic material cannot stand high temperatures for a long time. Especially for \ac{HEP} applications, temperatures $>250\,\si{\degreeCelsius}$ need to be avoided, since electromigrations significantly increase, changing the characteristics of sensor and \ac{ROC}. For this reason, one aim of this thesis was to reduce the bonding temperature to $250\,\si{\degreeCelsius}$ without losing the connection.
+\\
+\\As a starting point of the investigations, a bonding temperature of $380\,\si{\degreeCelsius}$ and a bonding force of $400\,\rm{N}$ had been chosen~\cite{Hei12}, using \ac{FPIX} sensors with a gold-stud bump diameter of $75\,\si{\micro \meter}$. The mechanical pull force of $>10\,\rm{kg}$\footnote{The bond tester cannot pull more than $10\,\rm{kg}$.} and a separation process of $50\,\%$ aluminum lift-off and $50\,\%$ bump-to-bump separation indicate a very strong connection. To ensure a good connection also at lower temperatures, the idea is to reduce the bump diameter and in doing so increase the pressure onto a bump during the bonding. This higher pressure might allow using lower bonding temperatures. For this reason, the next bonding has been performed using material with bump diameters of $35\,\si{\micro \meter}$. At the same time, the bonding temperature was reduced to $250\,\si{\degreeCelsius}$, while keeping the bonding force at $400\,\rm{N}$. The pull test of this assembly showed high mechanical strength with a pull force of more than $10\,\rm{kg}$ ($2.4\,\rm{g}$ per bump) and separation processes of bump-to-bump separation (ca.~$75\,\%$) and aluminum lift-off (ca.~$25\,\%$). Figure~\ref{pic:cross_gold_bonding} shows a cross section of another assembly bonded at $250\,\si{\degreeCelsius}$, showing that the metallic connection between the flip-chip bonded gold-stud bumps is very uniform and without any holes. Also visible is an undesired misalignment in the bonding. Most likely, the misalignment is caused by a shift of the chips during the bonding and will be discussed in detail in section~\ref{sec:bonding_misalignment}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.75]{pictures/cross-section/cross_gold_bonding.pdf}
+\end{center}
+\caption[Cross-section of gold-stud bump bonded single chip assembly]{\textbf{Cross-section of gold-stud bump bonded single chip assembly.} The picture shows a cross-section through a row of bumps of a gold-stud bump bonded \ac{CMS} pixel single chip assembly. The bonding was performed at $250\,\si{\degreeCelsius}$ using a bond force of $400\,\rm{N}$. The left side shows how the cross-section is oriented. On the right, there are pictures of a cross-section through gold-stud bumps. It is well visible that the metallic connection between top and bottom bumps is very good and that there is some systematic misalignment of the chips.}\label{pic:cross_gold_bonding}
+\end{figure}
+\\
+\\With a bonding temperature of $250\,\si{\degreeCelsius}$, the gold-stud bump bonding uses a bonding temperature similar to the SnPb process (see sec. \ref{sec:SnPb_flip-chip}) and allows the gold-stud bump bonding to be used for \ac{HEP} detector applications. Because of the good inter-metallic connection and the high mechanical strength, the bonding temperature can be assumed to be sufficiently tuned.
+
+Still, it is possible that the bonding temperature could be reduced even further. This could be especially interesting for irradiation studies of future pixel sensors, which require low thermal exposures during the bonding, since the high temperature would cause a strong reverse annealing that increases the damages in the lattice structure of the silicon bulk \cite{Mol99}. Such a reduction of the bonding temperature needs to be investigated in future assemblies. 
+
+
+\subsection{Investigation of the connections' dependence on the bonding force}\label{sec:flip-chip_bonding_force}
+The second bonding parameter investigated for the flip-chip bonding process is the bonding force. The bonding force needs to be high enough to ensure that all gold-stud bumps are deformed enough, so that all of them get in touch with their counterparts. A bonding force too high deforms the bumps too much, leading to an enlargement of the gold-stud bump diameter, thus reducing the minimum pitch of the process. A large bump deformation also reduces the gap between sensor and \ac{ROC}, increasing the risk of electric discharges between sensor and \ac{ROC} (compare sec:~\ref{sec:BPIX_sensor}).
+
+
+\subsubsection{Misalignments in the gold-stud bump bonding process}\label{sec:bonding_misalignment}
+Figure~\ref{pic:cross_gold_bonding} shows a misalignment in the bump connection that causes the bumps to not be pressed onto each other centrally. The misalignment seems to be systematic and has a value of approximately $15\,\si{\micro \meter}$. Such a misalignments needs to be avoided since it cannot be ensured that all bumps are connected to their counterparts
+
+In general, there are two types of misalignments possible in the flip-chip bonding process: systematic misalignment and statistical misalignment. The statistical misalignment is caused by the statistical bump displacement in the bumping sequence. With its accuracy of $<2\,\si{\micro \meter}$, the IConn can ensure that there are no bumping displacements causing bump-to-bump alignments larger than $4\,\si{\micro \meter}$.
+
+For the systematic misalignment, there are two possible contributions. A systematic bump displacement could cause a systematic non-central bump deposition. This was not observed in the bumping process. Also, the influence of a systematic bump deposition should be low, since the chips are aligned by taking the bumps themselves as reference points. The last and most likely reason is a systematic misalignment caused by the flip-chip bonding process. With its placement accuracy of $\pm 0,5\,\si{\micro \meter}$, the femto should be able to place the bumps well centered onto each other.
+\\
+\\The only reasonable explanation for this misalignment behavior is that the bumps are placed in a correct way and the femto performs a correct alignment, but the chips themselves move during the bonding. A scenario for such a behavior is the following:
+
+At bonding temperatures of $250\,\si{\degreeCelsius}$ the gold-stud bumps are still solid and quite hard. If the bump neck and the bump height are not fully planar and uniform, small irregularities transform part of the bonding force into a horizontal force that is not fully compensated by the vacuum fixing system. This results in a shift of the chip during bonding. It is already known that the gold-stud bumps placed by the IConn ball wire bonder show a small spike on top of the bumps due to the wire re-feeding process (see fig.~\ref{pic:chip_shift}).
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.18]{pictures/cross-section/shift_of_chips.pdf}
+\end{center}
+\caption[Horizontal forces during flip-chip bonding process]{\textbf{Horizontal forces during flip-chip bonding process.} The picture illustrates how the shape of the bump causes horizontal forces during the bonding process.}\label{pic:chip_shift}
+\end{figure}
+Also, the total height of the gold-stud bumps is influenced by several bumping parameters of the IConn ball wire bonder. Figure \ref{pic:chip_shift} illustrates the horizontal force caused by irregularities in the bump height and the bonding force applied.\\
+\\To solve this problem, there are several possibilities: One option would be to increase the strength of the vacuum holding the chip. This requires several hardware adjustments that would have to be done by the manufacturer and were not possible during this thesis. Another option would be to reduce the horizontal force component to values the vacuum can stand by reducing the bonding force. But a drastic reduction of the bonding force also reduces the deformation on the bumps and it cannot be ensured that all of the bumps are still in touch with their counterparts. This option was tested by reducing the bonding force to $200\,\rm{N}$. The pull test showed a mechanical strength of $F_{\rm{pull}}=9.2\,\rm{kg}$ ($\approx 2.2 \,\rm{g}$ per bump) and a separation process dominated by bump-to-bump separation ($95\,\%$), aluminum lift-off ($5\,\%$), and a few bumps not in contact. It is recommended not to use such low bonding forces, since not all bumps were connected. Unfortunately, the optical inspection after the pull test still showed some systematic misalignment at bonding forces of $200\,\rm{N}$. For future assemblies, the bonding force was set to $250\,\rm{N}$.
+
+This means that the horizontal force component can only be reduced by modifying the bump shape. Since the spike on top of the bump, as part of the wire re-feeding process, is inevitable, it has to be removed after the bump deposition.
+
+\subsection{Deformation and flattening of gold-stud bumped single chips}\label{sec:flattening}
+To still reduce the misalignment caused by the flip-chip bonding process, the last option is to flatten all the bumps and produce a smooth and planar bump level. For this reason, an additional step was included into the gold-stud bump bonding sequence. The main idea of this step is to flatten the bumps and to remove the spikes from the wire re-feeding process by pressing the bumped chip onto a very smooth and planar surface like for example the bonding table of the femto. Figure~\ref{fig:flattening} visualizes the process of flattening the bumps.\\
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.20]{pictures/bonding_process/flattening.pdf}
+\end{center}
+\caption[Process of flattening the gold-stud bumps]{\textbf{Process of flattening the gold-stud bumps.} It is illustrated how the gold-stud bumps are flattened into one planar level and how their top is smoothed by pressing the bumps onto the bonding table.}\label{fig:flattening}
+\end{figure}
+\\The flattening process needs to be performed at a bonding temperature as low as possible ($\leq 100\si{\degreeCelsius}$), to ensure there is no connection established between the bumps and the surface used to flatten them. On the other hand, an increase of the bonding temperature has the positive effect of decreasing the force required for the flattening process, since the gold becomes softer. \\
+\\The tuning of the process was performed at a bonding temperature of $40\,\si{\degreeCelsius}$ by increasing the bonding force until all bumps of a chip were flattened. First tests have shown that a bonding temperature of $40\,\si{\degreeCelsius}$ and a bonding force of $400\,\rm{N}$ for $40\,\rm{s}$ provide satisfactory results. Therefore, these parameter were set as the final flattening parameters.
+
+Figure~\ref{fig:flattening_results} shows the bumps before and after the flattening process. It is visible how the process smooths the bump top and provides a uniform and planar bump height for the complete chip. The process also slightly increases the bump diameter by approximately $5-10\%$.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.23]{pictures/flattening/flattening_result.pdf}
+\end{center}
+\caption[Results of the flattening process for gold-stud bumps]{\textbf{Results of the flattening process for gold-stud bumps.} The picture shows how the flattening process smooths the bump top creating a uniform planar bump height (top). The improvement in the alignment and the connection are visible in the cross-section of an assembly performed with flattened bumps (bottom).}\label{fig:flattening_results}
+\end{figure}
+A cross-section through another assembly performed with flattened bumps (see fig.~\ref{fig:flattening_results}) shows a very good bump-to-bump connection. Although there is still a little misalignment, the shift of the chips during the bonding could be significantly reduced by introducing the flattening process. To test the quality of the connection for all 4160 bumps, an electrical test had to be performed (see sec.~\ref{sec:electrical_test}).
+\\
+\\For future assemblies, it is recommended to flatten the gold-stud bumps on a po-lished glass plate. Polished glass plates can provide a very smooth and planar surface, and avoid the risk of accidentally bonding the chip onto the bonding table of the femto.
+
+
+\section{Electrical tests of gold-stud bump bonded chips}\label{sec:electrical_test}
+To test the electrical conductivity of the bump bonding interconnection, the ideal structure would be a daisy chain structure as described in figure~\ref{pic:daisy_chain}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{pictures/Daisy_chain.pdf}
+\end{center}
+\caption[Daisy chain structure to test the electrical connection]{\textbf{Daisy chain structure to test the electrical connection.} The daisy chain structure as shown in this drawing is the typical way to test the electrical connection of the bumps. Bump bonded on each other, the chips create a chain of bumps. This allows to test the connection of all bumps in a row by a single conductivity measurement.}\label{pic:daisy_chain}
+\end{figure}
+Unfortunately, all \ac{CMS} pixel daisy chain material is produced by \ac{VTT}. As already described in section~\ref{sec:grain_size}, it has not been possible to deposit gold-stud bumps on this material. For this reason, the electrical test by a daisy chain had to be skipped and the testing of the electrical connection had to be done directly by an electrical test with a radioactive source on a gold-stud bump bonded \ac{CMS} single chip assembly \footnote{The internal bump bonding tests of the \ac{ROC} are no option for the gold-stud bump bonding process, since they are tuned for solder bump bonding processes.}.
+\\
+\\For the electrical test with a radioactive source, a $^{90}\rm{Sr}$ $\beta$-emitter is placed on top of the sensor. The emitted electrons penetrate the sensor and induce a charge signal that is read out by the \ac{ROC} bump bonded to the sensor (see sec.~\ref{sec:semi_as_detector} and~\ref{sec:bump_bonding_pixel_detectors}). Pixel cells with a missing or damaged bump connection do not respond to the induced electrons and appear as a white pixel in figure~\ref{fig:source_test}.
+
+For these tests, \ac{CMS} single sensors and \ac{ROC}s (psiROCdigV2) were used. All electrical tests were performed on gold-stud bumps formed out of the Heraeus HA3 wire that has proven to be very hard (see sec.~\ref{sec:HA3}). All material was tested before and after the flip-chip bonding process, to ensure electrically working components.
+
+The flip-chip bonding of the gold-stud bumped \ac{CMS} single chips was performed using the final flattening process as described in section~\ref{sec:flattening}. The bonding was performed with a bonding temperature of $250\,\si{\degreeCelsius}$ and a bonding force of $250\,\rm{N}$. The thermocompression was applied for $60\,\rm{s}$.
+\\
+\\Figure~\ref{fig:source_test} shows the results of an electrical test with an radioactive source, performed on a gold-stud bumped \ac{CMS} pixel single chip assembly\footnote{Hit maps of electrical tests with radioactive sources performed on \ac{CMS} single chip assemblies always show more hits in the edge pixels. This can be explained by the larger dimensions of the edge pixels. The edge pixels are twice as large (four times as large in case of the corner pixels) as the center pixels to cover the area between the \ac{ROC}s and to minimize the insensitive area of the sensor.}. The hit map shows a large number of good electrical connections, while two regions are not responding to the electrons emitted by the $^{90}\rm{Sr}$. Since \ac{ROC} and sensor were tested to be working, it is very likely that the bump bonding connection is not established for these pixels.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.7]{pictures/Hitmap_SG6.pdf}
+\end{center}
+\caption[Electrical test performed on gold-stud bump bonded single chip assembly]{\textbf{Electrical test performed on gold-stud bump bonded single chip assembly.} The hit map of the electrical test with a radioactive source performed on a gold-stud bumped single chip assembly shows an area, where no connection between sensor bumps and \ac{ROC} bumps is established. It also shows an area around the edges of the chip that could be caused by a rotation during the bonding.}\label{fig:source_test}
+\end{figure}
+
+The small area of unconnected pixels in the center of the assembly can be explained by asperities in the bonding table of the femto. When flattening the bumps onto the bonding table to establish a uniform bump height, every kind of asperity brings the risk of deforming the bumps too much in a certain area. This leads to an area of no contact where the bumps have a lower bump height. As already mentioned above, a polished glass plate could increase the uniformity of the bump height.
+
+The region around the top edge and the right edge can be explained by a rotational movement of the chips during the flip-chip bonding process. An indication for such a rotation is the circular shape of the edge between connected bumps and unconnected bumps visible in the hit map of the electrical tests with a radioactive source. Such a circular structure can be induced by a rotation around a point in the center of the circular structure. According to $ds=r\cdot d\varphi$, all bumps with a certain distance from the center of rotation miss their corresponding bump and do not establish a bump bonding connection.
+
+Since the possibilities regarding the reduction of any horizontal forces have already been exploited, the only way to avoid any rotation during the flip-chip bonding is to improve the vacuum holding the chips. Such an improvement of the femto's vacuum system was not possible in this thesis, since the femto is currently used for the production of the \ac{CMS} Phase I Upgrade pixel detector.
+\\
+\\
+The gold-stud bump bonding is not expected to show any misalignments for assemblies with much less gold-stud bumps ($\leq 200$), since the lower amount of bumps reduces the bonding force required. With lower bonding force, the horizontal forces are reduced as well, allowing the vacuum of the femto to hold the chips in position.
+
+ 
+\section{Future perspectives of gold-stud bump bonding}\label{sec:gold-stud_outlook}
+The investigations on the gold-stud bump bonding process were very promising and will probably allow the usage of gold-stud bump bonding for the R$\&$D of pixel detectors in the near future. Nevertheless, there might be future applications with special demands to the bump bonding process, concerning the bonding temperature or the flexibility in the bump deposition.
+
+\subsection{Improvement of the gold-stud bump bonding process}
+
+Further tests to improve the gold-stud bump bonding process could be done at lower bonding temperatures. Due to the time limitations, it was not possible to investigate the minimum bonding temperature required to ensure a good bump-to-bump connection. It is possible that a much lower bonding temperature can be used. This would allow additional applications of the gold-stud bump bonding that require low temperatures.
+
+Changes in the hardware of the femto would allow a stronger vacuum and remove the misalignment of the chips. Further tests with different gold-wires (hardness of the wire) would allow a fine-tuning on the bump deformation during the flip-chip bonding.
+ 
+\subsection{Gold-stud to SnPb-bump bonding process}
+For future developments for the \ac{CMS} pixel detector it might be useful to characterize new sensors e.g. from R$\&$D projects with spare \ac{ROC}s from the production of the \ac{CMS} Phase I Upgrade. Since these \ac{ROC}s are already bumped with SnPb bumps while the sensors are without any \ac{UBM}, they cannot be bonded without any additional \ac{UBM} deposition by an external company.
+
+Using gold-stud bumps, it would be possible to create an alternative for the \ac{UBM}. Since the inter-metallic connection between gold and SnPb is sufficient for bonding, the idea is to create a hybrid process of the standard SnPb bump bonding and the gold-stud bump bonding. This allows connecting the SnPb-bumped spare \ac{ROC}s of the Phase I Upgrade production to gold-stud bumps placed on new sensors. This way, the \ac{UBM} deposition step on the sensor side can by avoided, allowing a cheaper and more flexible R$\&$D of pixel sensors.
+\\
+\\Such a hybrid solution was tested with a digital \ac{ROC} and a gold-stud bumped sensor ($37\,\si{\micro \meter}$ gold-stud bump diameter). The bonding of the \ac{ROC} onto the sensor was performed with the standard SnPb flip-chip bonding process, developed for the CMS Phase I Upgrade (see sec.~\ref{sec:SnPb_flip-chip}).
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.4]{pictures/soldertogold/STG1.pdf}
+\end{center}
+\caption[Results of the first gold-stud to SnPb-bump bonding process test]{\textbf{Results of the first gold-stud to SnPb-bump bonding process test.} The left picture shows the pixel hitmap an electrical test with radioactive source performed on the first solder-to-gold \ac{CMS} pixel single chip assembly. The right picture show a cross-section through the solder-to-gold bump connection.}\label{fig:SnPb_to_gold}
+\end{figure}
+
+An electrical test with a radioactive source showed conductive connections for all bumps, except for six bumps that intentionally had not been placed. A cross-section through the assembly shows a good connection between SnPb solder and gold-stud bump (see fig.~\ref{fig:SnPb_to_gold}). A pull test of this assembly has not been performed yet. Although this process can still be further optimized, it can already be used for future sensor developments.
+
+
+\subsection{The \ac{PPS} process as a future in-house bump bonding technology using gold-stud bumps}
+The \ac{PPS} process, as already described in section~\ref{sec:PPS}, is a simple in-house bumping process, since it only requires a \ac{PPS} and a flip-chip bonder. Still, the \ac{PPS} process requires an \ac{UBM} on the metal pads to deposite the bumps. The \ac{UBM} could be replaced by a single gold-stud, since the inter-metallic connection between gold and SnPb allows a strong and electrically conductive connection. Such a process could be interesting if one of the components is without any bumps or \ac{UBM}, while the other components is already equipped with an \ac{UBM}. In this case, the bump bonding sequence would consist of the following steps (see fig.~\ref{fig:PPS_gold-stud}):
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{pictures/bonding_process/PPS-gold-stud.pdf}
+\end{center}
+\caption[The Pre-coated Powder Sheet (PPS) process as a future in-house bump bonding technology using gold-stud bumps]{\textbf{The \ac{PPS} process as a future in-house bump bonding technology using gold-stud bumps.} It is illustrated how the PPS process could be used on single gold-stud bumps as a \ac{UBM}. The gold-studs would be used as an \ac{UBM} to provide the necessary inter-metallic connection. The second \ac{UBM} could either be provided by a second gold-stud bump or by an actual \ac{UBM}.}\label{fig:PPS_gold-stud}
+\end{figure}
+\begin{enumerate}
+\item Place gold-stud bumps on components without \ac{UBM}.
+\item Flatten gold-stud bumps.
+\item Press gold-stud bumps onto \ac{PPS} to deposit solder bumps.
+\item Bond the components using the standard SnPb bonding process.
+\item Perform a vacuum reflow to remove gas trapped inside the SnPb solder.
+\end{enumerate}
+
+
+\subsection{Gold-stud bump bonding using anisotropic conductive gluing foils for irradiation studies}
+When doing irradiation studies on sensor material, one would like to characterize the sensor using the \ac{ROC}. To investigate the radiation hardness of the \ac{ROC} and the sensor separately, one would like to bump bond \ac{ROC}s after the irradiation. Since the bonding is typically done at high temperatures (ca.~$250\,\si{\degreeCelsius}$ for at least one minute), the aim is to find a bump bonding process with minimum thermal exposure in order to minimize the reverse annealing of defects in the silicon material. A possible solution that should be investigated in the future is the use of \ac{ACAB} in combination with gold-stud bumps.
+
+The \ac{ACAB} is typically used to connect flexible printed circuits to printed circuits. This technology uses gluing foils which contain small solder balls (approx.~$5\,\si{\micro \meter}$ diameter). By applying pressure on parts of the foil, the solder balls touch each other and form an electrically conductive connection, while the non-conductive foil prohibits any current between the pads. The mechanical connection of the material is provided by the gluing foil itself (see fig.~\ref{fig:ASAB})~\cite{MIY10}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{pictures/bonding_process/ACAD.png}
+\end{center}
+\caption[Bump bonding using anisotropic conductive adhesive gluing foil]{\textbf{Bump bonding using anisotropic conductive adhesive gluing foil.} The left figure illustrates the general working principle of anisotropic conductive adhesive bonding~\cite{MIY10}. On the right, it is illustrated how the bonding would look like using gold-stud bumps as pressure points.}\label{fig:ASAB}
+\end{figure}
+
+The advantage of this interconnection process is its low thermal exposure of $80\,\si{\degreeCelsius}$ for $10\,\rm{s}$ (equivalent to the thermal exposure of approx. half a day at room temperature~\cite{Mol99}). The pressure points, required to establish a connection, could be provided by gold-stud bumps. Figure~\ref{fig:ASAB} shows the principle of this idea.
+
+\section{R\'{e}sum\'{e}}
+In this chapter, the flip-chip bonding process of gold-stud bumps was described in detail, including the working process of the femto flip-chip bonder. It was possible to reduce the bonding temperature to $250\,\si{\degreeCelsius}$ avoiding any electromigration in the sensor. In the future, one could try to reduce the bonding temperature even further. 
+
+Due to the gold-stud bump shape and a weak vacuum, for holding the chips in position during the bonding, a systematic misalignment of the bump connection was observed. The misalignment could be reduced by introducing a flattening process that equalizes all bumps to the same height and smooths their top.
+
+Finally, several assemblies with working \ac{CMS} components were bump bonded. The tests show a very high mechanical strength (pull force of $9.2\,\rm{kg}$), and a good bump-to-bump connection. An electrical test of a single chip assembly showed good electrical connections for most of the gold-stud bumps, but it also indicated a rotation movement of the chips during the bonding. To avoid the rotation movement, the vacuum jig of the femto needs to be improved. Nevertheless, for smaller numbers of bump connections, the process should already be working since there is not such a strong vacuum required.

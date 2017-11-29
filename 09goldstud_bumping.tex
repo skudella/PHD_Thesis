@@ -1,0 +1,600 @@
+\acresetall
+\chapter{Investigation and optimization of the gold-stud bumping process}\label{cha:gold-stud_bumping}
+The gold-stud bump bonding technology is a bump bonding technology currently under investigation and constantly being improved at \ac{KIT}. This chapter gives detailed insight into the gold-stud bumping technology, its applications and possibilities. Although research has already been done on the usage of gold-stud bump bonding for \ac{HEP} detectors~\cite{Tri10}, this thesis aims at expediting the gold-stud bumping state of the art into the direction of smaller bump diameters and at establishing a stable gold-stud bump bonding process at \ac{KIT}.
+
+
+\section{Gold-stud bump bonding as an alternative bump bonding technology}
+As described in section~\ref{cha:bump_bonding}, all bumping processes using a lithographic bump deposition require an \ac{UBM} to establish a connection between bump and aluminum surface. This \ac{UBM} deposition complicates the bumping process that is typically performed at wafer level. Depositing \ac{UBM} on single chips is very difficult, since the alignment procedure of the mask is optimized for complete wafers.
+
+Gold-stud bumping could be an alternative to the conventional lithographic bump deposition. In the gold-stud bumping process, the bumps are deposited sequently by an thermo-ultrasonic bonding, while the flip-chip bonding is performed by thermocompression. This allows a high flexibility in the bumping pattern without requiring any \ac{UBM}. Using gold as bump material has the benefit of a non-oxidating material that ensures high conductivity. Most importantly, gold-stud bumping can be used on wafer and single chip level, which makes it a flexible and suitable process in the R$\&$D phase of \acl{ASIC}s (\acs{ASIC}s), \acl{FPGA}s (\acs{FPGA}s) and hybrid pixel detectors.
+
+%To perform the gold-stud bump bonding, two machines are needed. The gold-stud bumps need to be placed by a modified ball wire bonder and the bumped chips need to be bonded by a flip-chip bonder. At the electronic packaging group at \ac{IPE}, there is a Kulicke$\,\&\,$Soffa IConn ball wire bonder and a Finetech FINEPLACER$\rm{\symbR}$ femto flip-chip bonder available. With that the \ac{IPE} at \ac{KIT} provides all necessary infra-structure for a complete gold-stud bump bonding process.%/ Figure~\ref{pic:machinery} shows a picture of both machines.
+%\begin{figure}
+%\begin{center}
+%\includegraphics[scale=0.5]{pictures/machinery.png}
+%\end{center}
+%\caption[Machines used for gold-stud bump bonding]{\textbf{Machines used for gold-stud bump bonding.} The pictures show the Kulicke$\,\&\,$Soffa IConn ball wire bonder (left) and the FineTech Femto flip-chip bonder (right). These machines are used for the gold-stud bump bonding process at \ac{IPE}-\ac{KIT}.}\label{pic:machinery}
+%\end{figure}
+%
+
+
+\section{Working principle of gold-stud bumping}\label{sec:IConn_working principle}
+The crucial part of a ball wire bonder's working principle, other than for wedge bonders, is the melting of the end of a gold wire by an electric discharge. This \ac{EFO} creates a spherical \ac{FAB} at the end of the wire. The wire is fed through a capillary which is able to apply force on the \ac{FAB}. After a vertical movement to the heated substrate surface, the capillary applies force and an ultrasonic movement to the \ac{FAB} connecting it to the surface. Typically, the bonder would now pull a wire to another pad. For gold-stud bumping, the capillary moves up a few micrometers and shears off the wire right above the mashed ball, leaving just a gold-stud bump on the surface (see fig.~\ref{pic:gold-stud_principle}). After re-feeding the wire, the process is repeated and the gold-stud bumps are sequently deposited onto a substrate.
+
+The ball wire bonder available at the \ac{IPE} is a Kulicke$\,\&\,$Soffa IConn ball wire bonder that was used for all investigations on gold-stud bumping.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{pictures/gold-stud_principle.pdf}
+\end{center}
+\caption[Basic working principle of gold-stud bumping]{\textbf{Basic working principle of gold-stud bumping.} The figure gives an impression of the gold-stud bumping process performed by a ball wire bonder. After performing an \acl{EFO}, the \acl{FAB} gets bonded to the aluminum surface. Instead of pulling a wire-bond, the wire is sheared right above the bump~\cite{Jor03}.}\label{pic:gold-stud_principle}
+\end{figure}
+
+
+\section{The Kulicke$\,\&\,$Soffa IConn ball wire bonder}
+This section describes the hardware components and the bumping procedure of the Kulicke$\,\&\,$Soffa IConn ball wire bonder in detail (sec.~\ref{sec:IConn_layout}). This includes all components that directly influence the bumping process. Section~\ref{sec:bumping_process} describes the gold-stud bumping process of the Kulicke$\,\&\,$Soffa IConn ball wire bonder in more detail (see fig.~\ref{fig:bumping_process}).
+
+\subsection{Layout and hardware of the IConn ball wire bonder}\label{sec:IConn_layout}
+The Kulicke$\,\&\,$Soffa IConn ball wire bonder is designed to be part of a microelectronic production line and therefore built to work fully automatically. In principle, the machine can be separated into four hardware parts influencing the process. Figure~\ref{pic:IConn} shows the IConn ball wire bonder with its subsystems.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.66]{pictures/IConn.pdf}
+\end{center}
+\caption[IConn ball wire bonder]{\textbf{IConn ball wire bonder.} The pictures show the IConn ball wire bonder at \ac{IPE} (left) and some of its subsystems like the wire feeding system (upper right) the bond head (middle right) and the capillary (lower right).}\label{pic:IConn}
+\end{figure}
+
+\subsubsection{The wire feeding system}
+For the IConn ball wire bonder, a correct re-feeding of the wire is elementary to provide long-term stability. Starting point of the wire feeding system is the spool on which the wire is rolled up and stored. The spool is mounted on a motorized holder that turns to re-feed the wire. Next to the spool is the dispenser in contact with the wire, connecting it to ground potential. The signal to re-feed the wire is given by a light barrier inside the air-guide system. The air-guide also guarantees free running of the wire by compressed air and provides a little wire reservoir for continuous bumping. From the air guide system, the wire goes down to the tensioner and the clamp. The tensioner is able to pull up the wire by compressed air if needed. The clamp is placed right above the capillary and is capable of clamping the wire and holding it in position if necessary. To provide a good wire feeding and free running of the wire, all sub-components of the wire feeding system need to be kept as clean as possible and correctly tuned to the wire used. %For further information about the cleaning of the wire system see Appendix~\ref{sec:wire_feed_cleaning}
+
+\subsubsection{Gold wires}\label{sec:wires}
+There are many different gold wires available for ball wire bonders. They mainly differ in diameter and mechanical characteristics. Typical wire diameters are $12.5\,\si{\micro \meter}$ to $25\,\si{\micro \meter}$. In this thesis, the focus was set on wires with a diameter of $15\,\si{\micro \meter}$. 
+
+The chemical components have a large influence on the wires' mechanical, thermal and electrical characteristics. Basically, there are two ways of changing the chemical components, alloying and doping. For very thin wires, typically alloying is used to implement very small percentages of chemical impurities(typically palladium). This way, it is possible to produce very thin wires (due to the high percentage of gold), and still tune the characteristics of the wire. In general, a larger amount of chemical impurities makes the wire harder and more stiff. It also decreases the thermal and electrical conductivity, but increases the reliability~\cite{Her12a},~\cite{Her12b}. Table~\ref{tab:wires} shows which gold wires have been available at \ac{IPE} during this thesis.
+\begin{table}
+\caption[Gold wires available at IPE]{\textbf{Gold wires available at \ac{IPE}.} The table lists the dimensions and mechanical characteristics of the ball bonding gold wires that have been available at \ac{IPE} during this thesis.}\label{tab:wires}
+\begin{center}
+\begin{tabular}{@{}p{28mm}p{15mm}p{26mm}p{16mm}p{16mm}p{18mm}}
+\toprule
+wire type&diameter\newline$(\si{\micro \meter})$&non-gold\newline elements $(\rm{ppm})$&elongation $(\% )$&breaking load $(\rm{cN})$&E-module ($\rm{GPa}$)\\
+\midrule
+Heraeus Au HA6&25&$<100$&$2-5$&$>6$&$>90$\\
+Heraeus Au HA6&20&$<100$&$2-5$&$>6$&$>90$\\
+Heraeus Au HA6&15&$<100$&$2-6$&$>3$&$>90$\\
+Tanaka GBC&$12.5$&no information&$2.4$&$4.2$&$105$\\
+Heareus Au HA3&23&$<10000$&$0.5-2.5$&$>14$&$>90$\\
+Heareus Au HA3&20&$<10000$&$0.5-2.5$&$>10$&$>90$\\
+Heareus Au HA3&15&$<10000$&$0.5-2.5$&$>6$&$>90$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Most of the investigations were done with the $15\,\si{\micro \meter}$ Heraeus Au HA6 wire, since it allows placing small bumps ($<40\,\si{\micro \meter}$) and still is relatively easy to handle. Later, also the $15\,\si{\micro \meter}$ Heraeus Au HA3 was available to achieve a higher long-term stability of the process.\\
+\\Wires older than 18 months can show a strong increase in weak areas along the wire and can decrease the process stability. The wire needs to be handled with great care since already small tremors can cause weak parts in the wire and completely disturb the order of the wire on the spool. For this reason, all wire spools should always be stored in a vertical position inside the nitrogen cupboard, to reduce the risk of pollution or tremors.
+
+%\subsubsection{The bonding table}\label{sec:bonding_table}
+%The substrate or chip is placed on the bonding table that mounts and heats it. A vacuum hole, connected to the in-house vacuum system, keeps the material in position during bumping\footnote{Experience shows, that thin substrates ($< 150\,\si{\micro \meter}$) have the tendency to be bended by the vacuum. This can lead to false contact detections and bump shearing. See~\ref{sec:bumping_vacuum_jig}}. During the bonding process it is necessary to keep the material at a constant temperature to apply a constant thermal energy to the substrate. For this reason, the the bonding table has a temperature sensor and is able to heat up the substrate up to $300\, ^{\rm{\circ }} \rm{C}$.\\
+%The table has to be fully movable in the vertical direction to adjust the height of the table to the thickness of the material that needs to be bumped. At the same time it has to be stable within $< 5\,\si{\micro \meter}$ in the horizontal direction to ensure the bumping precision of $<5\,\si{\micro \meter}$ needed for gold-stud bump bonding. During the researches concerning the long-term stability it has been shown that vibrations caused by the movement of the bond-head made the table move upto $30\,\si{\micro \meter}$ in horizontal direction. This caused the bond-head to miss the passivation opening and the process to stop. Deeper investigations have shown that the reason for this behavior lies in some inaccuracy of production. This causes the sledge for vertical movement to be pressed against the base mount when it gets fixed in the horizontal direction. For this reason, the sledge had never been fixed in the  horizontal direction, since the vertical movement had been needed more. Fig~\ref{fig:table} illustrates the problem of the production inaccuracy.
+%\begin{figure}
+%\begin{center}
+%\includegraphics[scale=0.5]{pictures/table/table.png}
+%\end{center}
+%\caption[Stability of bonding table]{\textbf{Stability of bonding table.} The schematics show a horizontal cut through the sledge part of the bonding table. Due to an inaccuracy in the production ($y_{\rm{slide}}>y_{\rm{rail}}$), fixing the sledge in x-y-direction caused the sledge to be pressed against the wall of the mount and to block it in vertical direction. }\label{fig:table}
+%\end{figure}
+%The problem could have been solved by, removing $0,5\, \rm{mm}$ of material from the back of the sledge. Now the table is fully movable in vertical direction and stable within $< 1\,\si{\micro \meter}$ in horizontal direction.
+ 
+\subsubsection{The bonding capillary}\label{sec:capillary}
+The capillary is the crucial part of the bumping or ball bonding process. It applies pressure to the \ac{FAB} on the surface and transmits the ultrasonic movement of the \ac{USG} to the \ac{FAB}. The capillary is typically made out of ceramics, has a polished surface, and is roughly $12\,\rm{mm}$ long. There are a lot of different capillaries for different applications available. A capillary is defined by several dimensions. The most important ones are introduced here, while figure~\ref{fig:capillary_layout} illustrates the geometrical meaning of the parameters:
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.8]{pictures/capillary_layout.jpg}
+\end{center}
+\caption[Bonding capillary layout]{\textbf{Bonding capillary layout.} This figure shows the basic design and the parameters of a bonding capillary as it is used for the ball wire bonder \cite{Sma14a}.}\label{fig:capillary_layout}
+\end{figure}
+\begin{itemize}
+\item \textbf{Hole diameter ($H$):} The hole diameter limits the wire diameter ($WD$) that can be used as well as the minimum \ac{FAB} diameter at the end of the wire. The wire diameter needs to be smaller than the hole diameter, while the \ac{FAB} diameter needs to be larger than the hole diameter, to avoid the \ac{FAB} being pulled into the capillary. The hole diameter also defines the amount of gold that needs to be sheared to form a gold-stud bump.
+\item \textbf{Chamfer diameter ($CD$)}: The chamfer diameter influences the bump shape, since it defines the diameter of the lower end of the bump neck. Also, it is recommended to use \ac{FAB} diameters $\geq\,$ $CD$, to avoid a plugging of the capillary. This way, the chamfer diameter limits the \ac{FAB} diameter and consequently the minimum size of the gold-stud bump.
+\item \textbf{Chamfer angle ($CA$):} The chamfer angle defines the opening angle of the capillary. A smaller angle produces smaller and higher bumps, but also brings a higher risk of plugging the capillary~\cite{Gri14}.
+\item \textbf{Tip diameter ($T$):} The tip diameter limits the minimum bonding pitch and is important for ball-to-wedge wire bonding. It also limits the maximum bump diameter $BD$ that can be produced. Since the minimum pitch for \ac{CMS} pixel sensors and \acl{ROC}s (\acs{ROC}s) is $100\,\si{\micro \meter}$ and the aim is to place small bumps, the typical tip diameters are below the pitch for \ac{CMS} pixel chips.
+\item \textbf{Face angle ($FA$):} The face angle defines the angle between the capillary tip surface and the horizontal and is mainly needed for ball-to-wedge wire bonding.
+\end{itemize}
+Only capillaries from Small Precision Tools were used during this thesis. Table~\ref{tab:capillaries} gives an overview of the capillaries available at \ac{IPE}. Since the focus was set onto the $15\,\si{\micro \meter}$ wire during this thesis, most of the studies were done with the ``PI-19045-231F-ZP34T'' capillary. This capillary provides the correct hole diameter for the $15\,\si{\micro \meter}$ wire and is designed to place small and high gold-stud bumps.
+\begin{table}
+\caption[Bonding capillaries available at IPE]{\textbf{Bonding capillaries at \ac{IPE}.} The table lists the capillaries that were available during the master thesis and their dimensions. All diameters are in $\si{\micro \meter}$, all angles in $^{\rm{\circ }}$. The ``PI-19063-233F-ZP34T'' capillary was available at the end of this thesis.}\label{tab:capillaries}
+\begin{center}
+\begin{tabular}{llllllll}
+\toprule
+Capillary name&$WD$&$H$&$CD$&$FA$&$CA$&$T$&Bond pad pitch\\
+\midrule
+PI-35100-515F-ZP34T&25&35&51&11&90&100&80\\
+PI-25055-291F-ZP34T&20&25&29&11&50&55&45\\
+PI-19045-231F-ZP34T&15&19&23&11&50&45&35\\
+PI-15038-181F-ZP34T&12.5&15&18&11&50&38&30\\
+PI-19063-233F-ZP34T&15&19&23&11&70&65&50\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\\
+\\During the process optimization, it can easily happen that the capillary gets plugged by the \ac{FAB}, especially if the \ac{FAB} is too small, or gets polluted from outside. To clean or unplug the capillary, ``Capillary Unplugging Wires'' have been purchased. These thin tungsten wires have a fine tip with a $15\,\si{\micro \meter}$ diameter and can be used to remove gold particles or other pollutants from the capillary. To remove very fine organic pollutants, a cleaning in isopropyl alcohol is necessary. To do so, the capillary has to be unmounted and placed into an ultrasonic bath of isopropyl alcohol.% For more details see appendix~\ref{sec:cleaning_capillary}.
+
+\subsubsection{The optical system and the pattern recognition}
+To set the bump locations and to program the bumping process, the IConn ball wire bonder comes with an optical system in combination with an advanced pattern recognition system. The optical system has two magnifications~\cite{Hei12}:
+\begin{itemize}
+\item low magnification\\
+field of view: $1.78\,\rm{mm}\times 2.97\,\rm{mm}$, resolution: $3.7\,\frac{\si{\micro \meter}}{\rm{pixel}}$
+\item high magnification\\
+field of view: $0.72\,\rm{mm}\times 0.96\,\rm{mm}$, resolution: $1.5\,\frac{\si{\micro \meter}}{\rm{pixel}}$
+\end{itemize}
+While in the high magnification, the focus is adjusted automatically, the focus in the low magnification mode has to be adjusted by hand. To illuminate the substrate, red and blue \acl{LED}s (\acs{LED}s) are arranged in a ring light that can illuminate the substrate with different brightnesses and contrasts. %A detailed layout of the optical system is given in appendix~\ref{sec:layout_optical_system}.\\
+The pattern recognition has two advantages: It is able to automatically align the substrate by recognizing distinctive points of the substrates layout. This allows the bumping of large numbers of substrates to be automated, since the bonder will automatically align the process program to the substrate. The pattern recognition also gives the opportunity to automatically recognize bonding pads of rectangular, octagonal, or circular shapes with dimensions down to $25.4\,\si{\micro \meter}$. The precision of the pattern recognition depends on the resolution of the optical system and the size of the structure. Since the dimensions of the passivation openings for \ac{CMS} pixel chips are very small ($30\,\si{\micro \meter}$ on sensor, $15\,\si{\micro \meter}$ on \acs{ROC}), the automated pad recognition has not been used for this thesis.
+
+
+\subsection{Bumping sequence of the IConn ball wire bonder}\label{sec:bumping_process}
+The bumping sequence consists of up to ten steps that can be merged into four parts. An exact understanding of the bumping sequence is essential, especially for trouble shooting, since the machine-internal step-by-step mode cannot separate all the sequence steps. Figure~\ref{fig:bumping_process} describes all the bumping steps.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.33]{pictures/processpictures/process.pdf}
+\end{center}
+\caption[Bumping process sequence]{\textbf{Bumping process sequence.} The picture shows the different steps of the bumping procedure, using an IConn ball wire bonder. There are ten steps shown. Every step shows the status of the wire clamp on the top and the movement and deformation of the \ac{FAB} on the heated substrate at the bottom.}\label{fig:bumping_process}
+\end{figure}
+
+\subsubsection{\acl{FAB} formation and \acl{EFO}}
+%In the standard starting situation of the bonder, the capillary is at home position and a wire of the correct length sticks out the capillary tip\footnote{This situation can be reached by feeding a wire through the capillary. After bending the end of the wire upwards under the capillary, the clamp can be opened and a wedge of can be performed on some free space of substrate. In doing this the wire gets sticked to the surface and the amount of wire needed for a ball gets fed.}. 
+The first step of the bumping sequence is to create a \ac{FAB} at the end of the wire (step 1 in fig.~\ref{fig:bumping_process}). This is achieved by performing an \ac{EFO} on the wire. The \ac{EFO} is performed by the \ac{EFO} wand which is connected to the \ac{EFO} box. The \ac{EFO} box is a high voltage power supply, applying up to $5\,\rm{kV}$ next to the end of the wire. The clamp connects the wire to ground potential and the high potential difference between \ac{EFO} wand and wire causes an electric discharge. The discharge melts the end of the wire to a \ac{FAB}. The size and the shape of the \ac{FAB} depend on the \ac{EFO} current, the \ac{EFO} time, and the wire diameter. The IConn ball wire bonder is able to calculate the correct \ac{EFO} time needed for a given \ac{EFO} current, wire diameter, and \ac{FAB} diameter. As mentioned above, the \ac{FAB} diameter should not be smaller than the $CD$-value of the capillary, to avoid wire-loss or plugging of the capillary. A correct \ac{EFO} can only be performed if there is a wire tail of correct length, since the electric discharge needs to melt only the tip of the wire. Also, the distance between wire and \ac{EFO} wand has to be correct, requiring the \ac{EFO} wand to be correctly aligned%\footnote{For instructions about how to align the \ac{EFO}-wand correctly see Appendix~\ref{sec:EFO-wand-alignment}.}
+.
+
+After the \ac{FAB} is formed, the clamp opens and the tensioner pulls the \ac{FAB} up to the capillary tip, making sure the \ac{FAB} is in the correct position for the bonding step (step 2 in fig.~\ref{fig:bumping_process}).
+
+\subsubsection{Touchdown onto substrate surface}
+After the \ac{FAB} is formed and at its position at the capillary tip, the capillary moves down onto the substrate surface (step 3 in fig.~\ref{fig:bumping_process}). There are two parameters describing the movement to the substrate surface: the height of the \ac{TIP} and the \ac{CV}. The \ac{TIP} height is the point above the last known $z$-position of the substrate at which the bonder reduces the movement speed to search for the touchdown onto the surface. \ac{CV} defines the movement speed during the search for contact. Although the bonder can handle height differences of up to $2\,\rm{mm}$, the angle at which the capillary touches the surface depends on the substrate level. Therefore, the substrate surface should always be set to level zero. The \ac{TIP} height should always be larger than the largest height difference on the substrate. Otherwise there will always be the risk of crashing the capillary into the substrate, destroying the substrate, the capillary, and the bonder.
+
+For contact detection, the IConn ball wire bonder provides three kind of modes: Z-mode, V-mode, F-mode. While in Z-mode, the IConn measures the $z$-position of the capillary to detect a touchdown, the V-mode detects the surface by measuring the speed of the movement and how it changes during the touchdown. The F-mode measures the force applied onto the capillary. Since the F-mode is the most sensitive of these modes, causing the least deformation to the \ac{FAB} during the touchdown, the F-Mode was used for all gold-stud bump depositions.
+
+
+\subsubsection{The process of bonding the ball to the surface}
+The central part of the bumping process is the bonding sequence. While the bond head presses the capillary and the \ac{FAB} onto the substrate surface with a defined force, the \ac{USG} creates an ultrasonic horizontal movement of the capillary with a frequency of approximately~$120\,\rm{kHz}$. The power of the ultrasonic generator is controlled via the current driving the \ac{USG} (\ac{USG} current). The friction between \ac{FAB} and surface in combination with the bonding force\footnote{For ball wire bonders, bonding forces and shear forces are typically given in kilogram-force ($1\,\rm{kg}\triangleq 9.81\,\rm{N}$, $1\,\rm{g}\triangleq 9.81\,\rm{mN}$).}, the ultrasonic movement and the bonding temperature of the substrate locally heat up the contact area. This locally high temperature enables the inter-metallic connection between the surface (typically aluminum) and the \ac{FAB}. There is the option of adding a scrubbing movement to the bonding. This causes the capillary to do an additional movement with a frequency of typically several hundred Hertz and an amplitude of a few micro-meter. This movement can be used to rid the surface from contamination and roughen the surface to gain a higher friction during bonding.
+
+In cooperation with Kulicke$\,\&\,$Soffa, a special bonding process was designed to allow bonding on aluminum surfaces which are difficult to bond. This process consists of three sub-sequences. First, the bonder presses down the \ac{FAB} with some force but without any ultrasonic movement, to pre-deform the gold-stud (step 4a in fig.~\ref{fig:bumping_process}). This flattens the contact area of the \ac{FAB} and reduces the risk of damaging the substrate during the following bonding (there might be electric circuits underneath the passivation opening). In the second step the bonder performs some scrubbing. The bonder moves the capillary over the bonding area and applies a small bonding force and little ultrasonic power (step 4b in fig.~\ref{fig:bumping_process}). Doing so prepares the surface for the actual bonding, where the connection will be established. It is important to limit the scrubbing, to avoid a pre-bonding that could damage the surface. Also, too much scrubbing could ``contaminate'' the \ac{FAB} with aluminum (or even worse: with passivation, if the gold-stud bumps should be done on very small passivation openings), making bonding very difficult. The final bonding sub-sequence establishes the actual connection by applying defined bonding force, ultrasonic power, and heating to the \ac{FAB} (step 4c in fig.~\ref{fig:bumping_process}).
+
+The bonding parameters of the first and second bonding steps were defined relative to the bonding parameters of the last bonding step. The first step applies $100\%$ of the bonding force to the \ac{FAB} for $5\,\rm{ms}$. In the scrubbing sequence, the bonding force and the \ac{USG} current applied are $33\%$ of the bonding force and \ac{USG} current used for the actual bonding. The bonding time of the scrubbing sequence is at $50\%$ of the bonding time used for the third bonding sequence.
+ 
+
+
+\subsubsection{Wire shear-off and wire re-feed}
+After establishing a connection to the substrate surface, the gold has to be shaped into a gold-stud bump and some new wire has to be re-fed for the next \ac{FAB}.
+
+To do so, the IConn uses its AccuBump$\rm{\symbTM}$ function, which is a wire shear process provided by Kulicke$\,\&\,$Soffa. In this part of the process, the wire gets sheared by the capillary right above the gold-stud bump neck (step 5 in fig.~\ref{fig:bumping_process}). This is done by moving the capillary up a few $\si{\micro \meter}$ and moving it to the side several $\si{\micro \meter}$. The wire does not get sheared completely but a small connection to the gold-stud bump gets left to allow the wire re-feed. The wire shear process is controlled by the AccuBump$\rm{\symbTM}$ parameters described in section~\ref{sec:accu_parameters}. This way it is possible to achieve a very flat and smooth gold-stud bump top.
+
+After the wire shear process, the capillary moves up to re-feed the wire for the next \ac{FAB} (step 6 in fig.~\ref{fig:bumping_process}). During this movement, the clamp is still open so the capillary moves up while the wire stays connected to the gold-stud bump.
+
+When the necessary amount of wire is re-fed, the clamp closes and capillary and clamp move up, ripping the wire (step 6 in fig.~\ref{fig:bumping_process}). Due to the wire shear sequence, the predetermined breaking point is at the level of the gold-stud bump neck. With the gold-stud bump placed and a piece of wire with correct length at the capillary, the bumping sequence can start all over again.
+
+\section[Process parameters, strength of connection and bump shape]{Process parameters and their influence on strength of connection and gold-stud bump shape}\label{sec:mech_strength}
+On the IConn ball wire bonder, one bond can have up to $200$ bonding parameters. For gold-stud bump bonding, the amount of parameters is reduced to a few parameters influencing the gold-stud bump shape and strength of connection. These parameters were varied separately and their influence on the gold-stud bumps is described in this section.
+
+\subsection{Parameters influencing the strength of connection}\label{sec:par_strength}
+The strength of connection of the gold-stud bumping is dominated by the quality of the inter-metallic connection between gold and substrate material. The quality of the inter-metallic connection increases with the total energy applied to this area. Depending on the material, the amount of energy, necessary for a good quality of the inter-metallic connection, differs. Bonding on silver substrates e.g.~requires significantly more energy than bonding on aluminum substrates. The energy gets applied via the bonding temperature of the substrate and the friction between \ac{FAB} and substrate during the ultrasonic movement.
+
+\paragraph*{Bonding temperature}
+The bonding temperature, defining the temperature of the bonding table and the substrate placed on the bonding table, is the easiest way to increase the quality of the process\footnote{This can help to bond material that seems to be difficult to bond e.g. Ag-scinter-paste.}. Although the bonding temperature can easily be increased, heating alone is not sufficient to provide the energy necessary for the bonding. Figure~\ref{pic:bonding-temperature} shows an example of how an increase in the bonding temperature decreases the \ac{USG} power required to achieve the same mechanical strength of the connection.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1]{pictures/temperature.jpg}
+\end{center}
+\caption[Influence of the bonding temperature onto the strength of connection]{\textbf{Influence of the bonding temperature onto the strength of connection.} This figure shows an example of how the \ac{USG} power needed for a good mechanical strength reduces with the bonding temperature (picture source:~\cite{Fal94}).}\label{pic:bonding-temperature}
+\end{figure}
+Also, the bonding temperature cannot be increased without limit since high temperatures can damage semiconducting electronic material. For this reason, the bonding temperature was set to the standard value of $150\,\si{\degreeCelsius}$.
+
+To ensure that the temperature of the chip equals the set temperature, a good thermal connection of substrate and bonding table is required. %Also, the bonding temperature should be recalibrated frequently by externally measuring the temperature on the bonding table and adjusting the temperature offset of the heating module, so $T_{\rm{set}}=T_{\rm{measured}}$ is established.
+
+\paragraph*{Bonding force, bonding time and \ac{USG} current}
+Bonding force, bonding time, and \ac{USG} current form a ``magic triangle'' of applying bonding energy. The power of the friction is increased with higher bonding force since the friction force is calculated by 
+\begin{equation}
+F_{\rm{friction}}=\mu_{\rm{friction}}\cdot F_{\rm{N}}\label{equ:friction}
+\end{equation}
+with $\mu_{\rm{friction}}$ as the coefficient of friction and $F_{\rm{N}}$ as the normal force. Typically, the normal force is given by the bonding force (except for the bonding on small openings, see sec.~\ref{sec:small openings}). The \ac{USG} current increases the power of the friction since the speed and amplitude of the horizontal ultrasonic movement increase with the \ac{USG} current\footnote{The ultrasonic movement behaves like a harmonic oscillation with external force coming from the \ac{USG} current. In the harmonic oscillator, amplitude and speed increase with the amount of the external force.}. The amount of energy $W_{\rm{bonding}}$ deposited in this way is increased with higher bonding times according to $W=P\cdot t_{\rm{bonding}}$\footnote{Another way of describing the friction would be that the bonding time limits the number of oscillations, since the oscillation frequency is fixed. A higher \ac{USG} current increases the amount of total movement distance of the \ac{FAB} during the bonding time. The energy is calculated according to $W=F_{\rm{friction}}\cdot s_{\rm{friction}}$.}. Though the exact correlation between the applied energy and these parameters is unknown, it can be approximated to be linear:
+\begin{eqnarray}\label{equ:bonding_energy}
+P_{\rm{bonding}}  &\propto & \mu_{\rm{friction}}\cdot F_{\rm{bonding}}\cdot I_{\rm{USG}}\\
+W_{\rm{bonding}}  &\propto & \mu_{\rm{friction}}\cdot F_{\rm{bonding}}\cdot I_{\rm{USG}}\cdot t_{\rm{bonding}}
+\end{eqnarray}
+These bonding parameters need to be tuned in such a way that the strength of connection is stable and sufficiently large to provide a robust assembly. The energy applied gets spread all over the contact area of the \ac{FAB}. This means that the necessary energy applied increases with the size of the \ac{FAB}.
+
+\paragraph*{Grain-size of \acl{FAB} and substrate}\label{sec:grain_size}
+As equation~\ref{equ:friction} describes, the amount of friction is correlated to the coefficient of friction. This coefficient depends on the roughness of the substrate surface and the \ac{FAB} surface. The roughness typically depends on the grain size of the material. The maximum coefficient of friction is achieved when the \ac{FAB} and the substrate show an equal grain size~\cite{Cas14}.
+
+The grain-size of the substrate cannot be influenced since it depends on the metal deposition process of the manufacturer. The gold-stud bumping was tested on several different materials, which showed significant differences in their bond-ability. For example bonding on very flat metal surfaces with very small grain sizes is very difficult and they require much more \ac{USG} current to establish a connection. For this reason, the \ac{VTT} material that was acquired to do electrical tests was not bond-able in this thesis (grain-size of approx.~$100\,\rm{nm}$)\footnote{The material has been sent to Kulicke$\,\&\,$Soffa to confirm the bond-ability. Kulicke$\,\&\,$Soffa was not able to place any gold-stud bumps on the \ac{VTT} surface. Therefore, the material is assumed to be not bond-able.}, while the \ac{HPK} material that was used for basic investigations on the process parameters (grain-size of approx.~$5\,\si{\micro \meter}$) is easier to bond than the CIS or IBM material that is the material used for the \ac{CMS} pixel detector (grain-size of approx.~$1\,\si{\micro \meter}$). Figure~\ref{pic:surface_grainsizes} shows a \ac{SEM} picture of the different material surfaces from which the grain sizes have been estimated.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.43]{pictures/substrates/substrates.png}
+\end{center}
+\caption[Grain-sizes of the different aluminum surfaces on substrates]{\textbf{Grain-sizes of the different aluminum surfaces on substrates.} The pictures show the surfaces and the grain sizes of the different materials (left HPK, middle CIS, right \acs{VTT}). Please note the different scales \cite{Jun14}.}\label{pic:surface_grainsizes}
+\end{figure}
+\\
+\\The grain size of the \ac{FAB} depends on the \ac{EFO} parameters. As the \ac{EFO} time gets calculated by the IConn ball wire bonder from the \ac{EFO} current and the \ac{FAB} diameter, the \ac{EFO} current is the only parameter to be varied. A high \ac{EFO} current results in a fast heat-up and a high temperature of the \ac{FAB}. Since there is no active cooling, the high temperature brings a slow cool-down, which results in a large grain size. With a small \ac{EFO} current, it is the exact opposite: slow heat-up, low temperature, fast cool-down and a small grain size. Figure~\ref{pic:FAB_grainsize} shows the different \ac{FAB} grain sizes, depending on the \ac{EFO} current.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.7]{pictures/FAB/grainsizes.png}
+\end{center}
+\caption[Grain-size of Free Air Ball for different EFO currents]{\textbf{Grain-size of \acl{FAB} for different \ac{EFO} currents.} The pictures shows how the grain-size of the \ac{FAB} depends on the \ac{EFO} current. The left picture shows a $60\,\si{\micro \meter}$ \ac{FAB} formed with a $10\,\rm{mA}$ \ac{USG} current and on the right there is a $60\,\si{\micro \meter}$ \ac{FAB} formed with a $50\,\rm{mA}$ \ac{USG} current \cite{Jun14}.}\label{pic:FAB_grainsize}
+\end{figure}
+
+A large \ac{FAB} grain size also has the disadvantage of less robust gold-stud bumps which easily break during the wire shear process.
+
+\subsection{Parameters influencing the shape of a gold-stud bump}
+The shape of gold-stud bump is defined by the bump diameter, the total height, the bump shoulder height, the neck height, and the smoothness of its top. Figure \ref{fig:bump-shape} illustrates the dimensions defining the bump shape.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.75]{pictures/processpictures/bump-shape.pdf}
+\end{center}
+\caption[Shape of a gold-stud bump]{\textbf{Shape of a gold-stud bump.} The figure illustrates the typical shape of a gold-stud bump and visualizes the dimensions, defining the shape of a gold-stud bump \cite{Jun14}.}\label{fig:bump-shape}
+\end{figure}
+The shaping can be separated into two kinds of parameters. The shaping of the low part of the gold-stud bump is defined by the \ac{FAB} and the parameters deforming the gold-stud bump, while the upper part of the bump is shaped by the AccuBump$\rm{\symbTM}$ parameters.
+
+\subsubsection{\ac{FAB} diameter and minimum gold-stud bump diameter}
+In general, it is obvious that a large \ac{FAB} creates a large gold-stud bump, due to the larger amount of gold. The general aim should be to use \ac{FAB} diameters as small as possible. It has to be kept in mind that \ac{FAB} diameter cannot be reduced at will, since the capillary will be plugged by a \ac{FAB} too small. The linear correlation between minimum gold-stud bump diameter and \ac{FAB} diameter has been investigated before~\cite{Hei12}.
+
+In addition to the amount of gold in a \ac{FAB}, the gold-stud bump diameter is also increased by deformations of the gold-stud bump. These deformations of the gold-stud bump strongly depend on the parameters of the process. If the process is optimized, the gold-stud bump diameter ($BD$) can be calculated by the following equation~\cite{Sma14c}:
+\begin{equation}\label{equ:minimum_bump_diameter}
+BD=\sqrt{\left(\left( FAB \oslash \right)^3-\frac{1.5\cdot H^2\left( H-WD\right)+\left( CD^3-H^3\right)}{4\cdot \tan \left( 0.5\cdot CA\right)}\right)\cdot \frac{1}{1.5\cdot BSH}}
+\end{equation}
+Here, $H$ is the hole diameter, $WD$ is the wire diameter, $CD$ is the chamfer diameter and $CA$ is the chamfer angle (see sec.~\ref{sec:capillary}). $BSH$ describes the bump shoulder height, which is a dimension depending on the bonding parameters. Assuming the bump shoulder height is approximatively proportional to the \ac{FAB} diameter\footnote{This assumption makes sense since scaling down the hole process leads to a linear scaling of all lengths and heights.}, it becomes
+\begin{equation}\label{equ:bump_should_height}
+BSH=\frac{FAB\oslash}{35\,\si{\micro \meter}}\cdot 9.5\,\si{\micro \meter} \text{ }\cite{Sma14c}.
+\end{equation} 
+Equation \ref{equ:minimum_bump_diameter} allows checking whether the process parameters are already optimized with respect to the gold-stud bump diameter.
+
+
+\subsubsection{Gold-stud bump deformation parameters}
+The deformation of the \ac{FAB} occurs during the touchdown of the capillary onto the surface where the bonder searches for contact and during the bonding of the \ac{FAB} to the surface.
+
+\paragraph*{\acl{CV} and \acl{FST}}
+The movement to the substrate surface is performed with the \acl{CV}. If the \acl{CV} is high, this leads to a large deformation, since the bonder has to slow down the entire arm once he detects the contact. In this application, the aim is to reduce the deformation during the touchdown to a minimum. For this reason, the \acl{CV} should be $\leq 6\,\frac{\si{\micro \meter}}{\rm{ms}}$. The correlation between the \acl{CV} and the gold-stud bump diameter has been investigated in previous works~\cite{Hei12} and will not be investigated any further in this thesis. Very small \acl{CV}s have the tendency to cause false detections. To keep the deformation of the \ac{FAB} during the touchdown at a minimum and to avoid any false detections, a \acl{CV} of $3\,\frac{\si{\micro \meter}}{\rm{ms}}$ was chosen for all bumping investigations.
+
+The bonder has to be very sensitive for contact, too, to avoid any deformation due to not detecting the surface level fast enough. This is controlled by the contact detection mode and its parameters. The contact mode chosen is the F-Mode, because it is the most sensitive mode, causing the least deformation. When using the F-Mode, the \ac{FST} needs to be adjusted to the \acl{CV} used. The \ac{FST} defines the force at which the machines detects a contact. If the \ac{FST} is chosen too high, the bonder will behave like in V-Mode, causing more deformation to the \ac{FAB}~\cite{Kul08a}. \ac{FST} too small might cause false detections. The proper \ac{FST} for small \acl{CV} values $< 9\,\frac{\si{\micro \meter}}{\rm{ms}}$ is $7\,\rm{g}$~\cite{Kul08a}, which is also the minimum value for the threshold the machine can handle.
+
+\paragraph*{Bonding force, bonding time and \ac{USG} current}
+When the \ac{FAB} is bonded to the surface, the movement of the capillary not only applies energy to the surface, but it also deforms the \ac{FAB}. This deformation is directly correlated to the energy applied to the gold-stud bump. According to equation~\ref{equ:bonding_energy}, the deformation increases with higher bonding force, \ac{USG} current, or bonding time. With a higher deformation, the gold-stud bump diameter increases, too.
+
+The \ac{USG} current can also cause another kind of deformation: If bumping with extraordinarily high \ac{USG} current, the amplitude of the ultrasonic movement gets so large that the gold-stud bump gets deformed by the ultrasonic movement itself and not by the friction to the surface. This results in an oval shape of the gold-stud bump~\cite{Rol14}.
+
+
+\subsubsection{AccuBump$\rm{\symbTM}$ parameters}\label{sec:accu_parameters}
+The upper part of the gold-stud bump gets shaped by the AccuBump$\rm{\symbTM}$ parameters, defining the wire shear sequence. These are geometrical parameters defining the capillary movement during the wire shear sequence as it is described in the bumping process in section~\ref{sec:bumping_process}. In this section, this wire shear process will be described in more detail. Figure~\ref{fig:accu_bump} visualizes the geometrical meaning of the AccuBump$\rm{\symbTM}$ parameters.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.75]{pictures/processpictures/accu.pdf}
+\end{center}
+\caption[Wire shear process]{\textbf{Wire shear process.} On the left side the graph shows the geometric equivalent of the AccuBump$\rm{\symbTM}$ parameters. On the right side, there is a \ac{SEM}-picture of gold-stud bumps placed using the wire shear process \cite{Kul05}.}\label{fig:accu_bump}
+\end{figure}
+\paragraph*{Bump height and separation height}
+For the wire shear process, the capillary needs to do an upwards movement to get on the correct level for a wire shear. The bump height determines the distance the capillary moves up before it starts the wire shear process. It is measured from the shoulder to the neck of the gold-stud bump. During the wire shear process, the capillary has the option to change its $z$-position. The separation height determines the level of the capillary at which the moment the shear of the wire stops. It is measured from the shoulder of the gold-stud bump to the last height of the capillary tip before it moves up to re-feed wire. Typically, it is desired to get a flat gold-stud bump neck, which means that bump height and separation height need to have the same value.
+
+To achieve a consistent gold-stud bump shape and good long-term stability, bump- and separation height need to be chosen in such a way that the capillary shears through a vertical part of the gold-stud bump (see fig.~\ref{fig:accu_bump}). This vertical part automatically is formed by the shape of the capillary into which part of the \ac{FAB} is pushed during the bonding. This way, the diameter of the material that needs to be sheared is very consistent, even if the shear-height does not show a high precision. Shearing at a bump- and separation height too low causes the wire to get connected to the gold-stud bump shoulder during the wire shear process. This causes wire pieces to remain connected to the bump shoulder and results in a bad gold-stud bump shape and no long-term stability. A shearing height too high causes the capillary to shear through the wire instead of the bump neck. Since the wire diameter is smaller than the hole diameter of the capillary, this brings the risk of completely shearing of the wire without leaving a connection for the wire re-feeding.
+
+
+\paragraph*{Smooth distance and smooth speed}
+In the wire shear process, the smooth distance defines the distance the capillary shears through the wire after raising to bump height. The smooth distance has to be large enough to create a weak part in the wire and to create a flat gold-stud bump surface. A smooth distance too large, on the other hand, completely shears the wire without leaving a connection to the gold-stud bump. In this case, the wire cannot be re-fed for the next \ac{FAB} and the process stops.
+
+The smooth speed defines the speed at which the capillary shears through the gold and can be used to tune the long-term stability of the bumping process. It is given as a percentage of the maximum movement speed and can be reduced down to $10\,\%$ of the maximum smooth speed. Reducing the smooth speed can help to reduce the risk of a breaking in the gold during the wire shear process and by that increase the long-term stability of the process.
+
+\section[Optimization of size and mechanical strength of the gold-stud bumps]{Optimization of the gold-stud bumping process according to size and mechanical strength of the gold-stud bump}\label{sec:mechanical_optimization}
+To achieve a stable process, the bonding parameters need to be chosen in such a way that the strength of connection is as strong as possible and that small variations in the bonding parameters or the surface structure do not decrease the strength of connection too much. A strong mechanical connection is important because it provides both high mechanical strength and good electrical conductivity.
+
+\subsection{Shear testing of the bumps}\label{sec:shear_test}
+To measure the mechanical strength, a shear test is performed on the gold-stud bumps. This is done by shearing a single gold-stud bump with an increasing horizontal force. In this procedure, the shear force gets increased until the gold-stud bump gets sheared and the force applied at the breaking point is measured. The shear force necessary to separate the gold-stud bump from the substrate typically increases with the connection area \footnote{In this context the connection area is given in square mils ($\rm{mil^2}$), since this is a typical unit used for ball wire bonding processes. $1\,\rm{mil}$ corresponds to $25.4\,\si{\micro \meter}$, leading to $1\,\rm{mil^2}=645.16\,\si{\micro \meter}^2$.}. For this reason, the shear force value always has to be scaled with the connection area $A_{\rm{connection}}$. When the bumping process is performed on large openings in the passivation layer protecting the chip material, the connection area is equal to gold-stud bump area. To establish a reliable process, both a high shear force ($\overline{F}_{\rm{shear}}$) and a low spreading in the shear force value are important. To consider this, a coefficient for the mechanical strength and stability was defined as follows:
+\begin{equation}
+\gamma = \frac{\overline{F}_{\rm{shear}}}{A_{\rm{connection}} \cdot \sigma_{  F_{\rm{shear}}}}
+\end{equation}
+Here $\sigma_{  F_{\rm{shear}}}$ defines the interval, within which $95\,\%$ of the measured values lie. Since every bump needs to be sheared individually, the shear testing is a very time-consuming process. For this reason, only approximately~$20$ bumps where sheared for every parameter setting. To calculate the value of $\sigma_{F_{\rm{shear}}}$ correctly, the lack of statistics needs to be considered by multiplying with the appropriate quantile of the Students' t-distribution for a confidence level of $95\,\%$\footnote{The quantiles of the Students' t-distribution allows the transfer from a t-distribution with low statistics to a normal distribution.}~\cite{Sha06}.
+
+\subsubsection{Nordson Dage4000 bond tester}
+To perform a shear test, a bond tester machine is used. The bond tester machine available at \ac{IPE} is the Nordson Dage 4000, which is able to perform shear tests as well as pull tests. Figure~\ref{pic:shear_tester} shows a picture of the bond tester.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{pictures/shear-test/sheartester.png}
+\end{center}
+\caption[The Nordson DAGE 4000 bond tester]{\textbf{The Nordson DAGE4000 bond tester.} The picture shows the Nordson DAGE 4000 multi purpose bond tester at \ac{IPE} that is used to shear test the gold-stud bumps and test their mechanical strength.}\label{pic:shear_tester}
+\end{figure}
+
+\paragraph*{Shear process and shear parameters}
+Before shearing the gold-stud bumps, the substrate has to be fixed to the bond tester. The substrate is kept in position by vacuum. Here, it is important to mount the substrate as planar and horizontally as possible. A tilted substrate could cause the shear tool to crush into the surface.
+
+When shearing a gold-stud bump, the bond tester moves down the shear tool onto the substrate to search for the height of the substrate level. This movement is done with a touchdown speed of $100\,\si{\micro \meter}/\rm{s}$. After the touchdown onto the surface, the shear tool moves up to shear height. The shear height defines the height above the substrate level in which the bond tester will perform the shear movement. A shear height too high will cause the tool to miss the gold-stud bump or just streak it. A shear height too low could cause shear forces too high because the tool scratches over the substrate surface. After reaching the shear height of $4.8\,\si{\micro \meter}$, the tool moves forward to shear the gold-stud bump. This movement is performed with a shear speed of $200\,\si{\micro \meter}/\rm{s}$. After reaching the maximum value, the shear tool moves for another $30\,\si{\micro \meter}$ to completely shear the gold-stud bump.
+
+\subsubsection{Separation processes}\label{sec:shear_separation}
+To establish a strong mechanical connection, not only the shear force is important but also the process of separation during the shear test. There are several different types of separation processes that can occur during the shear test~\cite{Sma14b}. Figure~\ref{pic:shear_separations} shows all the separation processes of a shear test.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.8]{pictures/shear-test/all_shear.png}
+\end{center}
+\caption[Possible separation processes of shear test]{\textbf{Possible separation processes of shear test.} The picture shows the different separation processes as they occur in the shear testing of gold-stud bumps: 1. ball lift-off, 2. aluminum shear, 3. bond shear, 4. bump shear, 5. aluminum lift-off, 6. cratering, 7. wire shear \cite{Sma14b}.}\label{pic:shear_separations}
+\end{figure}
+\begin{enumerate}
+\item \textbf{Ball lift-off:} The connection between gold-stud bump and surface gets loosened and the bump gets lifted off the surface without leaving any damage to the surface.
+\item \textbf{Aluminum shear:} The connection between gold-stud bump and aluminum surface is stronger than the aluminum surface itself. The weakest part is in the aluminum surface, leading to a break inside the aluminum.
+\item \textbf{Bond shear:} The connection between gold-stud bump and aluminum is not established completely. Parts of the connection show a ball lift-off while other parts show a bump shear.
+\item \textbf{Bump shear:} The connection between gold-stud bump and aluminum is stronger than the bump itself. The tools shears through the bump.
+\item \textbf{Aluminum lift-off:} The connection between the aluminum surface and the silicon underneath is the weakest part of the bump connection. The aluminum gets lifted off.
+\item \textbf{Cratering:} The silicon under the aluminum breaks. This happens if the bonding force or the \ac{USG} power is too large.
+\item \textbf{Wire shear:} The tool shears through the wire or the neck of the gold-stud bump. The shear height needs to be reduced.
+\end{enumerate}
+The separation processes indicating a good inter-metallic connection and a good bumping process are the aluminum shear (2.), bump shear (4.), and the aluminium lift-off (5.).
+
+\subsection{Systematic search for parameter area providing mechanically strong bumps}\label{sec:mechanical_strength_optimization}
+To find a parameter region with a strong and stable connection to the substrate, the bonding parameters influencing the strength of connection (compare section~\ref{sec:par_strength}) were scanned systematically, doing shear tests for every parameter combination. Since the energy applied to the surface is proportional to the bonding time, in the first step the bonding time was set to $8\,\rm{ms}$ for the systematic investigation of the bonding force and \ac{USG} current. The substrate material used for these tests were \ac{HPK} diodes and CIS test structures with an aluminum surface. All these tests were performed with an \ac{FAB} diameter of $23\,\si{\micro \meter}$. The \ac{USG} current ranged from $25\,\rm{mA}$ to $70\,\rm{mA}$. Below $25\,\rm{mA}$, no bonding was possible, above $70\,\rm{mA}$, the gold-stud bumps were completely squashed. The bonding force ranged from $7\,\rm{g}$ to $30\,\rm{g}$. While there was no bonding possible below $7\,\rm{g}$, the gold-stud bump were completely squashed at bonding forces higher than $30\,\rm{g}$. For all parameter combinations, approximately~$20$ gold-stud bumps were placed and sheared. The value of the corresponding $\gamma$ is plotted in figure~\ref{plot:syst}. Between the parameter combinations, the behavior of $\gamma$ is approximated to be linear.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.24]{pictures/syst.pdf}
+\end{center}
+\caption[Systematic scan for bumping parameters providing mechanically strong and stable gold-stud bumps]{\textbf{Systematic scan for bumping parameters providing mechanically strong and stable gold-stud bumps.} The plot shows the mechanical strength $\gamma = \frac{\overline{F}_{\rm{shear}}}{A_{\rm{connection}} \cdot \sigma \left( F_{\rm{shear}}\right) }$ in $\frac{1}{\rm{mil}^2}$ over the bonding force and the \ac{USG} current. A bonding force of $9\,\rm{g}$ and a \ac{USG} current of $30\,\rm{mA}$ were chosen as final parameters for bumping on openings with a diameter $\ge 30\,\si{\micro \meter}$.}\label{plot:syst}
+\end{figure}
+
+The low $\gamma$-values for high bonding forces and high \ac{USG} current can be explained with the high deformation of the gold-stud bump, resulting in gold-stud bumps with a large diameter and a low height. These flat gold-stud bumps increase the risk of a wire shear, resulting in high $\sigma(F_{\rm{shear}})$.
+
+As final parameters for bumping on openings with a diameter $\ge 30\,\si{\micro \meter}$, a bonding force of $9\,\rm{g}$ and a \ac{USG} current of $30\,\rm{mA}$ were chosen, since the area around these parameters seems to be very stable and is not to close to the parameter limits.
+
+In a second step, also the bonding time was changed and the influence on the mechanical strength was tested. This investigation confirmed that the energy applied increases with the bonding time. Since the bonding time works simply as a multiplicator on the bonding force and the \ac{USG} current, and since the aim is to keep the total bumping time short, the bonding time was set to $8\,\rm{ms}$.
+\\
+\\Comparing the gold-stud bump diameter of $30\,\si{\micro \meter}$ with equation~\ref{equ:minimum_bump_diameter}, shows that the process is already optimized regarding the gold-stud bump diameter.
+
+According to Kulicke$\,\&\,$Soffa, the shear force expected for a strong bumping connection is $5.5\,\frac{\rm{g}}{\rm{mil}^2}$~\cite{Val13}, which shows that the optimization of the mechanical strength resulting in a shear force of $7.9\,\frac{\rm{g}}{\rm{mil}^2}$ is very successful.
+
+\subsection{Bumping on small passivation openings}\label{sec:small openings}
+When it is necessary to place gold-stud bump on small openings in the passivation layer that covers the chip (diameter of passivation opening $<$ gold-stud bump diameter), additional adjustments are necessary. During this thesis it was necessary to deposit gold-stud bumps on \ac{CMS} pixel ROC psi46digV2 chips that have passivation openings of $15\,\si{\micro \meter}$.
+
+When bumping on small openings, the geometric design does not allow the application of any vertical force onto the metal pad (compare fig.~\ref{fig:opening}).
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{pictures/cross-section/opening.pdf}
+\end{center}
+\caption[Influence of the opening diameter onto the gold-stud bump diameter]{\textbf{Influence of the opening diameter on the gold-stud bump diameter.} In the upper part, the bumping on a $30\,\si{\micro \meter}$ opening is shown, while the lower pictures show bumping on an $18\,\si{\micro \meter}$ openings. The left pictures are cross-sections through the bumps, showing bump diameter and connection area. The right pictures visualize the problem of applying force onto a small opening, requiring a higher \ac{USG} current and resulting in a larger bump diameter.}\label{fig:opening}
+\end{figure}
+Since the force onto the aluminum surface is very limited, the energy necessary for a good connection has to be applied by the ultrasonic movement. For this reason, it is necessary to increase the \ac{USG} current. With higher \ac{USG} current, the deformation of the bump also increases because, although the passivation does not contribute to any inter-metallic connection, the ultrasonic movement over the passivation still deforms the bump, leading to larger bump diameters. During the tests on these passivation openings, it was necessary to increase the \ac{USG} current to $50\,\rm{mA}$ for $18\,\si{\micro \meter}$ passivation openings and to $70\,\rm{mA}$ for $15\,\si{\micro \meter}$ passivation openings while it was sufficient to use $30\,\rm{mA}$ on $30\,\si{\micro \meter}$ passivation openings.
+\\
+\\
+Since the bump diameter had increased to approximately~$35\,\si{\micro \meter}$ on small passivation openings, it was decided to use parameters known from previous investigations~\cite{Hei12}. These parameters are set in a similar range and show similar results but have already been optimized for $18\,\si{\micro \meter}$ openings. For the $15\,\si{\micro \meter}$ opening, the parameters of these previous investigations were just modified to a higher \ac{USG} current of $70\,\rm{}mA$.
+\\
+\\
+With the smaller passivation opening, the area of the inter-metallic connection between bump and substrate also decreases, leading to a lower mechanical strength. Consequently, the shear force decreases to a value of $5.5\,\rm{g}$, which is still good for such a small interconnection area ($\frac{\overline{F}_{\rm{shear}}}{A_{\rm{connection}}}=20\,\frac{\rm{g}}{\rm{mil}^2}$). Shear tests of these bumps showed that aluminum lift-offs become relevant ($10\,\rm{\%}$) as a separation process although the major separation process is still the ball shear ($90\,\rm{\%}$).
+
+One can summarize that bumping on openings smaller than the bump diameter leads to larger bumps with less mechanical strength.
+
+\section{Optimization of the gold-stud bumping process for its long-term stability}\label{sec:long-term_stability}
+To use gold-stud bump bonding for the \ac{CMS} pixel detector, the bumping process needs to be stable enough to bump at least one \ac{CMS} pixel single chip without any interruption. Otherwise the complete gold-stud bump bonding process would become very time-consuming, since every interruption of the process requires a manual re-feeding of the wire. This section contains information and investigations on the processes and parameters influencing the long-term stability of the gold-stud bumping process.
+
+The optimization of the long-term stability is very time- and material-consuming, since most errors reducing the long-term stability are of statistical nature. For this reason, the long-term stability was not optimized by scanning a parameter range, but by an iterative adjustment of the parameters.
+
+
+\subsection{Parameters influencing the long-term stability}
+The long-term stability of the process is limited by the inter-metallic connection between bump and substrate and the wire re-feeding process. The strength of connection was already optimized in section~\ref{sec:mechanical_optimization}, so the focus in this section will be on the wire re-feeding process.
+
+\paragraph*{AccuBump$\rm{\symbTM}$ parameters}
+To achieve a good wire re-feeding process, it is necessary to produce a predetermined breaking point at the level of the neck of the bump. As already described in section~\ref{sec:bumping_process}, the weakening of the wire at the level of the bump neck is performed by the wire shear process. This ensures that the cross-section area between bump and wire is smaller than the cross-section area of the wire. The cross-section area between bump and wire can be described as the cross-section of two circles (see fig.~\ref{fig:accu_cross}). While one circle represents the cross-section area of the gold-stud bump neck, the other circle represents the cross-section area of the capillary. The sidewards movement of the capillary needs to be tuned, so that the interconnection cross-section area between bump and wire is reduced to values that allow a consistent wire re-feeding and good bump shape.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/accu_cross.pdf}
+\end{center}
+\caption[Cross-section area during the wire shear process]{\textbf{Cross-section area during the wire shear process.} This figure illustrates how the cross-section area of the wire connected to the bump can be described as the cross-section of two circles.}\label{fig:accu_cross}
+\end{figure}
+To calculate the interconnection cross-section area between wire and bump, one can use equation~\ref{equ:accu_cross}~\cite{Wol14}:
+\begin{equation}\label{equ:accu_cross}
+\begin{split}
+A_{\rm{neck}}=\frac{H^2}{4}\arccos{\frac{H^2-CD^2+4SD^2}{4\cdot H\cdot SD}}+\frac{CD^2}{4}\arccos{\frac{CD^2-H^2+4SD^2}{4\cdot CD\cdot SD}}\\-\frac{1}{2}\sqrt{(H+CD+SD)(-H+CD+SD)(H-CD+SD)(H+CD-SD)}\\
+\end{split}
+\end{equation}
+The parameters of this equation are defined by the geometry of the capillary used ($A_{\rm{neck}}=\rm{cross}$-section area at bump neck, $HD=\rm{hole}$ diameter, $CD=\rm{chamfer}$ diameter, $SD=\rm{smooth}$ distance, see sec.~\ref{sec:capillary}). This equation cannot be solved analytically for the smooth distance, but a numeric estimation can be given. For the ``PI-19045-231F-ZP34T'' capillary and the $15\,\si{\micro \meter}$ wire, the smooth distance needs to be at least $9\,\si{\micro \meter}$, to ensure a predetermined breaking point at the level of the bump neck. Typically, the smooth distance necessary for a stable process is larger than $9\,\si{\micro \meter}$. The maximum value possible for smooth distance lies between the $CD$-value and the $H$-value of the capillary. Although a large smooth distance causes very smooth bump shapes, it also brings the risk of frequently losing the wire.
+
+Kulicke$\,\&\,$Soffa gives an equation to calculate a starting value for the process optimization~\cite{Kul05} of the smooth distance ($SD$) from the tip diameter ($T$) and the chamfer diameter ($CD$).
+\begin{equation}\label{equ:SD_KnS}
+SD=\frac{T-CD}{2}
+\end{equation}
+This equation gives an $SD$-value of $11\,\si{\micro \meter}$ for the ``PI-19045-231F-ZP34T'' capillary. First test show that this value is too low for a stable process and causes un-smooth bump shapes. The best $SD$-value probably lies somewhere between the value given by Kulicke$\,\&\,$Soffa and the maximum \acs{SD}-value.
+
+\paragraph*{Wire clamp}
+The opening of the clamp is the only parameter of the clamp that can be defined by the user. Nevertheless, it is very important for the long-term stability of the bumping process. The clamp has to close correctly and hold the wire fixed at the required position in order to ensure a correct wire rip-off. Since the clamp force is given by a spring pressing the two clamp brackets together, the opening is directly correlated to the force with which the clamp holds the wire in position ($F_{\rm{spring}}=D_{\rm{spring}}\cdot s_{\rm{spring}}$). Also, the clamp opening limits the wire diameter that can be used and influences the timing of the clamp closing \cite{Val13}. For this reason, the clamp opening needs to be adjusted to the wire diameter every time the wire gets changed. According to Kulicke$\,\&\,$Soffa~\cite{Rol14}, for an opened clamp the distance between the clamp brackets has to be three to five times the wire diameter.
+
+If the clamp is polluted, the friction between wire and brackets can be reduced. Pollutants can also keep the clamp from closing correctly, due to particles keeping the brackets from touching the wire. Small dust particles can also damage the wire itself, which can lead to a breaking of the wire inside the capillary. For this reason, the clamp should be cleaned once every 40 working hours by dry compressed air and isopropyl alcohol. 
+
+\paragraph*{Wire feeding system, wire and capillary}
+It is important to ensure a smooth wire feed and to avoid any statics and adhesions of the wire to the wire feeding system. This can be achieved by keeping all parts of the wire feeding system that are in contact with the wire as clean as possible. The air guide pressure and tensioner pressure are responsible for a smooth wire feeding without any statics. They also have to be adjusted in such a way that there are no vibrations in the wire, caused by the movement of the bond head. The tensioner pressure needs to be tuned to guarantee a good wire pull-back before the touchdown of the capillary to the surface (see sec.~\ref{wire-bow_error}). All wire feeding parameters need to be adjusted in accordance with the wire diameter. Some tuning led to an air guide pressure of $30\,\rm{mbar}$ and a tensioner pressure of $15\,\rm{mbar}$ for the $15\,\si{\micro \meter}$ wire.
+
+With every month of age all wires lose stability and their characteristics may change. A wire older than six months bears the risk of frequent wire breaks during the bumping process. But also the capillary shows ageing effects. The tip of the capillary becomes polluted and worn over time. While the pollution can be removed by isopropyl alcohol, the abrasion causes unsolvable problems in the wire shear process. 
+
+\subsection{Optimization of the long-term stability}
+All optimizations on the long-term stability of the bumping process were done using a substrate with a $30\,\si{\micro \meter}$ passivation opening.
+
+Since the inter-metallic connection characteristics between bump and substrate had already been optimized and the bumps show a good correct shape and size (see sec.~\ref{sec:mechanical_strength_optimization}), the long-term stability is mainly defined by the stability of the wire shear and wire re-feeding process.
+\\
+\\In cooperation with Kulicke$\,\&\,$Soffa, the smooth speed was set to $50\%$ to increase the stability of the smoothing process. The bump- and separation height were set to $8\,\si{\micro \meter}$, since this ensures a wire shear through a the bump neck. The optimization of the smooth distance was done by starting with the maximum value ($SD=H$) and reducing the smooth distance with every short tail by $1\,\si{\micro \meter}$. This way, it is possible to create a bump as smooth as possible and wire feeding as stable as necessary. This optimization lead to a smooth distance of $SD=17\,\si{\micro \meter}$.
+
+
+
+\section{The wire-ripping and sparking error}\label{sec:wrse}
+The ``wire-ripping and sparking error'' occurred after the bumping process had already been established and occurred approximately every $150$ bumps. The basic sequence of this error is that when the bonder is ripping the wire, the wire does not break at the level of the bump neck but inside the capillary. As a consequence, there is still a wire connected to the bump that is pointing upwards into the capillary. When the bonder tries to form a new \ac{FAB} by firing the \ac{EFO}, it applies up to $5\,\rm{kV}$ to the wire connected to the bump. Since the table is on ground potential, there are $5\,\rm{kV}$ applied to the electrical structures of the chip, destroying the chip. Figure~\ref{fig:wire_ripping} illustrates the sequence of this error.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.38]{pictures/wire-ripping/error.pdf}
+\end{center}
+\caption[Wire-ripping and sparking error]{\textbf{Wire-ripping and sparking error.} The figures on the left illustrate how the the error occurs. The right pictures show the result of this error, a wire connected to the bumps and a sparking of the electric chip.}\label{fig:wire_ripping}
+\end{figure}
+This error not only reduces the long-term stability of the process, it also questions the suitability of the gold-stud bump bonding process as well, since it is unacceptable to lose any material due to this error.
+\subsection{Investigations into the wire-ripping and sparking error}
+Deeper investigations of the process in the step-by-step mode showed that the wire is still connected during the wire re-feeding and breaks when the clamp closes and the bond arm moves up to rip the wire. This is the process step which is supposed to break the wire. However, the wire break does not happen on the level of the bump neck but inside the capillary. There are two possible reasons for this kind of behavior: The connection to the bump is much stronger than expected, or the wire inside the capillary is somehow weakened.
+
+Checking the cross-section area of the wire connected to the bump neck showed that the wire shearing works the way it should and that the interconnection cross-section area at the level of the bump neck is much smaller than the cross-section area of the wire. This makes it more likely that the wire is weakened.
+
+Tests showed that in most cases the wire breaks at the level of the back-hole of the capillary, but there are also cases in which the wire breaks between capillary and clamp or somewhere inside of the capillary. The most likely reason for this is that the wire gets weakened by the ultrasonic movement of the capillary, which leads to transverse vibrations of the wire inside the capillary and a little bit above the back hole of the capillary. This ultrasonic movement is done on every bump and the wire should be strong enough to withstand it. This suggests the assumption that, for some reason, the wire has some parts more fragile than others. One hypothesis on the origin of these fragile parts is that sharp edges at the back-hole of the capillary or at the clamp damage the wire, but according to the capillary manufacturer, all capillaries have polished back-hole edges and the clamp has been inspected and cleaned without any effect.\\
+\\The ``wire-ripping and sparking error'' has finally been solved by ordering a new wire (Heraeus HA3). Due to that fact, two possible explanation remain:
+\begin{enumerate}
+\item The error is caused by a too soft wire (compare sec.~\ref{sec:HA3}) and is solved by the harder HA3 wire. According to the manufacturer, the HA3 should be the perfect wire for gold-stud bump bonding~\cite{Koe14}. This would not answer why the former HA6 wire worked well for several months.
+\item The error is caused by some strong ageing effect, which has been solved by ordering a new wire.% To avoid the ``wire-ripping and sparking error'' in the future, it is recommended to use two wires spools. While one is only used to tune the process parameters and therefore stored on the bonder machine, the other one is stored inside the nitrogen cabinet and is only used to bump material with the final process. This way the sensitive wire can be protected against pollution and damages during the long time of process optimization.
+\end{enumerate}
+It has not been possible to determine the exact origin of the ``wire-ripping and sparking error'' during the time of this thesis.
+
+\subsection{Insulating the chip from ground potential}
+Independent of the origin of the ``wire-ripping and sparking error'', the risk to lose any electric material to an ageing effect or any variances in the hardness of the wire must not be taken. For this reason it is necessary to protect the electrical material from the high voltage applied by the \ac{EFO}. To do so, the electrical material has to be insulated from the ground potential of the bonding table using an insulation layer.
+\paragraph*{Layout and material of insulation layer}
+The layout of the insulation layer has to ensure that there is a vacuum strong enough to hold the chip in position during bumping. Also, the insulation layer has to be thick enough to ensure that there is no electric discharge between the electric material and the bonding table through the vacuum hole. At the same time, the insulation layer has to be as thin as possible to provide sufficient thermal conductivity.
+\\
+\\
+The insulation material has to fulfill the following requirements:
+\begin{itemize}
+\item The material needs to be temperature resistant and must not deform at temperatures of up to $200\,\si{\degreeCelsius}$. This rules out \ac{PTFE}, since it strongly deforms at such high temperatures.
+\item The thermal conductivity of the material needs to be as high as possible.
+\item The material has to be millable to produce insulation plates in different forms and with different layouts for vacuum holes.
+\end{itemize}
+The material meeting these standards best are Macor$\rm{\symbR}$ industrial ceramics. Unfortunately, this material has a low thermal conductivity of only $\kappa (T=25\, \si{\degreeCelsius})=1.46\,\frac{\rm{W}}{\rm{m^2\,K}}$. This means that the temperature on the top side of the insulation layer differs significantly from the bottom side. To compensate for this, the bonding temperature needs to be re-calibrated with the temperature measured at the top of the ceramic insulation.\\
+\\First tests were done with ceramic plates of different thicknesses and a vertical $3\,\rm{mm}$ hole allowing to fix material by vacuum. These tests were performed by connecting a wire to a bump that was already placed on a \ac{CMS} pixel \acs{ROC} as an electric example via wedge-off and firing the \ac{EFO} into this wire. If there was some damage on the \acs{ROC} visible (compare right picture of fig.~\ref{fig:wire_ripping}), the insulation was declared as not sufficient. These first tests have shown that there is an electric discharge through the vacuum hole, even at thicknesses of $4\,\rm{mm}$. Unfortunately, the ceramic thickness could not be increased further since the maximum thickness of the ceramic is limited by the height of the bonding table.
+
+To prevent any electrical discharge without increasing the ceramic thickness, an improved layout, made of Macor$\rm{\symbR}$ ceramics and Kapton$\rm{\symbR}$ tape, was designed. The main feature of this layout is to prohibit any direct line of sight through the vacuum hole. Figure~\ref{fig:insulation_layout} shows how the new layout increases the air distance to avoid any electrical discharge through the vacuum hole.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{pictures/isolation/layouts.pdf}
+\end{center}
+\caption[Layout of insulation layer used to protect chip from EFO voltage]{\textbf{Layout of insulation layer used to protect the chip from \ac{EFO} voltage.} The graphic shows the first test layout for the insulation layer (left) and the improved layout (right) to improve the insulation by increasing the air distance between table and chip. By building a three dimensional structure of ceramic plates separated by Kapton$\rm{\symbR}$ tape, it is possible to increase the air distance between chip and bonding table by one order of magnitude.}\label{fig:insulation_layout}
+\end{figure}
+With the new layout, the air distance between chip and bonding table can be increased by a factor of 15 from $4\,\rm{mm}$ to approximately $60\,\rm{mm}$. The test of the insulation layer was repeated by firing the \ac{EFO} $100$ times into a wire connected to a gold-stud bump on a \acs{ROC}. It showed that a one-layer structure ($20\,\rm{mm}$ of air distance) is already sufficient to insulate the chip from the ground potential of the bonding table. To ensure sufficient thermal conductivity, the insulation layer was not increased any further. Still, the thermal conductivity is drastically reduced by the layer structure and the Kapton$\rm{\symbR}$ tape, resulting in a temperature difference of $\Delta T\approx 45\,\rm{K}$ between the bonding table and the chip. Figure~\ref{pic:insulation} shows pictures of the insulation layer produced and the \acs{ROC} surface after the insulation test.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{pictures/isolation/isolation_beta.pdf}
+\end{center}
+\caption[Insulation layer and test of insulation quality]{\textbf{Insulation layer and insulation test.} The figure shows the final insulation layout (layout on the left, produced insulation in the middle) consisting of one layer of ceramics ($1\,\rm{mm}$) and two layers of Kapton$\rm{\symbR}$ tape. The right picture shows the chip after firing the \ac{EFO} into a wire, connected to the bump, $100\,$ times.}\label{pic:insulation}
+\end{figure}
+
+To be sure the insulation layer works, an electrical test was performed on one of the \acs{ROC}s. In this test, a working \acs{ROC} was placed on the insulation layer and the \ac{EFO} was fired into a wire connected to a bump. This procedure was repeated in different \acs{ROC} positions where the \ac{EFO} was fired one to five times. The same test was repeated for a \acs{ROC} that was not placed on an insulation layer but directly onto the bonding table.
+
+A standard test procedure, the so-called pixel-alive test, was performed on the \acs{ROC}s. In this test, the \acs{ROC} sends ten pulses to a \ac{PUC} and counts the number of answering pulses coming form the \ac{PUC} (ideally ten). The \acs{ROC} that was placed on the insulation layer showed dead pixels in all the positions that where hit by the \ac{EFO}. If the \ac{EFO} was fired five times, also some of the neighboring \ac{PUC}s were destroyed. Unfortunately, this means that the AC coupling of the \ac{EFO} pulse into the \ac{PUC} of the \acs{ROC} is already sufficient to destroy the \ac{PUC}. But, for the \acs{ROC} placed directly on the bonding table, the pixel-alive test shows only six \ac{PUC}s alive on the whole chip (see fig.~\ref{fig:electrical_insulation}).
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.445]{pictures/isolation/pixel_alive.pdf}
+\end{center}
+\caption[Electrical test of insulation layer]{\textbf{Electrical test of insulation layer.} The picture shows two pixel maps of pixel-alive tests, performed on \acs{ROC}s. Here, all red \ac{PUC}s answered on all the ten test pulses and are working, while the white \ac{PUC}s seem to be dead. All \ac{PUC}s are arranged in columns and rows. The left \acs{ROC} was hit by the \ac{EFO}, without being insulated against the ground and is completely destroyed. Thee right \acs{ROC} was placed on the insulation layer, when the \ac{EFO} fired into the pixel cells, which are destroyed while the rest of the chip is still working.}\label{fig:electrical_insulation}
+\end{figure} 
+
+Although it was not possible to protect a \ac{PUC} from the AC coupling of the \ac{EFO} pulse by using an insulation layer, the insulation prohibits the destruction of the entire chip. This allows minimizing the damage, in case the ```wire-ripping and sparking error'' occurs again.
+
+
+
+\section{The Heraeus HA3 gold wire}\label{sec:HA3}
+To investigate possible reasons for the ``wire-ripping sparking error'' (see sec.~\ref{sec:wrse}) a new wire was tested. This wire (Heraeus HA3, diameter: $15\,\si{\micro \meter}$, elongation: $0.5-2.5\,\%$) had been recommended for gold-stud bump bonding by the manufacturer. Unfortunately, the new wire is much harder than the HA6 used for the process optimization (see the elongations in table~\ref{tab:wires}). The higher hardness requires a completely new process optimization of process parameters. Since this was not possible during this thesis, only an estimate of the necessary parameter modification can be given here.
+
+Since the wire is harder than the HA6 version used before, more energy needs to be applied to the bump to achieve the same amount of deformation as for the HA6. This increase can be achieved by an increase of the bonding force, the bonding time, or the \ac{USG} current. Tests have shown that an increase of the bonding force by $30\%$ seems the most promising adjustment for bumping on \acs{ROC}s ($15\,\si{\micro \meter}$ passivation opening). With these parameters, it was possible to bump several \acs{ROC}s (bump diameter: $35\,\si{\micro \meter}$, shear force: $9.0\,\rm{g}$). For the sensor ($30\,\si{\micro \meter}$ passivation opening), an increase of the \ac{USG} current by $30\,\rm{\%}$ and an increase of the \ac{FAB} diameter by $10\, \%$ showed the best results. These parameters lead to gold-stud bumps with a diameter of $32\,\si{\micro \meter}$ and a shear force of $11.2\,\rm{g}$ ($\gamma=4.2\,\frac{1}{\rm{mil^2}}$). The difference in the shear forces between the HA6 and the HA3 wire can be explained by the hardness differences between the wires.\\
+%\begin{figure}
+%\begin{center}
+%\includegraphics[scale=0.5]{pictures/ha3/}
+%\end{center}
+%\caption[Bumping with the Heraeus HA3 gold wire]{\textbf{Bumping with the Heraeus HA3 gold wire.}}\label{pic:HA3}
+%\end{figure}
+\\Besides the advantage of avoiding the ``wire-ripping and sparking error'', the HA3 also shows some disadvantages:
+\begin{itemize}
+\item The harder gold adapts less to the passivation opening structure of the \acs{ROC}, leading to a less consistent connection of the gold bump to the aluminum.
+\item With the increased hardness of the wire, also the shear strength of the material is increased. When the capillary shears the wire during the bumping process, the bump neck can be stronger than the inter-metallic connection between gold and aluminum, sometimes leading to a shear of the bump.
+\item The \ac{FAB} requires a higher bonding force to place the bump. This increases the risk to damage any sensitive electronics below or around the passivation opening.
+\item The flip chip bonding process (see ch.~\ref{cha:flip-chipping}) becomes more difficult, since the bumps will hardly deform.
+\end{itemize}
+Summarized, a soft wire has advantages in the flexibility of the process and allows an easier flip-chip bonding process, while a hard wire allows a more stable bumping process and avoids the ``wire-ripping and sparking error''. For the future, a trade-off between these two factors has to be done. A possible compromise could be to purchase a HA3 wire that is processed in such a way that it shows a hardness\footnote{All Heraues wires are available in different hardnesses~\cite{Koe14}.} between the former HA6 and the current HA3. The necessity of this compromise needs to be investigated.
+
+Since the HA3 was the only wire available that lead to a stable bumping of chips, parts of the flip-chip bonding were done with gold-stud bumps from the HA3 wire.
+
+\section{Final bumping parameters for bumping of \ac{CMS} pixel single chips}
+With the investigations described in this thesis, it was possible to bump several chips and to define final bumping parameters for bumping \ac{CMS} single chips. (These final bumping parameters were tuned for the Heraeus $15\,\si{\micro \meter}$ HA6 wire and need to be adjusted according to section~\ref{sec:HA3}, if the Heraeus $15\,\si{\micro \meter}$ HA3 wire is used.)
+\begin{itemize}
+\item \textbf{\ac{BPIX} sensor:} The standard \ac{BPIX} sensor from CIS has a $30\,\si{\micro \meter}$ opening. This allows using the bumping parameters chosen during the systematic investigation. The bumps placed with these parameters have a diameter of $30\,\si{\micro \meter}$, a total height of $15\,\si{\micro \meter}$, and a shear force of $8.6\,\rm{g}$.
+\item \textbf{\ac{FPIX} sensor:} A chip from HPK that was used for mechanical tests in the flip-chip bonding process is the \ac{CMS} pixel \ac{FPIX} sensor. With a passivation opening of $18\,\si{\micro \meter}$, it requires a higher \ac{USG} current to be bumped. Bumping on this passivation opening has already been optimized in previous works~\cite{Hei12}. For this reason, the optimized parameters of the previous work are used to bump on this material. These sensors were bumped with a stable process placing $35\,\si{\micro \meter}$ bumps that show a shear force of $9.1\,\rm{g}$.
+\item \textbf{Readout chip psi46digV2:} The digital \acs{ROC} has a $15\,\si{\micro \meter}$ passivation opening. To bond on this material with a stable process, the same parameters as for the \ac{FPIX} sensor were used except that the \ac{USG} current had to be increased to $70\,\rm{mA}$. This \acs{ROC} is bumped with $35\,\si{\micro \meter}$ bumps that show a shear force of $5.5\,\rm{g}$.
+\end{itemize}
+Table~\ref{tab:final_parameters} summarizes the final bumping parameters used for the bumping of \ac{CMS} pixel single chips.
+\begin{table}
+\caption[Final bumping parameters for bumping of \ac{CMS} pixel single sensors and readout chips]{\textbf{Final bumping parameters for bumping of \ac{CMS} pixel single sensors and readout chips.} The table summarizes the final bumping parameters used to bump the different types of \ac{CMS} pixel chips.}\label{tab:final_parameters}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Chip name&\ac{BPIX} sensor&\ac{FPIX} sensor & \acs{ROC} psi46digV2\\
+\midrule
+Passivation opening ($\si{\micro \meter}$)&30&18&15\\
+Bonding force (g)&9&10&10\\
+Bonding time (ms)&8&8&8\\
+\ac{USG} current (mA)&30&55&70\\
+\ac{FAB} diameter ($\si{\micro \meter}$)&23&28&28\\
+\ac{EFO} current (mA)&20&20&20\\
+\acl{CV} $\left( \frac{\si{\micro \meter}}{\rm{ms}}\right)$&3&3&3\\
+Bump- $\&$ separation height ($\si{\micro \meter}$)&8&9&9\\
+Smooth distance ($\si{\micro \meter}$)&17&17&17\\
+Smooth speed ($\%$)&50&50&50\\
+Bump diameter ($\si{\micro \meter}$)&30&35&35\\
+Shear force (g)&$8.6$&$9.1$&$5.5$\\
+$\gamma$ $\left( \frac{1}{\rm{mil}^2}\right)$&$7.3$&$3.0$&$4.5$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+Figure~\ref{pic:bumped_material} shows a fully gold-stud bumped \ac{BPIX} sensor, \ac{FPIX} sensor and a digital \acs{ROC} psi46digV2.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.35]{pictures/bumped_material/neu/bumped_material.png}
+\end{center}
+\caption[\acs{CMS} pixel sensors and \acs{ROC}s bumped with gold-stud bumps]{\textbf{\acs{CMS} pixel sensors and \acs{ROC}s bumped with gold-stud bumps.} The picture shows the different \ac{CMS} pixel chips that were bumped with the gold-stud bumping process and parameters described in this thesis (top: \ac{BPIX} sensor, middle: \ac{FPIX} sensor, bottom: \acs{ROC} psi46digV2).}\label{pic:bumped_material}
+\end{figure}
+
+\section[Gold-stud Under Bump Metallization (UBM) layer for power electronics]{Gold-stud \ac{UBM} layer for power electronics as a further application for gold-stud bumping}\label{sec:UBM_layer}
+
+One of the advantages of gold-stud bumps is that, due to the good inter-metallic connection induced by the thermo-ultrasonic bonding, they do not require any \ac{UBM} between bump and metal pad. This advantage can be transferred in such way that the bumps are used to create a gold-stud \ac{UBM} layer. This layer has the aim of soldering aluminum surfaces, which is not possible in the traditional way since the inter-metallic connection of aluminum to tin-silver solder is very weak. A possible application for such a gold-stud \ac{UBM} layer could be the R$\&$D phase of power electronics~\cite{Mei14}.
+
+To create such a gold-stud bump \ac{UBM} layer, the bumps need to be placed as closely together as possible. The idea is to do some soldering tests with bumps placed in a square pattern ($\frac{\rm{\pi}}{4}$ of the area covered) to test whether this type of \ac{UBM} layer would work in general. In a second step, the bumping layout should be changed to a hexagonal pattern to increase the area covered by the bumps ($\frac{\rm{\pi}}{\sqrt{12}}$ of area covered). Figure~\ref{fig:gold_stud_UBM_layout} illustrates the differences in the covered area.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{pictures/Gold-stud-UBM.pdf}
+\end{center}
+\caption[Bumping layouts of gold-stud bump UBM layer]{\textbf{Bumping layouts of gold-stud bump \ac{UBM} layer.} The figure illustrates the different bumping patterns for the gold-stud bump \ac{UBM} layer (left: square bumping pattern, right: hexagonal bumping pattern).}\label{fig:gold_stud_UBM_layout}
+\end{figure}
+To ensure a good thermal conductivity, the soldering layer and the gold-stud bump \ac{UBM} layer should be as flat as possible. For this reason, it was decided to use the $15\,\si{\micro \meter}$ wire, since it allows smaller \ac{FAB}s resulting in gold-stud bumps with a lower total height.\\
+\\To gain some additional flattening of the bumps and to improve the area covered by the bumps, an additional process step needs to be introduced. By pressing the bumps onto a polished glass plate, the bump diameters can be enlarged and the bump surface can be smoothened. This procedure can be completely performed with the Finetech FINEPLACER$\rm{\symbR}$ femto. To investigate this procedure, it is recommended to use the maximum bonding force the femto can apply ($500\,\rm{N}$) at a temperature of $\geq 100\,\si{\degreeCelsius}$ to ensure there is no connection to the glass.
+
+
+\subsection{Improvement of the vacuum jig}\label{sec:bumping_vacuum_jig}
+The dimensions of the chips that need to be bumped with a gold-stud bump \ac{UBM} ($2\,\rm{mm}\times 2\,\rm{mm}\times 100\,\si{\micro \meter}$) cause several problems: With a diameter of $3\,\rm{mm}$, the vacuum hole of the bonding table is too large to hold chips with such small dimensions. The thickness of these chips ($100\,\si{\micro \meter}$) cause problems as well since such thin substrates tend to bend when the vacuum gets applied. This induces false contact detections and causes the capillary to shear the bumps. When the capillary moves up after bonding to do the shearing of the wire, the substrate follows up, due to the bending of the substrate. Without being able to move up to the bump height, the capillary shears the bump and not the wire, resulting in a complete shear of the bump. For these reasons, a new vacuum jig had to be designed. This jig was designed as an adapter plate to change from one large vacuum hole to many small vacuum holes. With different arrangements of the vacuum holes, it is possible keep chips with different dimensions in position. Also, the use of several small holes prohibits the problem of the bending of thin substrates. Figure~\ref{fig:vacuum_jig} shows the basic layout of the vacuum jig. For the mechanical drawings see~\ref{App:vacuum_jig}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.21]{pictures/gold-stud_UBM/ball-bond-chuck-mod-both.png}
+\end{center}
+\caption[Layout of improved vacuum jig for IConn ball wire bonder]{\textbf{Layout of improved vacuum jig for IConn ball wire bonder.} The figure illustrates the basic layout of the improved vacuum jig that has been designed to fix small dies on the bonding table of the IConn ball wire bonder (left: top-view, right: bottom-view).}\label{fig:vacuum_jig}
+\end{figure}
+
+
+
+\subsection{Bumping parameters to create gold-stud \acs{UBM} layer}
+Since the bumps need to be as flat as possible, the aim is to apply a lot of energy to deform the bump. Using a new capillary (``PI-19063-233F-ZP34T'') with a large \acl{T}, it is possible to produce such flat and wide bumps.
+
+When placing very flat bumps, establishing a good and stable wire shear process is more difficult, since the wire tends to be connected to the bump shoulder during the shear process (compare sec.~\ref{sec:accu_parameters}). To avoid this, an ultrasonic movement was added to the wire shear movement of the capillary. This causes a weakening on the interconnection cross-section between bump neck and wire and allows a smooth wire shear process for very flat and large bumps.\\
+\\The bumping parameters for this application, using a Heraeus Au HA3 wire, are:
+\begin{itemize}
+\item Bonding force: $60\,\rm{g}$
+\item Bonding time: $16\,\rm{ms}$
+\item \ac{USG} current: $40\,\rm{mA}$
+\item \ac{FAB} diameter: $28\,\si{\micro \meter}$
+\item \ac{EFO} current: $20\,\rm{mA}$
+\item \acl{CV}: $5.4\,\frac{\si{\micro \meter}}{\rm{ms}}$
+\item Bump- $\&$ separation height: $8\,\si{\micro \meter}$
+\item Smooth distance: $15\,\si{\micro \meter}$
+\item Smooth speed: $40\,\%$
+\item Smooth-\ac{USG} current: $60\,\rm{mA}$
+\end{itemize}
+Figure~\ref{pic:stud-UBM} shows the gold-stud \ac{UBM} layer produced using these parameters. It also shows the low thickness of the \ac{UBM} layer of $6\,\si{\micro \meter}$ on average that is visible in a cross-section through the gold-stud \ac{UBM} layer.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.25]{pictures/gold-stud_UBM/stud_ubm_layer_comb.png}
+\end{center}
+\caption[Gold-stud UBM layer for power electronics]{\textbf{Gold-stud \ac{UBM} layer for power electronics.} This pictures show the gold-stud \ac{UBM} layer created to solder power electronics (left) and a cross-section through the \ac{UBM} layer (right).}\label{pic:stud-UBM}
+\end{figure}
+Unfortunately, there was no vacuum soldering oven available during  this thesis. The vacuum soldering oven is necessary to avoid any air trapped in between the bumps. For this reason, soldering tests could not be performed during this thesis.
+
+
+\section{R\'{e}sum\'{e}}
+In addition to the deep investigation of the bumping process with all its sub-sequences, the influence of parameters like the grain-size of the substrate surface or the passivation opening were investigated. An optimization in terms of mechanical strength of the gold-stud bumps and long-term stability of the bumping process was performed using a $15\,\si{\micro \meter}$ wire. This resulted in a stable process to deposit gold-stud bumps with a shear force of $7.9\,\frac{\rm{g}}{\rm{mil}^2}$. A process to deposit $30\,\si{\micro \meter}$ bumps on $30\,\si{\micro \meter}$ openings and $35\,\si{\micro \meter}$ bumps on $15\,\si{\micro \meter}$ and $18\,\si{\micro \meter}$ openings was established. The process allowed the bumping of several \ac{CMS} pixel single chips which can be used to investigate the flip-chip bonding process of gold-stud bumped material.
+
+By using a thinner wire (e.g.~a $12.5\,\si{\micro \meter}$ wire), the bump diameter can be reduced even further~\cite{Hei12}. If the gold-stud bump bonding process should be used in the R$\&$D phase of future pixel detectors, it is recommended to avoid passivation openings with diameters smaller than $30\,\si{\micro \meter}$.
+
+The ``wire-ripping and sparking error'' was investigated and a possible solution was found by using a new and hard gold wire. The exact influences of the wire hardness on the process still need to be investigated to find the perfect wire for the gold-stud bump bonding of pixel detectors.
+
+With the formation of a gold-stud bump \ac{UBM} layer there is the possibility of using the gold-stud bumping process to replace expensive lithographic \ac{UBM} deposition processes in the R$\&$D phase of power electronics. This process needs to be investigated further to determine all mechanical and electrical characteristics.

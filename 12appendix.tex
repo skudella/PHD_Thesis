@@ -1,0 +1,436 @@
+\acresetall
+
+
+\begin{appendices}
+
+\chapter{The IConn ball wire bonder}
+In this chapter mentions two errors of the IConn ball wire bonder that have been solved during this thesis.
+
+\section{Fixing the bonding table}\label{sec:bonding_table}
+The bonding table of the IConn ball wire bonder has to be fully movable in the vertical direction to adjust the height of the table to the thickness of the material that needs to be bumped. At the same time, it has to be stable within $< 5\,\rm{\mu m}$ in the horizontal direction to ensure the bumping precision of $<5\,\si{\micro \meter}$ needed for gold-stud bump bonding. During the investigations concerning the long-term stability, it was observed that vibrations, caused by the movement of the bond head, made the table move up to $30\,\si{\micro \meter}$ in horizontal direction. This caused the bond head to miss the passivation opening and the process to stop. Deeper investigations showed that the reason for this behavior was some inaccuracy of production. This caused the sledge for vertical movement to be pressed against the base mount, when it was fixed in the horizontal direction. Since the vertical movement had been more important, the sledge had never been fixed correctly in the horizontal direction. Figure~\ref{fig:table} illustrates the problem of the production inaccuracy.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/table/table.pdf}
+\end{center}
+\caption[Stability of IConn bonding table]{\textbf{Stability of IConn bonding table.} The schematic show a horizontal cut through the sledge part of the bonding table. Due to an inaccuracy in the production ($y_{\rm{slide}}>y_{\rm{rail}}$), fixing the sledge in $x$-$y$-direction caused the sledge to be pressed against the wall of the mount and to block it in vertical direction. }\label{fig:table}
+\end{figure}
+The problem could be solved by removing $0.5\, \rm{mm}$ of material from the back of the sledge. Now the table is fully movable in vertical direction and stable within $< 1\,\si{\micro \meter}$ in horizontal direction.
+
+
+\section{``Wire bow'' error}\label{wire-bow_error}
+During the process, it can happen that the \ac{FAB} does not get pulled back properly onto the tip of the capillary (step 3 in fig.~\ref{fig:bumping_process}). The outcome of this is that the capillary performs a wedge-off instead of placing a gold-stud bump, resulting in a ``wire bow''. Figure~\ref{pic:wire_bow} shows such a ``wire bow''.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{pictures/wire-bow/wire_bow.png}
+\end{center}
+\caption[FAB pull-back error resulting in ``wire bow'']{\textbf{FAB pull-back error resulting in ``wire bow''.} This picture shows how a ``wire bow'' gets produced due to some error during the pull-back of the FAB e.g. by pollutions on clamp or capillary (left). The right side shows what a ``wire bow'' looks like.}\label{pic:wire_bow}
+\end{figure}
+Possible reasons for this kind of behavior are pollutants of the wire and the capillary, or a wire tail bended to the side, due to vibrations in the bonder. This problem can be solved by increasing the tensioner air pressure, to pull back the \ac{FAB} more strongly and by cleaning the capillary and wire feeding system.
+
+
+
+%\subsection{Layout of the optical system}\label{sec:layout_optical_system}
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[scale=0.2]{pictures/optical_system.png}
+%\end{center}
+%\caption[Optical system of IConn ball bonder]{\textbf{Optical system of IConn ball bonder.} The picture shows a schematic layout of the optical system the IConn uses the lighten and picture the substrate surface.}
+%\end{figure}
+
+%\subsection{Check-list for gold-stud bumping/bonding with an Kulicke $\&$ Soffa IConn ball bonder}
+%This check-list should lead through the process of bumping a substrate with gold-stud bumps. It is assumed, that there is already process program defined for the bumping process and that there are the correct capillary and wire installed. (Software commands are in brackets.)
+%\begin{enumerate}
+%\item Switch on small vacuum and air pressure
+%\item Switch on bonder(green button)/wake bonder from standby (move mouse $\rightarrow$ turn on heaters)
+%\item Exit motor-stop-mode (OK), do xyz-calibration if asked
+%\item Place substrate on jig
+%\item Load process program ([3] program $\rightarrow$ load program)
+%\item Align reference system ([3] program $\rightarrow$ align ref)
+%\item If no PRS, align manually (move with pressed mouse wheel [B2], set points with [B1])
+%\item Measure z-height ([7]Utilities $\rightarrow$ Z measurement), adjust height of table so $z=0\pm 20\,\\si{\micro \meter}$)
+%\item Adjust low magnification focus with screw
+%\item Move bond-head to right front of working area ([B2])
+%\item Threat wire (don't touch wire, turn off air guide, use wire feed through, open clamp [F8], use USG to feed wire through capillary [F7])
+%\item Bend wire to side under the capillary, do a wedge off on not used good area (scroll to area [B2] $\rightarrow$ open clamp [F8] $\rightarrow$ bond-off [B1])
+%\item Remove wire from substrate, perform EFO
+%\item Start automatic bonding process, lean back and relax ([1]automatic, [start/stop])
+%\item When finished press the ``index''-button and remove the substrate
+%\item Clear process (Programm[F3]$\rightarrow$Save/Load/Clear[1]$\rightarrow$Clear Process[1])
+%\item Put machine into motor-stop-mode (both ``motor-stop-mode''buttons)
+%\item If no more bonding/bumping on the machine for more than $24\,\rm{h}$, shut down bonder (red button).
+%\end{enumerate}
+
+%\subsection{Creating a new process programm}
+%\begin{enumerate}
+%\item clear current programm
+%\item press index button
+%\item select Programm $\rightarrow$ [new ref syst]
+%\item chose name $\&$ type of reference system
+%\item choose nonambigeous structures in different corners of the substrate as operator points (in case the patternrecognition of the automatic alignement doesn't work, one can still allign manually with the operator points)
+%\item choose nonambigeous structures in different corners of the substrate as alignment points
+%\item define bond pads. There are several possibilities to do so (manually or using the pattern recognition). Consider the pad orientation (direction of the shear movement, direction of the wire bond).
+%\item Teach wires/bumps ([Edit Programm]$\rightarrow$[Wire and Parameters]$\rightarrow$[Teach wires]): select [Bumps (1-PT)]  for stud bumping and [SSB-1] for wire bonding (SSB allows to use the bumping parameters already known from the stud bumping process.), 
+%\item Enter parameters for bumping/wire bonding process (see \ref{sec:})
+%\item save process programm ([Programm]$\rightarrow$[Save programm])
+%\end{enumerate}
+
+
+
+
+%\subsection{Maintenance and adjustment procedures}
+%This section gives short guidelines about the maintenance and adjustment procedures of the IConn ball-bonder. For detailed information it is recommended to read the sections of the ``operation manual'' \cite{Kul08b} and the ``maintenance manual'' \cite{Kul08c}.
+%\subsubsection{Maintenance procedure}\label{sec:wire_feed_cleaning}
+%A standard maintenance procedure consists
+%\begin{enumerate}
+%\item save all data to pen drive to ensure there is no data loss, take screen shots of serial numbers
+%\item clean the complete work area with vacuum cleaner
+%\item clean the filters of the machine with vacuum cleaner
+%\item tune Axis
+%\item clean clamp with folded cleaning paper (3M lapping)
+%\item adjust clamp opening, see sec.
+%\item calibration of capillary
+%\end{enumerate}
+
+
+
+%\subsubsection{Cleaning and adjustment of the wire clamp}\label{sec:wire_clamp_adjustment}
+
+%\begin{enumerate}
+%\item open clamp [F8], fold 3M lapping cleaning paper 1-2x
+%\item clean inside of clamp with folded paper
+%\item measure opening of clamp with microscope (4x zoom, $\rm{separation}\triangleq \approx 32\,\\si{\micro \meter}$)
+%\item opening should be $3-5\times$ wire diameter ($25\,\rm{mm}\rightarrow 2.4-3.9\,\rm{sep}$; $20\,\\si{\micro \meter}\rightarrow 1.9-3.1\,\rm{sep}$; $15\,\\si{\micro \meter}\rightarrow 1.4-2.3\,\rm{sep}$; $12.5\,\\si{\micro \meter}\rightarrow 1.2-1.9\,\rm{sep}$)
+%\item use hexagon socket screw key to adjust clamp opening
+%\end{enumerate}
+%\begin{figure}
+%\begin{center}
+%\includegraphics[scale=0.25]{pictures/appendix/clamp.png}
+%\end{center}
+%\caption[Cleaning and adjustment of the wire clamp]{\textbf{Cleaning and adjustment of the wire clamp.} The pictures show the wire clamp (left) and the hole to adjust the clamp opening (right).}\label{fig:wire_clamp_adjustment}
+%\end{figure}
+
+
+%\subsubsection{Aligning the EFO wand}\label{sec:EFO-wand-alignment}
+%\begin{enumerate}
+%\item move bond head to most forward position, move to home position (Utilities → EFO Wand adjustment
+%\item loosen X-Z axis locking screws, adjust X$\&$Z axis so the upper part of the wand is on one level with the capillary tip with adjustment screws, tighten X-Z locking screw
+%\item loosen Y axis locking screws, adjust Y axis with adjustment screw, tighten locking screw
+%\item The wand should be pointing slightly downwards,  and aligned on the tip of the capillary
+%\item the distance between wand and capillary has to be several mils, when moving the capillary down there still needs to space (check with piece of paper (no clean room paper), folded once one should be able to pull it through between wand and capillary
+%\end{enumerate}
+
+%\subsubsection{Cleaning of the capillary}\label{sec:capillary_cleaning}
+
+%\subsubsection{Capillary exchange procedure}\label{sec:capillary exchange}
+%\begin{enumerate}
+%\item start the capillary change procedure ([5]calibration $\rightarrow$ capillary change) to get a guide through the procedure
+%\item move bond head to most right forward end
+%\item go to motor-stop-mode
+%\item grab capillary with capillary squeezers and loosen capillary holding screw with screwdriver 
+%\item remove capillary and mount new capillary
+%\item tighten screw with screwdriver
+%\item perform USG calibration
+%\item perform corsair offset
+%\item retreat wire
+%\end{enumerate}
+%For more detailed information, see section 3.2.2 in \cite{Kul08b}
+
+
+%\subsection{Bumping parameters}
+
+%\subsection{Troubleshooting instructions}
+%\textit{software commands are in brackets}
+%\begin{enumerate}
+
+%\item wire breaks during wire threating:
+%\begin{itemize}
+%\item if wire is inside air-guide
+%\item check if there are some statics at air-guide
+%\item don't use pointy or sharp tweezers
+%\end{itemize}
+%\item can't get wire through capillary:
+%\begin{itemize}
+%\item turn on USG ([F7])
+%\item unplug capillary with capillary unplugging wire (CUW-15 $\&$ CUW-25 available, CUW-25 only for capillary diameters $>25\,\rm{mm}$)
+%\item remove capillary and clean it inside a ultrasonic bath of isopropyl
+%\end{itemize}
+
+%\item EFO open:
+%\begin{itemize}
+%\item  check with microscope if there is a wire tail and check its shape
+%\begin{enumerate}
+
+%\item no tail visible:
+%\begin{itemize}
+%\item accu bump smooth distance to high? maximum $SD = 1/2*(CD+H)$
+%\item tensioner to high? $20\,\rm{kPa}$
+%\item air guide to low $\rightarrow$ vibrations in wire lead to statistical wire break $\rightarrow$ $200\,\rm{kPa}$
+%\item bond able material? surface grain size $>1\,\\si{\micro \meter}$, non-oxidated surface
+%\item force to high? $<30\,\rm{g}$
+%\item clamp not properly adjusted $\rightarrow$ adjusting clamp
+%\end{itemize}
+%\item tail with mashed bump visible $\rightarrow$ no connection to substrate
+%\begin{itemize}
+%\item bondable material? surface grain size $>1\,\\si{\micro \meter}$, non-oxidated surface
+%\item too low USG current? $>25\,\rm{mA}$ for Al
+%\item too low force? $>5\,\rm{g}$ for Al
+%\item increase bond time
+%\item substrate surface planar, no bending due to vacuum hole?
+%\end{itemize}
+
+
+%\item tail with no bump visible $\rightarrow$ EFO not firing properly
+%\begin{itemize}
+%\item proper FAB size? $>CD-2$
+%\item EFO wand aligned? $\rightarrow$ align EFO wand
+%\item check resistance between ground and clamp (without wire), should be $>1\,\rm{M\Omega}$ $\rightarrow$ rebooting sometimes solves this problem $\rightarrow$ but that's no long-term solution $\rightarrow$ order maintenance from K$\&$S
+%\item check resistance between ground and divider (without wire), should be $154\,\rm{k\Omega}$ $\rightarrow$ check isolation of clamp from arm, clean from wire, release and re-tight screws
+%\end{itemize}
+
+%\end{enumerate}
+%\end{itemize}
+		
+%\item Large Drift detected
+%\begin{itemize}
+%\item occurs if job is interrupted and substrate has been
+%\item realign reference system ([3]Program $\rightarrow$ align ref)
+%\end{itemize}
+
+%\item Align Error $\rightarrow$ realign reference system manually [Manually align Ref. system]
+
+
+
+%\item Error 240 - badly specified starting wire $\rightarrow$ press ``index'' button and restart process
+
+
+
+%\end{enumerate}
+
+\chapter[Manual for cross-section and polishing]{Manual for cross-section and polishing of \acs{CMS} pixel single chip assemblies}
+The following manual describes a step-by-step procedure for performing a cross-section of small assemblies (for example, single chips of the \ac{CMS} pixel detector) using the Struers products present in the IPE clean room. While the process was defined in cooperation with Struers, the manual itself was written by Fabio Colombo.
+\section*{Materials needed}
+\subsection*{Fixing the sample in Epoxy resin}
+\begin{itemize}
+\item Struers SpeciFix resin
+\item Struers SpeciFix-20 curing agent
+\item Struers MultiClips
+\item Struers plastic cylindrical container
+\item Struers Epovac chamber, connected to a vacuum pump
+\item plastic glass for mixing the components
+\item wooden tool for stirring 
+\item metallic screw or equivalent small and moderately heavy tool
+\end{itemize}
+\subsection*{Cross-section and polishing}
+\begin{itemize}
+\item polishing sheets: SiC 800, LARGO, DAC, DUR, NAP
+\item polishing liquids: LARGO, DAC, DUR, NAP
+\end{itemize}
+
+\section*{Procedure}
+\subsection*{Fixing the sample in Epoxy resin}
+\textit{Note: The quantities indicated below are sufficient for fixing one single sample in the Struers cylindrical container. For more samples or different containers, scale the quantities in the appropriate way.}
+
+
+\begin{enumerate}
+
+\item Pour $10.0\,\rm{g}$ of SpeciFix resin in the plastic container.
+\item Add $1.4\,\rm{g}$ of SpeciFix-20 curing agent.
+\item Stir the content of the container with the wooden tool for three minutes, mixing the two components together and trying to avoid the formation of air bubbles.
+\item Place the container in the Epovac chamber, switch on the pump and let it rest under vacuum for five minutes.
+\item Hold the sample to be polished in a vertical position, using the black MultiClip (The MultiClip should be oriented such that the small feet are on the bottom side: this will be the side to be polished later).
+\item Place the MultiClip that holds the sample in the cylindrical container.
+\item Take the container out of the vacuum chamber and pour the resin in the cylindrical container, covering completely the MultiClip and the sample.
+\item If the sample is light and tends to flow up, place the metallic screw on top of the MultiClip and keep on pouring the resin until everything is completely covered.
+\item Place the container in the Epovac chamber, switch on the pump and let it rest under vacuum for five minutes.
+\item Take off the container from the vacuum chamber and let it rest for eight hours, to allow the Epoxy resin to cure.
+\item Remove the cylinder of solid Epoxy resin (where the sample is now fixed) from the plastic container.
+\end{enumerate}
+\subsection*{Cross-section and polishing}
+
+\underline{General instructions for running the Struers polishing machine:}
+\begin{enumerate}
+\item Place the appropriate table (metallic or magnetic) on the support and check the planarity.
+\item Fix the appropriate polishing sheet to the table: The Silicon Carbide (SiC) sheets are fixed to the metallic table with a ring, while other polishing sheets have a metallic backside that allows them sticking to the magnetic table.
+\item Place the cylinder of Epoxy in one of the three openings of the arm.
+\item Lower the arm and lock it (the lock is on the bottom side).
+\item Adjust the force with which the cylinder is pushed to the table: Each graduation mark corresponds to roughly $10\,\rm{N}$, according to the machine manufacturer.
+\item Set the rotational speed (in rpm) using the black control knob.
+\item Switch on the machine, pressing the green button.
+\item Pour polishing liquid (water or other special liquids) on the rotating table while the machine is running.
+\item Switch off the machine, pressing the red button.
+\item Unlock the arm and lift it.
+\item Remove the Epoxy cylinder.
+\end{enumerate}
+\underline{Detailed steps:}
+\begin{enumerate}
+\item Rough polishing step/cut\\
+This step does a first approximate cut of the epoxy cylinder, removing unnecessary material until interesting structures (for example bumps in a bump bonded \ac{CMS} chip) can be seen. It can also be used to smoothen the back part of the Epoxy cylinder before beginning the actual procedure.
+\begin{itemize}
+\item place the metallic table on the support and fix the 800 Silicon Carbide sheet.
+\item force: $30\,\rm{N}$ 
+\item rotational speed: $300\,\rm{RPM}$
+\item polishing liquid: water
+\item time: ~ $5-10\,\rm{min}$ (as long as necessary)
+\end{itemize}
+\item LARGO step
+\begin{itemize}
+\item place the magnetic table on the support and fix the LARGO sheet.
+\item force: $30\,\rm{N}$ 
+\item rotational speed: $150\,\rm{RPM}$
+\item polishing liquid: special LARGO polisher
+\item time: $5-7\,\rm{min}$
+\end{itemize}
+\item DAC step
+\begin{itemize}
+\item fix the DAC sheet to the magnetic table
+\item force: $20\,\rm{N}$  
+\item rotational speed: $150\,\rm{RPM}$
+\item polishing liquid: special DAC polisher
+\item time: $4\,\rm{min}$
+\end{itemize} 
+\item DUR step
+
+\begin{itemize}
+\item fix the DUR sheet to the magnetic table
+\item force: $20\,\rm{N}$ 
+\item rotational speed: $150\,\rm{RPM}$
+\item polishing liquid: special DUR polisher
+\item time: $2\,\rm{min}$
+\end{itemize}
+\item NAP step
+\begin{itemize}
+\item fix the NAP sheet to the magnetic table
+\item force: $15\,\rm{N}$  
+\item rotational speed: $150\,\rm{RPM}$
+\item polishing liquid: special NAP polisher 
+\item time: $1\,\rm{min}$
+\end{itemize}
+\end{enumerate}
+After the procedure, wash the used polishing sheets and let them dry. Carefully clean the polishing machine with water and a soft tissue, removing the residuals of the polishing liquids.
+
+\chapter{Manual for cleaning of \acs{CMS} \acl{ROC}s (\acs{ROC}s)}\label{app:cleaning_manual}
+As described in chapter \ref{cha:cleaning}, KIT receives bumped material protected by a thick layer of photo-resist. This photo-resist layer is removed by a cleaning procedure that was developed during this thesis. The following manual describes a step-by-step procedure for cleaning the photo-resist layer off the \ac{ROC}s.
+\subsection*{Liquids needed:}
+\begin{itemize}
+\item $2\,\rm{l}$ pure water from \ac{IPE} SMD-Lab (higher purity than water from \ac{IPE} clean-room\footnote{The water from the \ac{IPE} SMD-Lab showed an electrical conductance of $1.97\,\si{\micro}\rm{S}$, while the water from the clean-room has an electrical conductance of $4.07\,\si{\micro}\rm{S}$.})
+\item $400\,\rm{ml}$ acetone
+\item $400\,\rm{ml}$ ultrapure isopropyl alcohol ($99,9\,\%$)
+\end{itemize}
+
+\subsection*{Mechanics needed:}
+\begin{itemize}
+\item \ac{POM} tray
+\item \ac{PTFE} grid
+\item vacuum tool
+\item Venturi vacuum system
+\item Kapton$\rm{\symbR}$ tape
+\item vacuum pipette (neither isopropyl alcohol nor acetone resistive)
+\end{itemize}
+\subsection*{Safety instructions:}
+\begin{itemize}
+\item always wear gloves and glasses
+\item try to avoid contact with acetone and isopropyl alcohol at any time
+\item try to avoid inhaling aceton or isopropyl alcohol vapors
+\item always close acetone and isopropyl alcohol containments hermetically if not needed
+\item clean up acetone immediately if spilled (PVC floor gets dissolved)
+\item store larger amounts of acetone ($>50\,\rm{ml}$) into metallic containers in SMD lab
+\end{itemize}
+
+\subsection*{Material needed:}
+\begin{itemize}
+\item $1-35$ \ac{ROC}s
+\end{itemize}
+
+\section*{Instructions for the cleaning}
+
+\begin{enumerate}
+\item Remove old chemicals from containments if necessary.
+\begin{itemize}
+\item old impure acetone into metallic container in SMD lab
+\item old isopropyl alcohol into metallic container in SMD lab
+\item old water into sink
+
+\end{itemize}
+
+\item Clean all containments needed.
+\begin{itemize}
+\item Place \ac{POM} tray, \ac{PTFE} grid, and screws in gastro container and add pure water. Place inside an ultrasonic bath for $5$ minutes at maximum power.
+\item Clean all gastro containers with isopropyl alcohol and pure water.
+\end{itemize}
+
+\item Fill each bath with $400\,\rm{ml}$ of the appropriate liquid. Cover all containers with a corresponding lid.
+
+\item Place all chips on the \ac{POM} tray with the pads facing towards yourself using the vacuum pipette. If not all of 35 the positions are needed, close the remaining vacuum holes with Kapton$\rm{\symbR}$ tape.
+
+\item If needed, note down the \ac{ROC} numbers and positions (this will not be possible once they are flipped).
+
+\item Mount the \ac{PTFE} grid on top of the tray.
+
+\item Place the tray in the first acetone bath for 4 minutes. Shake the bath lightly and slowly.
+
+%\item Move the tray into second acetone bath very quick to avoid any evaporation. Lightly and slowly shake the bath for $1\,\rm{min}$.
+
+\item Move the tray into the isopropyl alcohol bath very quickly to avoid any evaporation. Lightly and slowly shake the bath for 3 minutes.
+
+\item Move the tray into the first water bath very quickly to avoid any evaporation. Shake the bath fast and vigorously for 3 minutes.
+
+\item Move the tray into the second water bath very quickly to avoid any evaporation. Shake the bath fast and vigorously for 3 minutes.
+
+%\item Mount the vacuum tool from the back, dismount the \ac{PTFE} grid and apply the vacuum.
+
+%\item Blow-dry the \ac{ROC}s with nitrogen flux.
+
+%\item Remount the \ac{PTFE} grid and dismount the vacuum tool.
+
+%\item Let the water remnants dry out in the vacuum oven at $70\,\si{\degreeCelsius}$\\
+
+\item Remove the \ac{PTFE} grid and let the tray dry in the vacuum oven at $70\,\si{\degreeCelsius}$ for roughly half an hour.
+\\Here it is possible to store the chips inside the nitrogen cupboard while they are still on the tray.
+
+\item Apply the vacuum tool on the tray, connect it to the vacuum system and switch it on.
+
+\item Blow the chips with $\rm{N_2}$, if needed, to clean off any pollutants (e.g.~dust particles).
+
+\item Optional: Remove oxidation from the bumps by placing the tray inside a Ar+$\rm{H_2}$ plasma for $10\,\rm{min}$ at $80\%$ of the maximum power.
+
+\item Flip the tray onto a GelPack$\rm{\symbTM}$, with the vacuum still applied.
+
+\item Slowly switch off the vacuum: The cleaned chips will fall down onto the GelPack$\rm{\symbTM}$ with the bumps facing downwards.
+
+\end{enumerate}
+\newpage
+
+\chapter{Mechanical drawings of parts designed during this thesis}
+
+\begin{figure}[h]
+%\rotatebox{90}{% 
+%\begin{landscape}
+\begin{minipage}{.6\textheight} 
+\begin{center}
+\includegraphics[scale=0.23, angle=270]{pictures/cleaning_tech.pdf}
+\end{center}
+%}
+\caption[Mechanical drawing of cleaning tray]{\textbf{Mechanical drawing of cleaning tray.} These mechanical drawing shows the exact dimensions of the cleaning tray produced to handle the \ac{ROC}s during the the cleaning procedure.}\label{App:cleaning_drawings}
+%\end{landscape}
+\end{minipage}% 
+
+\end{figure}
+
+
+
+\begin{figure}[h]
+%\rotatebox{90}{% 
+%\begin{landscape}
+\begin{minipage}{.6\textheight} 
+\begin{center}
+\includegraphics[scale=0.23, angle=90]{pictures/gold-stud_UBM/ballbondchuck.pdf}
+\end{center}
+%}
+\caption[Mechanical drawing of improved vacuum jig]{\textbf{Mechanical drawing of improved vacuum jig.} These mechanical drawing shows the exact dimensions of the jig and the positions of the vacuum holes. The diameters of the vacuum holes were defined to $0.5\,\si{\micro \meter}$ but experience showed that the vacuum is too weak with such small holes to stand the forces during the wire shearing. For this reason, some of the holes were conically enlarged to increase the strength of the vacuum. These mechanical drawings have been designed in cooperation with Michael Meisser.}\label{App:vacuum_jig}
+%\end{landscape}
+\end{minipage}% 
+
+\end{figure}
+
+
+\end{appendices}

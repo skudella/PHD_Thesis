@@ -1,0 +1,199 @@
+\documentclass{thesisclass}
+% Based on thesisclass.cls of Timo Rohrberg, 2009
+% ----------------------------------------------------------------
+% Thesis - Main document
+% ----------------------------------------------------------------
+
+%% -------------------------------
+%% |  Information for PDF file   |
+%% -------------------------------
+\hypersetup{
+ pdfauthor={Simon Spannagel},
+ pdftitle={diploma thesis},
+ pdfsubject={Not set},
+ pdfkeywords={Not set}
+}
+
+
+%% ---------------------------------
+%% | Information about the thesis  |
+%% ---------------------------------
+
+\newcommand{\myname}{Simon Spannagel}
+\newcommand{\mytitle}{A High-Rate Beam Test\\for the CMS Pixel Detector\\Phase I Upgrade}
+\newcommand{\myinstitute}{Institut f\"ur Experimentelle Kernphysik (IEKP)}
+\newcommand{\mydepartment}{Fakult\"at f\"ur Physik}
+\newcommand{\myuniversity}{Karlsruher Institut f\"ur Technologie}
+\newcommand{\myplace}{Karlsruhe}
+
+\newcommand{\reviewerone}{Prof. Dr. Ulrich Husemann}
+\newcommand{\reviewertwo}{Prof. Dr. Guido Drexlin}
+%\newcommand{\advisor}{?}
+%\newcommand{\advisortwo}{?}
+
+\newcommand{\timestart}{7. November 2011}
+%\newcommand{\timeend}{6. November 2012}
+\newcommand{\timeend}{2. November 2012}
+%\newcommand{\submissiontime}{DD. MM. 20XX}
+
+\def\symbR{\textsuperscript{\textregistered}}
+\def\symbC{\textsuperscript{\textcopyright}}
+\def\symbTM{\textsuperscript{\texttrademark}}
+
+%% ---------------------------------
+%% | ToDo Marker - only for draft! |
+%% ---------------------------------
+% Remove this section for final version!
+\setlength{\marginparwidth}{20mm}
+%~ 
+\newcommand{\margtodo}
+{\marginpar{\textbf{\textcolor{red}{ToDo}}}{}}
+%~ 
+\newcommand{\todo}[1]
+{{\textbf{\textcolor{red}{(\margtodo{}#1)}}}{}}
+
+
+%% --------------------------------
+%% | Old Marker - only for draft! |
+%% --------------------------------
+% Remove this section for final version!
+%~ \newenvironment{deprecated}
+%~ {\begin{color}{gray}}
+%~ {\end{color}}
+
+
+%% --------------------------------
+%% | Settings for word separation |
+%% --------------------------------
+% Help for separation:
+% In german package the following hints are additionally available:
+% "- = Additional separation
+% "| = Suppress ligation and possible separation (e.g. Schaf"|fell)
+% "~ = Hyphenation without separation (e.g. bergauf und "~ab)
+% "= = Hyphenation with separation before and after
+% "" = Separation without a hyphenation (e.g. und/""oder)
+
+% Describe separation hints here:
+\hyphenation{
+spec-tro-me-ter
+in-fra-struc-ture
+lu-mi-no-si-ty
+Korn-mayer
+}
+
+
+%% ------------------------
+%% |    Including files   |
+%% ------------------------
+% Only files listed here will be included!
+% Useful command for partially translating the document (for bug-fixing e.g.)
+\includeonly{%
+titlepage,
+%pruefungsexemplar,
+abstract,
+introduction,
+ch2-semiconductors,
+ch3-lhc,
+ch4-cms,
+ch5-tracking,
+ch6-highrate,
+ch7-data-analysis,
+conclusion,
+appendix,
+danksagung,
+erklaerung
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here, main documents begins %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Remove the following line for German text
+\selectlanguage{english}
+
+\frontmatter
+\pagenumbering{Roman}
+%\include{titlepage}
+%\blankpage
+
+%\include{pruefungsexemplar}
+%\cleardoublepage
+
+%% -------------------
+%% |   Abstracts     |
+%% -------------------
+\include{abstract}
+
+%% -------------------
+%% |   Directories   |
+%% -------------------
+\tableofcontents
+\cleardoublepage
+\listoffigures
+%\listoftables
+
+%% -----------------
+%% |   Main part   |
+%% -----------------
+\mainmatter
+\pagenumbering{arabic}
+
+\input{03essay}
+
+\input{04introducion}
+
+\input{05LHC_CMS}
+
+\input{06semiconductors_interaction}
+
+\input{07bumpbonding_technology}
+
+\input{08substrate}
+
+\input{09goldstud_bumping}
+
+\input{10flipchipping}
+
+\input{11summary}
+
+
+
+
+%% ----------------
+%% |   Appendix   |
+%% ----------------
+%\cleardoublepage
+%\input{12appendix}
+%\include{tests}
+%\cleardoublepage
+\input{14acronyms}
+
+%% --------------------
+%% |   Bibliography   |
+%% --------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+
+\iflanguage{english}
+{\bibliographystyle{alpha}}
+{\bibliographystyle{babalpha-fl}}	% german style
+												  
+% Use IEEEtran for numeric references
+%\bibliographystyle{IEEEtranSA})
+
+\bibliography{thesis}
+
+
+%% --------------------
+%% |     The Rest     |
+%% --------------------
+\cleardoublepage
+%\input{13acknowledgements}
+\cleardoublepage
+
+\input{02declaration}
+
+\end{document}

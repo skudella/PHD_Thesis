@@ -1,0 +1,281 @@
+\acresetall
+\chapter[The LHC and the CMS experiment]{The \acl{LHC} and the \acl{CMS} experiment}\label{cha:LHC_CMS}
+
+With the \ac{LHC}, the European Organization for Nuclear Research (CERN\footnote{Conseil Europ\'{e}en pour la Recherche Nucl\'{e}aire}) operates the currently most powerful particle collider worldwide, which provides particle collisions with highest performance in both energy and luminosity. At several locations around the accelerator complex, experiments are installed to carry out different areas of particle physics, like the investigation of the mechanism of electroweak symmetry breaking, high density states of matter and physics beyond the Standard Model model of particle physics using the infra-structure of CERN.
+
+\section{The \acl{LHC}}\label{sec:LHC}
+With a circumference of $27\,\rm{km}$, the \ac{LHC} is a particle collider designed to work as both a proton-proton collider and an ion-ion collider ($\rm{Pb}$ ions). For proton-proton collisions, the \ac{LHC} design aims for a center-of-mass energy of $14\,\rm{TeV}$ and an instantaneous luminosity of $\mathcal{L}=1\cdot 10^{34}\rm{cm^{-2}s^{-1}}$~\cite{LHC14}.
+
+In general, the instantaneous luminosity is defined as the ratio of the particle rate interacting in the collision $\dot N$ and the particle interaction cross-section $\sigma$
+\begin{equation}
+\mathcal{L}=\frac{\dot N}{\sigma},
+\end{equation}
+while the integrated luminosity $L$ is given by
+\begin{equation}
+L=\int \mathcal{L} dt.
+\end{equation}
+For a collider, the instantaneous luminosity can be estimated as
+\begin{equation}
+\mathcal{L}=\frac{n \cdot N_1 \cdot N_2 \cdot f}{\sigma _{x(\rm{beam})}\cdot \sigma _{y(\rm{beam})}}
+\end{equation}
+assuming the beams hit each other at an angle of approximately $180\,^{\circ}$. Here, $n$ is the number of bunches in the collider ring, and $N_1$ and $N_2$ are the amounts of particles per bunch. The frequency of the bunches circulating is given by $f$, while $\sigma _{x\rm{(beam)}}$ and $\sigma _{y\rm{(beam)}}$ define the beam profile. With known beam parameters and a known total proton-proton interaction cross-section ($\approx 1\cdot 10^{-25}\,\rm{cm^2}$~\cite{Ant12}), it is possible to estimate the number of events created in each collision. The luminosity of the last runs ($7\cdot 10^{33}\,\rm{cm^{-2}s^{-1}}$) at a center of mass energy of $8\,\rm{TeV}$ led to an event rate of approximately~$7\cdot 10^8$ events per second.
+
+The \ac{LS1} consolidation of the \ac{LHC} (2013-2014) to an energy of $14\,\rm{TeV}$ and a luminosity of $1\cdot 10^{34}\,\rm{cm^{-2}s^{-1}}$ will increase the event rate by $30\,\%$. With an upgrade of the \ac{LHC}, the so-called \acl{LS2} (\acs{LS2}, 2018), it is planned to increase the instantaneous luminosity to more than $2\cdot 10^{34}\,\rm{cm^{-2}s^{-1}}$. To handle the additional particle flux, the complete pixel detector needs to be replaced by an upgraded version. The \ac{CMS} experiment decided to replace the pixel detector before \acs{LS2} in the year-end technical stop of 2016/2017 (Phase I Upgrade). This allows benefiting from the high integrated luminosity expected until \acs{LS2} and maximizing the physics potential of the pixel detector~\cite{Dom12}.
+
+\subsection{Acceleration process}
+To achieve particle energies of $4\,\rm{TeV}$, the particles need to be accelerated in several stages. Figure~\ref{fig:acceleration_complex} shows a schematic of the whole accelerator complex at CERN.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.48]{pictures/lhc-complex2.jpg}
+\end{center}
+\caption[Accelerator complex at CERN]{\textbf{Accelerator complex at CERN.} For protons the acceleration stages are LINAC 2, Booster, PS, SPS and \acs{LHC}, where they reach their current maximum energy of $4\,\rm{TeV}$~\cite{LHC14b}. For Pb ions the acceleration stages are LINAC 3, LEIR, PS, SPS and \acs{LHC} (maximum energy of $2.7\,\rm{TeV}$ per nucleon).
+}\label{fig:acceleration_complex}
+\end{figure}
+
+The first stage of acceleration is a \acl{LINAC} (\acs{LINAC} 2). After leaving a bottle of highly pure hydrogen gas in pulses of $100\,\si{\micro \second}$, the electrons of hydrogen atoms get stripped of, leaving just protons. Next, the protons are accelerated by strong electric fields between drift tubes to an energy of $50\,\rm{MeV}$. The electric fields are induced by oscillating high voltages applied to the tubes. The second stage is the \ac{PSB}, where the protons are packed into bunches and circularly accelerated in the four rings of the booster. At an energy of $1.4\,\rm{GeV}$, they are transmitted to the \ac{PS}. The \ac{PS} is an additional $628\,\rm{m}$ circular accelerator stage, increasing the energy of the protons up to $25\,\rm{GeV}$. After the \ac{PS}, all following accelerators are underground. In the \ac{SPS}, the protons get boosted further. As the \ac{PS}, the \ac{SPS} is a circular accelerator with a circumference of $7\,\rm{km}$ that increases the proton energy to $450\,\rm{GeV}$. Up to this point, room temperature electromagnets are sufficient to provide the magnetic fields necessary for a circular particle track~\cite{LHC14}.
+
+The last step of acceleration is provided by the \ac{LHC}. This $27\,\rm{km}$ circular accelerator hosts 1232 dipole magnets, creating a magnetic field of up to $8.33\,\rm{T}$ to bend the particle trajectories. To achieve such high magnetic fields, the magnets are cooled by supra-fluid helium ($1.9\,\rm{K}$)~\cite{Bru04} providing not only low temperature, but also high thermal conductivity and no internal friction~\cite{Lei70}. This allows a constant and homogeneous cooling of the magnets. The beam is focused by quadrupole magnets arranged in \acs{FODO} (\acl{FODO}) sections. The \acs{FODO} sections consist of two quadrupole magnets which are arranged in a certain distance to each other and rotated by $90\,^{\circ}$. Although a quadrupole magnet is always focusing in one direction and defocusing in the other, this arrangement leads a total focusing of the beam, the so-called strong focusing~\cite{Bet67}. Additional sextupole magnets provide the option of small corrections to the beam. The acceleration of the protons to their final energy of $4\,\rm{TeV}$ is performed by superconducting cavity resonators that are fed with radio-frequency electromagnetic waves from klystrons. The collisions of the protons take place in four interaction points, where the two proton beams hit each other. At each of the interaction points, an experiment is placed around the collision point to detect the interaction products.\\
+\\When accelerating Pb ions, the starting point of the acceleration is the \acl{LINAC} (\acs{LINAC} 3) that feeds the ions into the \ac{LEIR}, where they are pre-accelerated and transmitted into the \ac{PS}. From here, the acceleration is performed in the same way as for the protons, leading to a final center of mass energy of $5.5\,\rm{TeV}$ per nucleon~\cite{Ber12}.
+
+\subsection{Experiments at the \ac{LHC}}
+There are currently seven major experiments placed at the \ac{LHC}:
+\begin{itemize}
+\item \textbf{\acf{CMS}:} The \ac{CMS} experiment is a multi-purpose detector investigating the characteristics of the Higgs boson, searching for physics beyond the Standard Model and investigating heavy ion collisions~\cite{C+08}. A more detailed insight into the \ac{CMS} detector will be given in section~\ref{sec:CMS}.
+\item \textbf{\ac{ATLAS}:} Similar to \ac{CMS}, ATLAS is a multi-purpose detector with focus on Higgs physics and physics beyond the Standard Model of particle physics~\cite{A+08a}.
+\item \textbf{\ac{ALICE}:} With its focus on the investigation of the strong interaction and the search for the quark-gluon plasma, the ALICE detector is specialized on heavy ion collisions, but still can be used as a general-purpose detector during the proton run of the \ac{LHC} (lower luminosity)~\cite{A+08b}.
+\item \textbf{\ac{LHCb}:} With its asymmetric design as a forward spectrometer, the LCHb experiment is specialized on the detailed study of B hadrons produced in the forward direction of the proton-proton collisions\footnote{The forward direction of a detector or of a proton-proton collision is the region close to the beam pipe, which is penetrated by particles with a low transverse momentum compared to their longitudinal momentum. More details about the coordinate system of a detector are given in section~\ref{sec:coordinates}.}. Studying B-mesons allows, for example, a detailed investigation of CP-violation in B-meson systems~\cite{A+08d}.
+\item \textbf{\ac{LHCf}:} Placed in the forward direction of the \ac{ATLAS} detector, the physics goal of this experiment is to study the hadronic interactions at high energies to provide calibration data for cosmic ray experiments~\cite{A+08e}.
+\item \textbf{Monopole and Exotics Detector At the LHC (MoEDAL):} This experiment, currently being built up at the \ac{LHC}, has its focus on physics beyond the Standard Model, especially magnetic monopoles, extra dimensions and stable massive ionizing particles~\cite{Pin14}.
+\item \textbf{\acl{TOTEM}}\\ \textbf{(\acs{TOTEM}):} Located in the forward direction of the \ac{CMS} experiment, this detector investigates the total proton-proton interaction cross-section and the elastic scattering. Another approach is to search for exotic particles expected in the forward direction~\cite{A+08f}.
+\end{itemize}
+
+
+
+
+\section{The \acf{CMS} experiment}\label{sec:CMS}
+Developed since the 1990s, the physics goals of the \ac{CMS} experiment are the investigation of the process of electroweak symmetry breaking and the search for the Higgs boson, as well as the general investigation of physics at the TeV scale, including the search for super-symmetric particles, new heavy vector bosons and extra dimensions. No less important are detailed studies of the Standard Model, to provide detailed measurements for flavour physics and future detectors. With the \ac{LHC} running in heavy ion mode, the \ac{CMS} experiment also investigates high density states of matter and provides detailed data about \ac{QCD} interactions~\cite{Bay05}. To reach these goals, the detector has to meet high requirements described in the following~\cite{C+08}:
+\begin{itemize}
+\item Good muon identification, momentum and mass resolution ($<1\,\%$ at $100\,\rm{GeV}$) and the ability to determine the charge of muons for high muon momentums of $p<1\,\rm{TeV}$.
+\item Good momentum resolution and track reconstruction for charged particles in the inner tracker. To allow b- and $\tau$-tagging, this requires pixel detectors close to the interaction point.
+\item Good electromagnetic energy resolution for diphoton and dielectron signals ($\approx 1\%$ at $100\,\rm{GeV}$) at a wide geometric coverage, allowing $\rm{\pi}^0$ rejection and photon-lepton isolation.
+\item A good $E^T_{miss}$ and dijet resolution, requiring a highly segmented hadron calorimeter at a wide geometric coverage.
+\item The first stage of front-end electronics of all detector components has to be able to read out the detector signal within $25\,\rm{ns}$.
+\end{itemize}
+The overall concept for the detector design is centered around a large superconducting solenoid, providing a strong magnetic field with high bending power. This allows both precise measurements of the particle momentum and housing large tracker and calorimeters inside the solenoid. As the name already indicates, the \ac{CMS} detector is a rather compact detector compared to its weight and complexity. Its total mass is about $12500\,\rm{t}$, spread over a a cylindrical structure of $21.6\,\rm{m}\,\times \, 14.6\,\rm{m}$.
+
+
+\paragraph*{The \ac{CMS} coordinate system}\label{sec:coordinates}
+With the point of origin in the nominal interaction point of the proton beams, the $y$-axis is pointing vertically upwards and the $x$-axis is pointing radially inwards, to the center of the \ac{LHC}. As a consequence, the $z$-axis is pointing in the direction of one of the proton beams, westwards. In cylindrical coordinates (typically used to describe the geometry of sub-detector systems), $r$ defines the distance from the $z$-axis and $\varphi$ describes the orientation in the $x$-$y$-plane starting from the $x$-axis. 
+
+The direction of a particle compared to the beam direction is typically described by the pseudo-rapidity (high $\eta$ value means scattering in forward direction). Here $\theta$ is defined as a polar angle between the $z$-axis and the particle direction:
+\begin{equation}
+\eta =-\ln\tan\left(\frac{\theta}{2}\right)
+\end{equation}
+Values like the transverse energy $E_T$ and the transverse momentum $p_T$ are calculated from the $x$-$y$ values of the particle track. The missing transverse energy is denoted as $E^{\rm{miss}}_T$.
+
+
+\subsection{The \ac{CMS} sub-detector systems}
+Like most modern \ac{HEP} detectors, the \ac{CMS} detector shows an onion-like layout. In this layout, several sub-detector components are arranged in layers around the interaction point, to be able to detect particles with a solid angle coverage of nearly $4\rm{\pi}$. Figure~\ref{fig:CMS_layout} shows a three-dimensional schematic of the \ac{CMS} detector, as well as a slice through the detector with the tracks of different particles detected. Modern particle detectors typically use a barrel-endcap layout, where a cylindrical detector part surrounds the interaction area in the radial direction, while endcaps close the barrel and cover the longitudinal directions. 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{pictures/cms_both.png}
+\end{center}
+\caption[Layout of the CMS detector]{\textbf{Layout of the \ac{CMS} detector.} This sketches show the sub-structure of the \ac{CMS} detector with its sub-detector systems (top)~\cite{CMS11b} and the trajectories and detection methods of different particle types (bottom)~\cite{INF07}.}\label{fig:CMS_layout}
+\end{figure}
+%\\The basic detection principle for charged particles is to first measure the momentum of ionizing particle in a tracking system where the particles trajectory is bended due to the Lorentz force. The particles momentum is directly proportional to the bending radius of the track, while the charge of the particle defines the direction of the bending. A detailed track reconstruction can also give information about the vertex the particle was produced at, allowing to determine secondary vertices. The energy of the particle is determined in a calorimeter. With the particle energy and momentum measured, the particle can be identified.
+%\\For neutral particles, the tracking doesn't work and the identification needs to be done only by the exact process of energy deposition inside the calorimeter.
+%\paragraph*{The CMS coordinate system}
+\subsubsection{The solenoid magnet}
+The heart of the \ac{CMS} detector is its superconducting solenoid. Made of NbTi-alloy, a superconducting material cooled to a temperature of $1.93\,\rm{K}$ by supra-fluid helium, the solenoid allows currents of $19.14\,\rm{kA}$ in its coils. With this current, the solenoid provides a magnetic field of $3.8\,\rm{T}$ in its inner area.
+
+What sets the \ac{CMS} solenoid apart from others is not only its high energy stored in the magnetic field ($2.6\,\rm{GJ}$), but also its low mass and its large dimensions. With $220\,\rm{t}$ of mass, a length of $12.5\,\rm{m}$ and an inner diameter of $6.3\,\rm{m}$, its thickness is only $3\times$ the radiation length \footnote{The radiation length is defined as the mean distance over which the energy of an electromagnetically interacting particle is reduced by a factor $1/\rm{e}$.} of the solenoid material, keeping the multiple scattering of particles penetrating the solenoid as low as possible. Its large dimensions not only provide a lot of space in its inner area, but also ensure a relatively high magnetic field at high $\eta$.
+
+Outside the solenoid, there is an iron yoke to return the magnetic field and to house the muon system. This provides a magnetic field of $1.9\,\rm{T}$ in between the slaps of the iron yoke. With a weight of $10000\,\rm{t}$, the iron yoke dominates the total weight of the detector~\cite{C+08}.
+
+
+\subsubsection{The muon system}
+The muon system is located outside the solenoid and in between the iron yoke, where the magnetic field is $1.9\,\rm{T}$ strong. Its main function is to detect muons coming from decays inside the detector. The main importance of the muon system lies in its good momentum resolution, since muons are not influenced much by radiative energy losses in the detector material. To provide the optimum momentum resolution, the tracking information of the muon system and the tracker system (see sec.~\ref{sec:CMS_tracker}) are combined in a global fit.
+
+Since the area that needs to be covered by the muon system is very large, great emphasis has been put on producing a cheap, durable, easy to build and maintenance free detector system. In the barrel region where the magnetic field is homogeneous and the neutron background and the muon rates are small, the muon system consist of four layers of rectangular gas \acl{DC}s (\acs{DC}s). In the end-cap regions, \ac{CSC}s (\acs{CSC}s) are used, to deal with the higher muon rate and neutron background. Since the \acs{CSC}s have a fast response time, they can contribute to the muon trigger system. To deal with uncertainties in the background rates and to measure the correct beam crossing time, a system of \acl{RPC}s (\acs{RPC}s) has been added in both the barrel and the endcap regions. The \acs{RPC}s are operated in avalanche mode to ensure a good operation even at high particle rates. They produce a very fast signal response with a good time resolution (typically $1\,\rm{ns}$), but cannot provide the position resolution of \acs{DC}s or \acs{CSC}s. This way, \acs{RPC}s provide a complementary and dedicated trigger system to the \acs{CSC}s~\cite{C+08}.
+
+
+
+\subsubsection{The calorimeters}
+The measurement of particle energies is performed by calorimeters located between the tracker system and the solenoid. In the calorimeters, the particles are completely absorbed, while transferring their energy to the sensitive material.
+
+\paragraph*{Hadronic calorimeter} The \ac{HCAL} is the outermost sub-detector system inside the solenoid. Its purpose is to determine the energy of strongly interacting particles. Built up as a sampling calorimeter, it consists of alternating layers of absorber material (brass: $70\,\%$ Cu, $30\,\%$ Zn), inducing hadronic showers, and sensitive scintillating material equipped with \acl{HPD}s (\acs{HPD}s), transforming the scintillation light into an electrical signal. The thickness of the \ac{HCAL} is $7-11\times$ the average nuclear interaction length \footnote{The nuclear interaction length is defined as the distance required to reduce the number of hadronically interacting particles by a factor of $1/\rm{e}$.} (depending on $|\eta|$). In the barrel region, the \ac{HCAL} is completed by a tail-catcher outside the solenoid that detects hadronic particles penetrating the \ac{HCAL}\footnote{Since the energy deposition of hadronic particles inside a detector is Landau-distributed, there is a significant percentage of particles penetrating the \ac{HCAL} completely}. In the forward region, the \ac{HCAL} is completed by Cherenkov radiation detectors covering a pseudo-rapidity of up to $|\eta|<5$~\cite{C+08}.
+
+\paragraph*{Electromagnetic calorimeter} Inside the \ac{HCAL}, the \ac{ECAL} detects electrons, positrons and photons. Made of over $75000$ $\rm{PbWO_4}$ crystals, it is a hermetic and homogeneous calorimeter, combining absorber and scintillator in one material. The readout of the blue-green scintillation light is done by \ac{APD} in the barrel region and vacuum \ac{VPT} in the endcap region. The short radiation length of $X_0=0.89\,\rm{cm}$ allows the construction of a compact \ac{ECAL} with a small granularity. With a length of $230\,\rm{mm}$, the crystals cover $25.8\,X_0$. To maximize the readout efficiency of the light, the crystals are polished to allow the exploitation of total reflection at the crystal edges~\cite{C+08}.
+
+\subsubsection{The inner tracker system}\label{sec:CMS_tracker}
+The inner tracker of the \ac{CMS} detector faces very high demands concerning the high luminosity and particle rates provided by the \ac{LHC}. At the \ac{LHC}s design luminosity, every $25\,\rm{ns}$ there are about $1000$ particles from more than $20$ overlapping collisions to be tracked and assigned to the correct proton-proton collision. To comply with such high demands for readout, radiation hardness, high granularity, and low material budget, an all-silicon tracker with an active area of about $200\,\rm{m^2}$ has been built.
+
+The tracker can be separated into two components, the pixel tracker and the strip tracker. While the pixel tracker (described in detail in sec.~\ref{sec:CMS_pixel}) provides a high granularity with many readout channels, the strip tracker performs a precise tracking based on many track seeds, while keeping the total costs and number of readout channels low.\\
+\\The strip tracker can again be divided into the ``inner tracker'' and the ``outer tracker'', each consisting of a barrel and an endcap region. All of the strips in the barrel region are parallel to each other, while in the endcaps, they are arranged radially around the beam pipe. The \ac{TOB} and \ac{TEC} ($55\,\rm{cm}< r <110\rm{cm}$) are built from six barrel layers and nine disks in each endcap. The strips have a pitch of $122\,\si{\micro \meter}$ to $183\,\si{\micro \meter}$ in the barrel region ($97\,\si{\micro \meter}$ to $184\,\si{\micro \meter}$ average pitch in the endcaps), a length of $20\,\rm{cm}$ and can provide a minimum single point resolution of $35\,\si{\micro \meter}$~\cite{C+08}.
+
+The \ac{TIB} and the \ac{TID} ($20\,\rm{cm}<r<55\,\rm{cm}$) consist of four barrel layers and three disks on each endcap. With a strip length of $10\,\rm{cm}$ and strip pitches of $80\,\si{\micro \meter}$ to $120\,\si{\micro \meter}$ in the barrel region ($100\,\si{\micro \meter}$ to $141\,\si{\micro \meter}$ average pitch in the endcaps), the inner tracker achieves single point resolutions down to $23\,\si{\micro \meter}$~\cite{C+08}. All the strip modules of the first two layers of the \ac{TOB}, \ac{TIB}, \ac{TID} and \ac{TEC}, and also the modules of the fifth \ac{TEC} layer, are mounted back to back with another strip module to form double layers. A stereo angle of $0.1\,\rm{rad}\triangleq 5.73\,^{\circ}$ allows the measurement of a second coordinate of the point where the particle penetrates the layer.
+
+All strips are individually wire bonded to the readout electronics, placed at the end of the sensor, resulting in a total number of approximately $9.3$ million readout channels. The necessity of a fast readout causes the disadvantage of large power consumption and heat production ($150\,\rm{kW}$). Since the tracker has to be operated at a constant temperature, a cooling system removes the heat using a tetradecafluorohexane ($\rm{C_6F_{14}}$) coolant at a temperature of $-20\,^{\circ}\rm{C}$~\cite{C+08}.
+
+\subsubsection{The trigger system}\label{sec:trigger}
+Since the maximum rate of events that could be analysed and saved offline is in the order of a few hundred Hertz, it is impossible to save and analyse all data collected at the bunch crossing rate of $40\,\rm{MHz}$ offline. To still read out the data of interest, an online trigger system needs to reduce the amount of data collected to those events of interest for physics analysis and calibration. In the \ac{CMS} experiment, the trigger system consists of two levels, the hardware implemented \ac{L1} and the software implemented \ac{HLT}.
+\\
+\\Until the \ac{L1} Trigger decides which event is of interest, only the calorimeters and the muon system is read out, while the tracker is able to save the data for $3.2\,\si{\micro \second}$. The \ac{L1} Trigger system consists of fast electronics (\acl{FPGA}s (\acs{FPGA}s) and \acl{ASIC}s (\acs{ASIC}s)) that decide whether an event is of interest or not, based on the data collected from the calorimeters and the muon system. After a positive \ac{L1} Trigger decision, the whole tracker is read out and the data is transferred to the \ac{HLT}. The \ac{L1} Trigger reduces the rate of data to a maximum of $100\,\rm{kHz}$.
+
+The \ac{HLT} consists of a basic but faster version of the offline event reconstruction software which is running on a computer farm. It performs a basic online event reconstruction, searching events with physically interesting patterns. In this way, it reduces the data recorded to a rate of a few $100\,\rm{Hz}$. Since the trigger is software implemented, the physically interesting pattern can always be adjusted to the current physics program~\cite{C+08}.
+%\todo{notwendig?}For the Phase II Upgrade of the CMS detector coming with the upgrade to the HL-\ac{LHC}, an integration of the tracker into the trigger system is planned. Therefore the tracker will use 2-layer modules that directly give information about the momentum of the particle detected. For more details see~\cite{CMS11b},~\cite{Abb11}.
+
+\subsection{The \ac{CMS} pixel detector}\label{sec:CMS_pixel}
+Since one of the applications of the gold-stud bump bonding technology is the development of pixel detectors, this section will have a special focus onto the \ac{CMS} pixel detector.
+
+The \ac{CMS} pixel detector is the innermost part of the \ac{CMS} tracker, capable of tracking particles at high $\varphi$- and $z$-resolution. It allows b- and $\tau$-tagging by providing very good secondary vertex reconstruction. With its small pixel size of $100\si{\micro \meter}\times 150\,\si{\micro \meter}$, the occupancy is kept below $1\,\%$, even at high particle rates. In total, the pixel detector comprises $66$~million readout channels spread over a sensitive area of approximately $1\,\rm{m^2}$.
+
+Analogue readout of the charge deposited in a pixel allows increasing the resolution by exploiting the charge sharing between several pixels. In the barrel region, the charge sharing is induced by the magnetic field, perpendicular to the charge drift direction. In the endcaps, the charge sharing is induced by a turbine-like tilt of the pixel modules. Exploiting the charge sharing, the spatial resolution of the pixel detector using its 3 barrel layers can be improved from $29\,\si{\micro \meter}$ to $15-20\,\si{\micro \meter}$~\cite{Erd09}.
+
+
+
+\subsubsection{Geometry of the \ac{CMS} pixel detector}
+Similar to the strip tracker, the pixel detector consists of a barrel (\acs{BPIX}) and endcaps (\acs{FPIX}) and covers a region of $|\eta |<2.5$. Figure~\ref{fig:pixel_detector_layout} shows a schematic of the basic pixel detector layout.
+
+The \acs{BPIX} region hosts three layers of pixel sensors, with a total length of $53\,\rm{cm}$. The layers are arranged at radii of $41\,\rm{mm}-112\,\rm{mm}$ and are formed out of pixel modules. To ensure good accessibility, the barrel region is designed as a half-shell structure, allowing to mount the barrel layer by layer around the beam pipe.
+
+The endcaps consist of $2$ disks on each side of the barrel. Each of the disks shows a turbine-like structure with $24$ blades that are tilted at an angle of $20\,^{\rm{\circ}}$ to the disk plane. The blades cover radii of $60\,\rm{mm}-150\rm{mm}$ and are located at $z=\pm 345\,\rm{mm}$ and $z=\pm 465\,\rm{mm}$~\cite{Erd09}. A summary of the modules and pixels is given in table~\ref{tab:pixel_detector_old}. All pixel modules are mounted on light-weight support structures to reduce multiple scattering and cooled by a tetradecafluorohexane ($\rm{C_6F_{14}}$) cooling system.
+
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{pictures/Pixeldetector_layout.png}
+\end{center}
+\caption[Layout of the current CMS pixel detector]{\textbf{Layout of the current \acs{CMS} pixel detector.} The picture shows the basic layout of the \acs{CMS} pixel detector (left), a more detailed picture of the turbine-like geometry of the endcaps (right, top), and a cross-section through the barrel region visualizing the half-shell structure of the barrel layers (right, bottom)~\cite{C+08}.}\label{fig:pixel_detector_layout}
+\end{figure}
+
+\begin{table}
+\caption[Summary of geometric parameters of the current CMS pixel detector]{\textbf{Summary of geometric parameters of the current \acs{CMS} pixel detector.} The table gives an overview over the dimensions and numbers of the \acs{CMS} pixel detector~\cite{C+08} currently installed at the \ac{CMS} experiment.}\label{tab:pixel_detector_old}
+\begin{center}
+\begin{tabular}{@{}p{24mm}p{24mm}p{12mm}p{16mm}p{8.5mm}p{8.5mm}p{22mm}}
+\toprule
+name&radius/$z$-pos.\newline (mm)&faces/\newline blades&full-/half-modules&chips&pixels ($10^6$)&sensitive area ($\rm{m^2}$)\\
+\midrule
+\acs{BPIX} Layer 1&$41-45$/-&$18$/-&$128/32$&$2304$&$6.35$&$0.15$\\
+\acs{BPIX} Layer 2&$70-74$/-&$30$/-&$224/32$&$3844$&$10.6$&$0.25$\\
+\acs{BPIX} Layer 3&$107-112$/-&$46$/-&$352/32$&$5888$&$16.2$&$0.38$\\
+\acs{FPIX} Disk $\pm$1&$60-150$/$\pm 345$&-/$24$&$168$/-&$1080$&$3.0$&$0.07$\\
+\acs{FPIX} Disk $\pm$2&$60-150$/$\pm 465$&-/$24$&$168$/-&$1080$&$3.0$&$0.07$\\
+\midrule
+total &$41-150$/$\pm 465$&$94$/$96$&$1376$/$128$&$16352$&$66$&$1.06$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsubsection{The \acs{BPIX} Module}
+In this section, the layout of a \ac{CMS} barrel pixel full module is described exemplary for all pixel modules. A basic layout of the \acs{BPIX} module is shown in figure~\ref{fig:old_module}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.60]{pictures/old_module.png}
+\end{center}
+\caption[BPIX module layout of the current CMS pixel detector]{\textbf{\acs{BPIX} module layout of the current \acs{CMS} pixel detector.} The picture shows the composition of a \acs{BPIX} module (left), as well as an assembled \acs{BPIX} module~\cite{Erd09}.}\label{fig:old_module}
+\end{figure}
+A \acs{BPIX} module is comprised of several layers. The central part of the pixel module is the sensor, which is the sensitive part of the module. In its slightly doped silicon bulk, ionizing particles create electron-hole pairs that can be read out as a signal (compare sec.~\ref{sec:semi_as_detector}. The readout of the signal is done by the \ac{ROC} that is vertically connected to the sensor via bump bonding. The bump bonding technology used for the current detector is the indium solder bump bonding technology (see sec.~\ref{sec:indium_bumping}). On top of the sensor, there is the \ac{HDI} with the \ac{TBM}, glued to the sensor and wire bonded to the \ac{ROC}s. The \ac{TBM} collects all data from the \ac{ROC}s and transmits them outside via a signal cable; also it transmits the trigger decision to the \ac{ROC}s. The possibility to mount the module onto a mechanical structure is given by the base strips glued to the \ac{ROC}s at the very bottom~\cite{Erd09}.
+
+\subsubsection{The \acs{BPIX} Sensor}\label{sec:BPIX_sensor}
+All pixel sensors are semiconductor particle detectors. (See ch.~\ref{cha:semi-conductors} for more information about semiconductors and their application as particle detectors.)
+
+The \acs{BPIX} sensor is developed as an $\rm{n^+}$-in-$n^{-}$ concept that is read out on the n-side. This allows under-depleted operation after high irradiations, avoiding the need for very high depletion voltages and reducing the power consumption due to high leakage currents. It also improves the charge mobility (electrons as major charge carriers) and increases the Lorentz angle and the charge sharing. With a sensor thickness of $285\,\si{\micro \meter}$, a \ac{MIP} is expected to produce approximately $22000$ electrons-hole pairs inside the sensor~\cite{Tin11}. The usage of sensors processed on both sides ensures homogeneous bias voltage distribution by implementing a grid structure on the backside and allows shielding the sensor edges from the high voltage, using a guard ring on the backside. This reduces the risk of sparks via the $15\,\si{\micro \meter}$ air gap between sensor edge and the \ac{ROC}s. Every full sensor module is separated into $16$ single sensors, each separated into $80\times 52$ pixels (size: $150\,\si{\micro \meter}\times 100\si{\micro \meter}$). To insulate the pixel cells from each other, an additional p-spray implant layer is implemented between the single pixels. Figure~\ref{fig:BPIX_sensor_and_ROC} shows a picture of \acs{BPIX} sensor module pixels. While the signal is read out via bump bonds, the bias voltage is applied from the backside via wire bonds.
+
+Investigations have shown that the sensor is quite radiation hard, providing a detection efficiency of $95\,\%$ at fluences of $1.2\cdot 10^{15}\,n_{\rm{eq}}/\rm{cm}^2$~\cite{Erd09}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{pictures/old_pixel_sensor_ROC.png}
+\end{center}
+\caption[BPIX sensor and ROC of the current CMS pixel detector]{\textbf{\acs{BPIX} sensor and \ac{ROC} of the current \ac{CMS} pixel detector.} The figure shows pictures of the sensor pixel structure (left) and the \ac{ROC} layout (middle) used in the current \ac{CMS} pixel detector including a schematic of a \acl{PUC}~\cite{Erd09}.}\label{fig:BPIX_sensor_and_ROC}
+\end{figure}
+
+\subsubsection{The \acl{ROC}}\label{sec:ROC_old}
+The readout of both the \acs{BPIX} and the \acs{FPIX} sensor is done by the PSI46v2 \ac{ROC}. The main tasks of the \ac{ROC} are to
+\begin{itemize}
+\item measure and register the charge signals induced by ionizing particles
+\item store the data of the time-stamp, the pixel positions and the charge induced into all pixels hit by a particle until the \ac{L1} Trigger decision
+\item send out the data if requested by the \ac{L1} Trigger
+\end{itemize}
+To handle the large amount of data, it is necessary to use zero suppression mechanism on the data as early as possible (data reduction by a factor of $10^3$). The zero suppression requires a good control over the detection threshold, since the threshold varies from \ac{ROC} to \ac{ROC} and even from pixel to pixel.
+
+The layout of the \ac{ROC} can be separated into two basic parts, the matrix of $80\times 52$ \acl{PUC}s (\acs{PUC}s) and the periphery. The \acs{PUC}s exactly fit the dimensions of the sensor pixels (size: $150\,\si{\micro \meter}\times 100\si{\micro \meter}$) with which they are connected by bump bonds. The \acs{PUC} houses all the electronics necessary to read out and process the charge signal from the sensor, like pre-amplifier, shaper, comparator, the sample-and-hold capacitor, mask- and trim-bits, \ac{DAC}s etc.~to tune the threshold and the gain of a \acs{PUC} or to completely mute it. (For more details about the \acs{PUC} and its \ac{DAC} parameters, see~\cite{Dam09}.) The periphery houses buffers to store data during the \ac{L1} Trigger processing, control electronics to monitor the readout and the wire bond pads to connect the \ac{ROC} to the \ac{HDI}.
+
+All structures are produced in $250\,\rm{nm}$ \ac{CMOS} technology that proved to be radiation hard and able to withstand the high particle flux in the pixel detector~\cite{Dom12}.\\
+\\If a pixel gets hit by a particle, the \acs{PUC} holds the data in the sample-and-hold capacitor until it is read out. All \acs{PUC}s are arranged in symmetrical and independently working double-column structures that get read out serially after every bunch crossing. The positions, time-stamps, and signal levels are buffered inside the periphery for several~$\si{\micro \second}$. If the \ac{L1} Trigger gives the signal to read out the data, the periphery forwards the data to the \ac{HDI}, otherwise it gets overwritten. Up to $32$ hits or $12$ time-stamps can be stored inside the buffer before it goes into overflow.
+
+With the upcoming upgrade of the \ac{LHC} luminosity (see sec.~\ref{sec:LHC}), the demands concerning the occupancy, the particle rates, and readout frequency will be drastically increased requiring a redesign of the \ac{ROC}s~\cite{Dom12}.
+
+
+
+\subsection{The Phase I Upgrade of the \ac{CMS} pixel detector}
+The planned upgrades of the \ac{LHC} to an energy of $14\,\rm{TeV}$ and an instantaneous luminosity of $2\cdot 10^{34}\,\rm{cm^{-2}s^{-1}}$ until the \acs{LS2} in 2018 will increase the number of events that are expected to $2\cdot 10^{9}$ events per second. To handle the high rate of particles, the \ac{CMS} pixel detector requires an upgrade. Due to its position close to the interaction point, the current \ac{CMS} pixel detector is exposed to a lot of radiation damage, requiring the exchange of the complete pixel detector. The goals of the new pixel detector system are~\cite{Dom12}:
+\begin{itemize}
+\item less data loss during events with high pile-up by increasing the data buffer on the \ac{ROC}
+\item higher tracking efficiency by adding a forth pixel layer,
+\item increase of the \ac{CMS} detector performance by reducing the material budget, resulting in less multiple scattering and radiation losses.
+%\item remove all previous radiation damages, that cause a decrease in the detection efficiency and single point resolution by exchanging the complete detector
+\end{itemize}
+
+\subsubsection{Geometry of the pixel detector for the \ac{CMS} Phase I Upgrade}
+As the current pixel detector, the upgraded version will show a barrel-endcap design. To increase the tracking resolution, several changes to the geometry will be made. See figure~\ref{fig:pixel_upgrade} for the changes to the detector geometry.
+
+In the barrel region, four module layers are planned, to improve the tracking resolution by an increase of tracking seed redundancy. At the same time, the minimal radius will be reduced by exchanging the beam pipe with a new one of a smaller outer diameter. This will allow getting closer to the interaction point and improving the reconstruction of secondary vertices. The new layers will be mounted at radii of $30$-$160\,\rm{mm}$, forming a barrel of $560\,\rm{mm}$ length ($|\eta |<2.16$).
+
+In the endcap region, three disk wills form one endcap. This way the new \acs{FPIX} detector will cover the forward region up to $|\eta |=2.5$.
+
+Tab.~\ref{tab:pixel_detector_new} gives an overview of the geometry of the new planned pixel detector. All modules will be mounted on carbon fibre support structures to reduce the material budget (see fig.~\ref{fig:material_budged}). The new support structure will also contribute to a reduction of the total mass of the detector by more than a factor of two in the barrel region and by nearly $20\,\%$ in the forward region~\cite{Dom12}, although the additional barrel layer and the additional disks will nearly double the total number of readout channels and the active area.\\
+\\Another upgrade concerns the cooling system of the pixel detector. By changing from tetradecafluorohexane ($\rm{C_6F_{14}}$) coolant to a two-phase $\rm{CO_2}$ cooling system, the contribution of the cooling system to the passive material budget of the tracker will be be strongly reduced. Since a two-phase cooling system will be used, the biphasic state ensures high thermal stability of the system.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.9]{pictures/phase_I_upgrade/pixel_geometry.png}
+\end{center}
+\caption[Design of the pixel detector for the CMS Phase I Upgrade]{\textbf{Design of the pixel detector for the \ac{CMS} Phase I Upgrade.} The figure illustrates the geometric changes in the \ac{CMS} pixel detector, coming with the \ac{CMS} Phase I Upgrade~\cite{Dom12}.}\label{fig:pixel_upgrade}
+\end{figure}
+\begin{table}
+\caption[Summary of geometric parameters of the pixel detector for the CMS Phase I Upgrade]{\textbf{Summary of geometric parameters of the pixel detector for the \ac{CMS} Phase I Upgrade.} The table gives an overview of the dimensions and numbers of the pixel detector for the \ac{CMS} Phase I Upgrade~\cite{Dom12}.}\label{tab:pixel_detector_new}
+\begin{center}
+\begin{tabular}{@{}p{24mm}p{24mm}p{12mm}p{16mm}p{8.5mm}p{8.5mm}p{22mm}}
+\toprule
+name&radius/$z$-pos.\newline (mm)&faces/\newline blades&full-/half-modules&chips&pixels ($10^6$)&sensitive area ($\rm{m^2}$)\\
+\midrule
+\acs{BPIX} Layer 1&$30$/-&$12$/-&$96$&$1536$&$6.4$&$0.10$\\
+\acs{BPIX} Layer 2&$68$/-&$28$/-&$224$&$3584$&$14.9$&$0.24$\\
+\acs{BPIX} Layer 3&$109$/-&$44$/-&$352$&$5632$&$23.4$&$0.37$\\
+\acs{BPIX} Layer 4&$160$/-&$64$/-&$512$&$8192$&$34.1$&$0.54$\\
+\acs{FPIX} Disk $\pm$1&$45-161$/$\pm 291$&-/$24$&$112$&$1792$&$7.5$&$0.11$\\
+\acs{FPIX} Disk $\pm$2&$45-161$/$\pm 396$&-/$24$&$112$&$1792$&$7.5$&$0.11$\\
+\acs{FPIX} Disk $\pm$3&$45-161$/$\pm 516$&-/$24$&$112$&$1792$&$7.5$&$0.11$\\
+\midrule
+total &$45-161$/$\pm 516$&$148$/$144$&$1856$ &$29696$&$123.8$&$1.9$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.32]{pictures/phase_I_upgrade/material_budged.png}
+\end{center}
+\caption[Reduction of material budget with the CMS Phase I Upgrade]{\textbf{Reduction of material budget with the \ac{CMS} Phase I Upgrade.} The graphs show the reduction of the material budged for the \acs{BPIX} (left) and the \acs{FPIX} (right) pixel detectors in radiation lengths $X_0$ and as function of $\eta$~\cite{Fav11}.}\label{fig:material_budged}
+\end{figure}
+
+
+\subsubsection{Phase I Upgrade pixel modules}
+For the Phase I Upgrade, there are no major changes planned in the layout of the pixel module. While the sensor will not be changed at all, there will be minor changes to the \ac{HDI} and \ac{TBM}, to handle the higher data rates. The signal and power cables will be changed into a single Polyimide flexible flat cable providing both, power and readout. As for the current pixel detector, the same \ac{ROC} will be used for \acs{FPIX} and \acs{BPIX} modules.
+
+\paragraph*{Readout chip}\label{sec:dig_ROC}
+The biggest changes in the module are planned in the \ac{ROC} design and the data readout chain. In contrast to the current analogue \ac{ROC}, the new \ac{ROC} (psi46dig) will digitalize the data collected and will store and put out all data in digital formats. This will allow higher data rates ($160\,\rm{Mbit/s}$), while abolishing complex analogue decoding structures. In the \acs{PUC}, this will require an $80\,\rm{MHz}$ $8$-bit \ac{ADC}, to digitalize all signals, and an event builder, to create headers for every hit directly before they will be saved in the buffer.
+
+To handle the higher number of pixel hits per second caused by the higher \ac{LHC} luminosity, the buffer sizes will be increased by more than factor two~\cite{Dom12}. This way, the data loss due to buffer overflows can be reduced to $<0.5\,\%$ at a hit rate of $600\,\rm{MPix s^{-1}cm^{-2}}$\footnote{This means, that a $600$~million pixels centimetre are hit every second in the area of one square centimetre of sensor material.}. To provide the necessary space needed for the larger data buffers, the physical length of the \ac{ROC} will be increased by $0.4\,\rm{mm}$. All \ac{ROC}s will be produced using the same $250\,\rm{nm}$ \ac{CMOS} technology as the current pixel \ac{ROC}s.
+
+But not only the data loss and data rates will be improved. To improve the analogue readout part within the \acs{PUC}, an additional 6th metal layer will be implemented. This reduces the cross talk between \acs{PUC}s, allowing a reduction of the signal threshold from $3500$ to well below $2000$ electrons. % This allows a more precise tracking, since the higher signal allows better single point resolutions. To reduce the effect of the time-walk (see~\cite{Dam09} about the time-walk effect) the comparator has been redesigned.
+To reduce the material budget, the \ac{ROC}s will be thinned to $75\,\si{\micro \meter}$ for the \acs{BPIX} layer 1 and to $\approx 180\,\si{\micro \meter}$ for \acs{BPIX} layers $2-4$ and the \acs{FPIX} modules~\cite{Dom12}.
+
+
+\paragraph*{\acs{BPIX} Module Production}
+Different to the current \acs{BPIX} detector, the pixel detector for the \ac{CMS} Phase I Upgrade will not only be produced by a Swiss consortium composed of the \ac{PSI}, \ac{ETH}, and University of Z\"urich, but by several different institutes in Europe and Asia. The production of the Layer 1 and 2 modules will again be the responsibility of the Swiss consortium. Layer 3 will be produced by CERN and by universities in Italy, Taiwan and Finland, while layer 4 will be produced in Germany, by a consortium including Institutions in Hamburg, Aachen and Karlsruhe.
+
+The construction of the layer-4 modules will be done at \ac{DESY}, \ac{UHH} and Karlsruhe Institute of Technology (\acs{KIT}). One half of the modules will be produced, tested, and calibrated at \ac{DESY} and \ac{UHH}. The other half of the modules will be produced at \acs{KIT} and then sent to the \ac{RWTH} to be tested and calibrated. Finally, all modules will be collected at \ac{DESY} for the half-shell integration~\cite{Dom12}. One of the most complex processes of the module assembly is the bump bonding of the \ac{ROC}s to the sensor, which, at \acs{KIT}, is performed at the \ac{IPE}. Chapter~\ref{cha:bump_bonding} describes the bump bonding process performed at \acs{KIT} in detail. For more details about the assembly of \ac{CMS} pixel modules, see~\cite{CMS98} or~\cite{Koe06}.
