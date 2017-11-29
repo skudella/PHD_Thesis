@@ -1,15 +1,76 @@
 \part{Search for heavy bosonic resonances decaying via a vector-like quark into the all-hadronic final state}
 
 \chapter{Object identifcation}
+- for every bunch crossing, a huge number of particles is generated and tracked by the detector\\
+- only a small fraction originates from the interesting initial interaction process\\
+- CMS uses particle flow approach \\
+- PF candidates get assigned to leptons, hadrons or photons\\
+- charged particles get assigned to primary and pile-up vertices\\
+- particles from pile-up vertices are removed\\
+- number of neutral particles from pile-up have to be estimated\\
+- here the CHS algortithm used
+- some words to CHS\\
 
 
 \section{Jet clustering}
+- every color charged particle creates shower of particles among which its energy is distributed\\
+- observed object jet, initial object particle\\
+- jet clustering algorithms to cluster particle flow particles into jet object\\
+- here anti-$k_T$ algorithm\\
+- link for more detail
+
 
 \section{Jet-identification}
-\subsection{b-jet tagging}
-\subsection{Boosted object jet-identification}
-\subsubsection{W/Z/H-jet tagging}
-\subsubsection{t-jet tagging}
-%\subsection{DATA/MC scale factors}
+- in general: showering of jet smears up all information about initial particle so much, no information about initial particle is possible\\
+- in recent years, many developments on using as much jet information to give indicators on original particle
 
+
+\subsection{b-jet tagging}
+- widely used in high energy physics\\
+- picture of secondary vertex\\
+- bottom-quark decay supressed by CKM-matrix --> long life-time of B-mesons\\
+- looking for secondary decay vertices\\
+- established process included in MVA-methods considering impact parameter particle distribution within jet etc.\\
+- Here: Combined Secondary Vertex (v2)
+
+\subsection{Boosted heavy object jet-identification}
+- higher center-of-mass energies -> more strongly boosted objects\\
+- stronger boost --> decay products clustered into fat jet \\
+- bild von boost \\
+- large mass of particle gives jet substructure\\
+- use substructure to identiy jets arrising from decaying heavy objects\\
+- typical substructures: jet-mass, number of subjets
+
+\subsubsection{Jet mass algorithms}
+- two algorithms here \\
+- 1. Pruned jet mass\\
+- 2. Soft-Drop jet mass
+\subsubsection{N-subjettiness}
+- whidely used in combination with jet mass algorithm\\
+- calculate $p_T$ weighted average of minimal angles between subjets and particles\\
+- $\tau_N=0$ would mean that all particles within the jet are perfectly aligned with the subjets\\
+- $\tau_N$ as indicator for having at least N subjets or more\\
+- $\tau_{N,N-1}$ for indicator of having exactly N subjets\\
+- more detailled
+\subsubsection{W/Z/H-jet tagging}
+- heavy bosons are expected to decay into two stable particles and therefore to create jets with dominantly two subjets\\
+- $\tau_{21}$ as discriminating variable
+- jet mass expected to be around the mass of the heavy boson ($m(W)=80.3\,$GeV, $m(Z)=91.2\,$GeV, $m(H)=125.1\,$GeV)\\
+- additional b-tag requirements to subjets possible\\
+- b-tag veto for W-subjets\\
+- b-tagging of H-subjets\\
+- this analysis, focus on W-tagging, but also remain senitivity for Z- \& H-jets\\
+- WP?
+\subsubsection{t-jet tagging}
+- expected to decay into bottom quark and W-boson\\
+- three quarks in final state --> three subjets\\
+- $\tau_{32}$ as discriminating variable\\
+- jet mass expected to be around the top mass $m(t)=173.3\,$GeV\\
+- additional b-tag requirement possible to increase purity\\
+- WP\\
 \section{Lepton-identification}
+- this analysis focusing on full-hadronic final state\\
+- veto on isolated leptons\\
+- lepton identification important for veto and to ensure orthogonality to semi-leptonic analysis\\
+- isolated muons: $p_T>30\,$GeV, $|\eta|<2.4$, $>80\,\%$ valid tracker hits, LOOSE Muon ID, +additional criteria\\
+- isolated electrons: MVA-ID, $p_T>30\,$GeV, $|\eta|<2.4$, MVA cut>0.837\\
